@@ -1,0 +1,870 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
+%\input{tikzit/tikz_premable.tex}
+\newcommand{\intextheight}{13 pt}
+\let\fileinput\input % to allow conversion without turning tikz to lyx
+\end_preamble
+\options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Pegasus: The second connectivity graph for large-scale quantum annealling
+ hardware
+\end_layout
+
+\begin_layout Author
+Nike Dattani
+\end_layout
+
+\begin_layout Author Email
+
+n.dattani@cfa.harvard.edu
+\end_layout
+
+\begin_layout Affiliation
+Harvard-Smithsonian Center for Astrophysics
+\end_layout
+
+\begin_layout Author
+Szilard Szalay
+\end_layout
+
+\begin_layout Author Email
+
+nicholas.chancellor@durham.ac.uk
+\end_layout
+
+\begin_layout Affiliation
+Wigner Institute
+\end_layout
+
+\begin_layout Author
+Nicholas Chancellor
+\end_layout
+
+\begin_layout Author Email
+
+nicholas.chancellor@durham.ac.uk
+\end_layout
+
+\begin_layout Affiliation
+Durham University
+\end_layout
+
+\begin_layout Abstract
+Pegasus is a graph which offers substantially increased connectivity between
+ the qubits of quantum annealing hardware compared to the graph Chimera.
+ It is the first fundamental change in the connecctivity graph of quantum
+ annealers built by D-Wave since Chimera was introduced in 2011 for D-Wave's
+ first commercial quntum annealer.
+ In this article we describe an algorithm which defines the connectivity
+ of Pegasus and we provide what we believe to be the best way to graphically
+ visualize Pegasus in 2D and 3D in order to see which qubits couple to each
+ other.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+We provide comparisons between Chimera and Pegasus
+\end_layout
+
+\end_inset
+
+As Supplemental Material, we provide open source codes for generating Pegasus
+ graphs.
+\end_layout
+
+\begin_layout Standard
+The 128 qubits of the first commercial quantum annealer (D-Wave One, released
+ in 2011) were connected by a graph called Chimera, which is rather easy
+ to describe: A 2D array of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ graphs, with one partition of each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ being also connected to the same corresopnding partition on the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cell above it, and the other partition being connected to the same
+ corresponding partition on the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ to the right of it (see Fig 1).
+ The degree of the graph is six, since each qubit couples to four qubits
+ within its 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cell, and to one qubit in a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ above it and one qubit in a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ to the right of it.
+ All commercial quantum annealers built to date follow this graph connectivity,
+ with just larger and larger numbers of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cells (See Table 1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Chimera graphs in all commercial quantum computers to date.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2mm" bottomspace="2mm">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Array of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cells
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total # of qubits
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2mm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D-Wave One
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4\times4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+128
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D-Wave Two
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8\times8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+512
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D-Wave 2X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12\times12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1152
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D-Wave 2000Q
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $16\times16$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2048
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 2018, D-Wave announced the contruction of a (not yet commercial) quantum
+ annealer with a greater connectivity than Chimera offers, and a publicly
+ available program (NetworkX) which allows users to generate Pegasus graphs
+ of arbitrary size.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+what about the thing Mark Fingerhuth showed?
+\end_layout
+
+\end_inset
+
+ However, no explicit description of the graph connectivity in Pegasus has
+ been published yet, so we have had to apply the process of reverse engineering
+ to determine it, and the following section describes our algorithm for
+ generating Pegasus.
+\end_layout
+
+\begin_layout Section
+Algorithm for generating Pegasus
+\end_layout
+
+\begin_layout Standard
+Start with 
+\begin_inset Formula $K$
+\end_inset
+
+ layers of Chimera graphs, each being an 
+\begin_inset Formula $I\times J$
+\end_inset
+
+ array of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cells (therefore we have a 
+\begin_inset Formula $I\times J\times K$
+\end_inset
+
+ array of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cells).
+ The indices 
+\begin_inset Formula $(i,j,k)$
+\end_inset
+
+ will be used to decribe the location of each unit cell along the indices
+ corresponding dimension picked from (
+\begin_inset Formula $I,J,K)$
+\end_inset
+
+.
+ Each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell has two partitions, labeled 
+\begin_inset Formula $l\in\{1,2\}$
+\end_inset
+
+, so that there's 4 qubits (vertices) for every 
+\begin_inset Formula $(i,j,k,l).$
+\end_inset
+
+ We will arbitrarily label these 4 qubits using two more labels: 
+\begin_inset Formula $(m,n)\in\{1,2\}^{2}$
+\end_inset
+
+.
+ Therefore every qubit is associated with 5 indices: 
+\begin_inset Formula $(i,j,k,l,m,n)$
+\end_inset
+
+, with their ranges and descriptions given in Table 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Indices used to describe each qubit (vertex) in Pegasus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2mm" bottomspace="2mm">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="2mm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Row within a Chimera layer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $j$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $J$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Column within a Chimera layer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+ to 
+\begin_inset Formula $K$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chimera layer
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $l$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bi-partition within 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Top partition within each bi-partition of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bottom partition within each bi-partition of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We then have the connections between 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells of a particular layer, which would normally appear in Chimera:________.
+ 
+\end_layout
+
+\begin_layout Standard
+Pegasus first adds connections within each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell (labeled Black).
+ The rest of the new connections in Pegasus come from connecting 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells between different layers of 
+\begin_inset Formula $I\times J$
+\end_inset
+
+ Chimera graphs.
+ The qubits of 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ will be connected to three different 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells from a specific Chimera graph 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ on a different Chimera layer, and each pair of connected 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells will have eight different connecctions in the form of 
+\begin_inset Formula $K_{2,2}$
+\end_inset
+
+:______.
+ 
+\end_layout
+
+\begin_layout Standard
+See Fig.
+ 2.
+\end_layout
+
+\begin_layout Section
+Alternative graphical representations of Pegasus
+\end_layout
+
+\begin_layout Section
+Comparison to Chimera and Discussion
+\end_layout
+
+\begin_layout Standard
+degree 15 vs degree 6.
+ Non-planarity, and explain how Helmut's paper claimed that D-Wave needs
+ to make the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells non-planar to each other (not just non-planar within the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_body
+\end_document
