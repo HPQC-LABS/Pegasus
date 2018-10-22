@@ -108,7 +108,7 @@ Szilard Szalay
 
 \begin_layout Author Email
 
-nicholas.chancellor@durham.ac.uk
+szalay.szilard@wigner.mta.hu
 \end_layout
 
 \begin_layout Affiliation
@@ -172,7 +172,17 @@ The 128 qubits of the first commercial quantum annealer (D-Wave One, released
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- to the right of it (see Fig 1).
+ to the right of it (see Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:chimera"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  The degree of the graph is six, since each qubit couples to four qubits
  within its 
 \begin_inset Formula $K_{4,4}$
@@ -202,11 +212,49 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+The Chimera graph, 
+\end_layout
+
+\end_inset
+
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Chimera graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:chimera"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_ChimeraLL_crop.pdf
+	width 50col%
 
 \end_inset
 
@@ -422,16 +470,6 @@ In 2018, D-Wave announced the contruction of a (not yet commercial) quantum
  annealer with a greater connectivity than Chimera offers, and a publicly
  available program (NetworkX) which allows users to generate Pegasus graphs
  of arbitrary size.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-what about the thing Mark Fingerhuth showed?
-\end_layout
-
-\end_inset
-
  However, no explicit description of the graph connectivity in Pegasus has
  been published yet, so we have had to apply the process of reverse engineering
  to determine it, and the following section describes our algorithm for
@@ -455,7 +493,7 @@ Start with
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- unit cells (therefore we have a 
+ unit cells (therefore we have an 
 \begin_inset Formula $I\times J\times K$
 \end_inset
 
@@ -469,7 +507,7 @@ Start with
 \end_inset
 
  will be used to decribe the location of each unit cell along the indices
- corresponding dimension picked from (
+ corresponding to the dimension picked from (
 \begin_inset Formula $I,J,K)$
 \end_inset
 
@@ -795,7 +833,18 @@ We then have the connections between
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells of a particular layer, which would normally appear in Chimera:________.
+ cells of a particular layer, which would normally appear in Chimera, as
+ in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:chimera"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+: [insert mathematical description here].
  
 \end_layout
 
@@ -804,7 +853,7 @@ Pegasus first adds connections within each
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell (labeled Black).
+ cell (drawn in black color in Figure 2).
  The rest of the new connections in Pegasus come from connecting 
 \begin_inset Formula $K_{4,4}$
 \end_inset
@@ -834,26 +883,403 @@ Pegasus first adds connections within each
 \begin_inset Formula $K_{2,2}$
 \end_inset
 
-:______.
+:[insert mathematical description here].
  
 \end_layout
 
 \begin_layout Standard
-See Fig.
- 2.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_PegasusLL_crop.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Alternative graphical representations of Pegasus
 \end_layout
 
+\begin_layout Standard
+There are many ways that Pegasus can be drawn, so we show some of these
+ in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus3_repeated"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ChimeraAndPegasus3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Chimera.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Pegasus.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Pegasus (1).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Pegasus (2).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Chimera.pdf
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Pegasus.pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Pegasus (1).pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Pegasus (2).pdf
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ChimeraAndPegasus3_repeated"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Chimera.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_Chimera (1).pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_PegasusLL.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_PegasusLL_1.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig_PegasusLLd.pdf
+	width 25text%
+	height 25text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Comparison to Chimera and Discussion
 \end_layout
 
+\begin_layout Subsection
+Graph degree
+\end_layout
+
 \begin_layout Standard
-degree 15 vs degree 6.
- Non-planarity, and explain how Helmut's paper claimed that D-Wave needs
+As the yellow vertex in Fig.
+ ? indicates, the vertices of Pegasus (except for vertices on an edge) have
+ a degree 15, which is 2.5 times larger than the maimum degree achieved in
+ Chimera.
+ 
+\end_layout
+
+\begin_layout Subsection
+Non-planarity
+\end_layout
+
+\begin_layout Standard
+Non-planarity, and explain how Helmut's paper claimed that D-Wave needs
  to make the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
