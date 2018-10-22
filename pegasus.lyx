@@ -1259,7 +1259,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 \end_layout
 
 \begin_layout Section
-Comparison to Chimera and Discussion
+Comparison to Chimera
 \end_layout
 
 \begin_layout Subsection
@@ -1279,17 +1279,96 @@ Non-planarity
 \end_layout
 
 \begin_layout Standard
-Non-planarity, and explain how Helmut's paper claimed that D-Wave needs
- to make the 
-\begin_inset Formula $K_{4,4}$
-\end_inset
+We note that certain binary optimization problems forming planar graphs
+ can be solved on a classical computer with a number of operations that
+ scales polynomially with the number of binary variables, with the blossom
+ algorithm 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Edmonds1965,Edmonds1965a"
+literal "false"
 
- cells non-planar to each other (not just non-planar within the 
-\begin_inset Formula $K_{4,4}$
 \end_inset
 
 .
+ Therefore it is important that the qubits of a quantum annealer are connected
+ by a non-planar graph.
+ The 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
  
+\begin_inset Quotes eld
+\end_inset
+
+unit cells
+\begin_inset Quotes erd
+\end_inset
+
+ of Chimera are already sufficient to make all commercial D-Wave annealers
+ non-planar.
+ However, if each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ unit cell of Chimera physical qubits were to encode one logical qubit (in
+ for example, an extreme case of minor embedding), then Chimera would be
+ planar.
+ While all red, blue, and green lines added in Pegasus are of the form 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+, which itself is planar; these 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ lines connect unit cells of different planes of chimeras in a non-planar
+ way, such that even if each unit cell were to represent one logical qubit,
+ 
+\emph on
+these logical qubits would still form a non-planar graph in Pegasus.
+
+\emph default
+ This should expand the number of binary optimization problems that can
+ be embedded onto a D-Wave annealer, and cannot be solved on a classical
+ computer with a number of operations that scales polynomially with the
+ number of binary variables.
+ 
+\end_layout
+
+\begin_layout Subsection
+Embedding of quadratization gadgets
+\end_layout
+
+\begin_layout Standard
+We have written an entire paper on the embedding of quadratization gadgets
+ onto Chimera and Pegasus.
+ One highlight of that work is the fact that 
+\emph on
+all 
+\emph default
+quadratization gadgets for single cubic terms which require one auxiliary
+ qubit, can be embedded onto Pegasus with no further auxiliary qubits because
+ Pegasus contains 
+\begin_inset Formula $K_{4},$
+\end_inset
+
+which means that all three logical qubis and the auxiliary qubit can be
+ connected in any way, without any minor-embedding.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "/home/nike/pCloud Sync/library"
+options "apsrev4-1"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
