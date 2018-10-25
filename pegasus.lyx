@@ -94,7 +94,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -107,7 +106,6 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
-
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -120,7 +118,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -914,7 +911,7 @@ name "fig:pegasus"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig_PegasusLL_crop.pdf
+	filename fig_PegasusLLfull_allBlue_0_crop.pdf
 	width 50col%
 
 \end_inset
