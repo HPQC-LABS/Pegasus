@@ -94,6 +94,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -106,11 +107,21 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
+
 szalay.szilard@wigner.mta.hu
 \end_layout
 
 \begin_layout Affiliation
-Wigner Institute
+Strongly Correlated Systems 
+\begin_inset Quotes eld
+\end_inset
+
+Lendület
+\begin_inset Quotes erd
+\end_inset
+
+ Research Group, Wigner Research Centre for Physics of the Hungarian Academy
+ of Sciences, 29-33, Konkoly-Thege Miklós út, Budapest, H-1121, Hungary
 \end_layout
 
 \begin_layout Author
@@ -118,6 +129,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -128,9 +140,9 @@ Durham University
 \begin_layout Abstract
 Pegasus is a graph which offers substantially increased connectivity between
  the qubits of quantum annealing hardware compared to the graph Chimera.
- It is the first fundamental change in the connecctivity graph of quantum
+ It is the first fundamental change in the connectivity graph of quantum
  annealers built by D-Wave since Chimera was introduced in 2011 for D-Wave's
- first commercial quntum annealer.
+ first commercial quantum annealer.
  In this article we describe an algorithm which defines the connectivity
  of Pegasus and we provide what we believe to be the best way to graphically
  visualize Pegasus in 2D and 3D in order to see which qubits couple to each
@@ -160,7 +172,7 @@ The 128 qubits of the first commercial quantum annealer (D-Wave One, released
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- being also connected to the same corresopnding partition on the 
+ being also connected to the same corresponding partition on the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -463,7 +475,7 @@ D-Wave 2000Q
 \end_layout
 
 \begin_layout Standard
-In 2018, D-Wave announced the contruction of a (not yet commercial) quantum
+In 2018, D-Wave announced the construction of a (not yet commercial) quantum
  annealer with a greater connectivity than Chimera offers, and a publicly
  available program (NetworkX) which allows users to generate Pegasus graphs
  of arbitrary size.
@@ -503,30 +515,38 @@ Start with
 \begin_inset Formula $(i,j,k)$
 \end_inset
 
- will be used to decribe the location of each unit cell along the indices
+ will be used to describe the location of each unit cell along the indices
  corresponding to the dimension picked from (
 \begin_inset Formula $I,J,K)$
 \end_inset
 
 .
- Each 
+ (In the concrete realization by DWave, 
+\begin_inset Formula $I=J=?$
+\end_inset
+
+, and 
+\begin_inset Formula $K=3$
+\end_inset
+
+.) Each 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell has two partitions, labeled 
-\begin_inset Formula $l\in\{1,2\}$
+ cell has two parts, labeled 
+\begin_inset Formula $l\in\{0,1\}$
 \end_inset
 
-, so that there's 4 qubits (vertices) for every 
+, so that there are 4 qubits (vertices) for every 
 \begin_inset Formula $(i,j,k,l).$
 \end_inset
 
  We will arbitrarily label these 4 qubits using two more labels: 
-\begin_inset Formula $(m,n)\in\{1,2\}^{2}$
+\begin_inset Formula $(m,n)\in\{0,1\}^{2}$
 \end_inset
 
 .
- Therefore every qubit is associated with 5 indices: 
+ Therefore every qubit is associated with 6 indices: 
 \begin_inset Formula $(i,j,k,l,m,n)$
 \end_inset
 
@@ -605,11 +625,11 @@ Indices used to describe each qubit (vertex) in Pegasus
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1$
+\begin_inset Formula $0$
 \end_inset
 
  to 
-\begin_inset Formula $I$
+\begin_inset Formula $I-1$
 \end_inset
 
 
@@ -644,11 +664,11 @@ Row within a Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1$
+\begin_inset Formula $0$
 \end_inset
 
  to 
-\begin_inset Formula $J$
+\begin_inset Formula $J-1$
 \end_inset
 
 
@@ -683,11 +703,11 @@ Column within a Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $1$
+\begin_inset Formula $0$
 \end_inset
 
  to 
-\begin_inset Formula $K$
+\begin_inset Formula $K-1$
 \end_inset
 
 
@@ -722,7 +742,10 @@ Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-1,2
+\begin_inset Formula $0,1$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -758,7 +781,10 @@ Bi-partition within
 \begin_inset Text
 
 \begin_layout Plain Layout
-1,2
+\begin_inset Formula $0,1$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -794,7 +820,10 @@ Top partition within each bi-partition of
 \begin_inset Text
 
 \begin_layout Plain Layout
-1,2
+\begin_inset Formula $0,1$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -826,23 +855,96 @@ Bottom partition within each bi-partition of
 \end_layout
 
 \begin_layout Standard
-We then have the connections between 
+The 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells of a particular layer, which would normally appear in Chimera, as
- in Figure 
+ Chimera unit cells are given by the equation
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m,n)\rightarrow(i,j,k,l=1,m',n').\label{eq:k44}
+\end{equation}
+
+\end_inset
+
+(In our convention, such an equation is understood to all valid indices.)
+ The vertical and horizontal couplings connect unit cells being nearest
+ neighbors with respect to the 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ coordinates,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m,n)\rightarrow(i,j+1,k,l=0,m,n),\label{eq:chimera_vertical}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=1,m,n)\rightarrow(i+1,j,k,l=1,m,n),\label{eq:chimera_horizontal}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j\neq J-1$
+\end_inset
+
+ in the first case, and 
+\begin_inset Formula $i\neq I-1$
+\end_inset
+
+ in the second.
+ Equations 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:chimera"
+LatexCommand eqref
+reference "eq:k44"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
-: [insert mathematical description here].
- 
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ define 
+\begin_inset Formula $K$
+\end_inset
+
+ Chimera graphs.
+ (These edges are drawn in gray color in the figures.) One Chimera layer
+ (fixed 
+\begin_inset Formula $k$
+\end_inset
+
+) is depicted in Figure ...........
 \end_layout
 
 \begin_layout Standard
@@ -850,38 +952,473 @@ Pegasus first adds connections within each
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell (drawn in black color in Figure 2).
- The rest of the new connections in Pegasus come from connecting 
-\begin_inset Formula $K_{4,4}$
+ cell, given by the equation
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l,m,n=0)\rightarrow(i,j,k,l,m,n=1).\label{eq:uc_add}
+\end{equation}
+
 \end_inset
 
- cells between different layers of 
-\begin_inset Formula $I\times J$
+(These edges are drawn in black color in the figures.) The rest of the new
+ connections in Pegasus come from connecting the unit cells between different
+ layers of Chimera graphs.
+ The qubits of a unit cell 
+\begin_inset Formula $(i,j,k)$
 \end_inset
 
- Chimera graphs.
- The qubits of 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- will be connected to three different 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cells from a specific Chimera graph 
-\begin_inset Formula $(i,j)$
-\end_inset
-
- on a different Chimera layer, and each pair of connected 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cells will have eight different connecctions in the form of 
+ from a specific Chimera layer will be connected to two times three different
+ unit cells on the neighboring Chimera layers, and each pair of unit cells
+ connected in this way will have two times eight different connections in
+ the form of 
 \begin_inset Formula $K_{2,2}$
 \end_inset
 
-:[insert mathematical description here].
+.
+ For the 
+\begin_inset Formula $m=0$
+\end_inset
+
+ vertexes of a unit cell, there will be connections to the unit cell with
+ the same 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+, but in the next layer, these are defined as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m=0,n)\rightarrow(i,j,k+1,l=1,m',n'),\label{eq:outgoing_same_ij1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=1,m=0,n)\rightarrow(i,j,k+1,l=0,m',n').\label{eq:outgoing_same_ij2}
+\end{equation}
+
+\end_inset
+
+(These edges are drawn in blue and red colors in the figures.) Note that
+ we have periodicity for the layers: addition for index 
+\begin_inset Formula $k$
+\end_inset
+
+ is understood modulo 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ For the 
+\begin_inset Formula $m=1$
+\end_inset
+
+ vertexes, there will be connections to the next unit cells in the next
+ layer, these are defined as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j\neq J-1$
+\end_inset
+
+ in the first case, and 
+\begin_inset Formula $i\neq I-1$
+\end_inset
+
+ in the second.
+ (These edges are drawn in orange and green colors in the figures.) The above
+ four equations give four types of edges from each unit cell.
+ One Pegasus unit cell with the edges given above (that is, for fixed 
+\begin_inset Formula $(i,j,k)$
+\end_inset
+
+) is depicted in Figure ......., 
+\end_layout
+
+\begin_layout Standard
+Applying Eqs.
  
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to obtain additional connections to the Chimera layers given by Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:k44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ will produce a Pegasus graph, without producing the same edge twice.
+ A representative part of the Pegasus graph (for 
+\begin_inset Formula $K=3$
+\end_inset
+
+) is depicted in Figure ......., 
+\end_layout
+
+\begin_layout Standard
+To count the number of edges of a vertex in a generic unit cell (not on
+ the boundary of the layers), we have to reverse the 
+\begin_inset Quotes eld
+\end_inset
+
+outgoing
+\begin_inset Quotes erd
+\end_inset
+
+ edges given in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ We call these 
+\begin_inset Quotes eld
+\end_inset
+
+incoming
+\begin_inset Quotes erd
+\end_inset
+
+ edges,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=1,m,n)\leftarrow(i,j,k-1,l=0,m'=0,n'),\label{eq:incoming_same_ij1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m,n)\leftarrow(i,j,k-1,l=1,m'=0,n'),\label{eq:incoming_same_ij2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=0,m,n)\leftarrow(i,j-1,k-1,l=1,m'=1,n'),\label{eq:incoming_jp1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,k,l=1,m,n)\leftarrow(i-1,j,k-1,l=0,m'=1,n'),\label{eq:incoming_ip1}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $j\neq0$
+\end_inset
+
+ in the third case, and 
+\begin_inset Formula $i\neq0$
+\end_inset
+
+ in the fourth.
+ From these rules we are now able to count the number of edges incident
+ on a vertex contained in a unit cell which lies not on the boundary of
+ the graph.
+ To start off, each vertex will have 
+\begin_inset Formula $6$
+\end_inset
+
+ edges coming from its chimera graph, Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:k44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ The vertex will also have an additional edge from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, leading to a total of 
+\begin_inset Formula $7$
+\end_inset
+
+ edges so far.
+ The vertex will additionally have four edges from either Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ if 
+\begin_inset Formula $m=0$
+\end_inset
+
+, and from either Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ or 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ if 
+\begin_inset Formula $m=1$
+\end_inset
+
+.
+ Moreover, it has additionally another two plus two edges from either 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:incoming_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:incoming_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, or 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:incoming_same_ij1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:incoming_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, leading to a total degree of 
+\begin_inset Formula $15$
+\end_inset
+
+.
+ One Pegasus unit cell with all the edges given above (that is, both outgoing
+ and incoming edges, for fixed 
+\begin_inset Formula $(i,j,k)$
+\end_inset
+
+) is depicted in Figure ......., 
 \end_layout
 
 \begin_layout Standard
@@ -1350,7 +1887,7 @@ quadratization gadgets for single cubic terms which require one auxiliary
 \begin_inset Formula $K_{4},$
 \end_inset
 
-which means that all three logical qubis and the auxiliary qubit can be
+which means that all three logical qubits and the auxiliary qubit can be
  connected in any way, without any minor-embedding.
 \end_layout
 
