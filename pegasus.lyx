@@ -281,7 +281,7 @@ name "fig:chimera"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig_ChimeraLL_crop.pdf
+	filename metapostfigs/fig_ChimeraLL_crop.pdf
 	width 50col%
 
 \end_inset
@@ -803,7 +803,7 @@ Bi-partition within
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
-
+ (horizontal/vertical)
 \end_layout
 
 \end_inset
@@ -838,7 +838,7 @@ Bi-partition within
 \begin_inset Text
 
 \begin_layout Plain Layout
-Top partition within each bi-partition of 
+First index within each part of 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -877,7 +877,7 @@ Top partition within each bi-partition of
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bottom partition within each bi-partition of 
+Second index within each part of 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1168,8 +1168,7 @@ For the
 
 \end_inset
 
-These edges are drawn in blue and red (respectively) in the figures.
- Note that we have periodicity for the layers: addition for index 
+Note that we have periodicity for the layers: addition for index 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1197,7 +1196,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\negthickspace}\boldsymbol{\negthickspace}(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
+(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
 \end{equation}
 
 \end_inset
@@ -1208,7 +1207,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\negthickspace}\negthickspace(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
+(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
 \end{equation}
 
 \end_inset
@@ -1235,7 +1234,6 @@ where
 
 \end_inset
 
-These edges are drawn in orange and green (respectively) in the figures.
  Equations 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1256,29 +1254,172 @@ noprefix "false"
 
 \end_inset
 
- give four types of edges from each 
+ give four types of edges for each 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
  cell.
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
  One Pegasus 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell with the edges given above (that is, for fixed 
+ cell with the edges given above is depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasusone"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ A representative part of the Pegasus graph (
+\begin_inset Formula $K=3$
+\end_inset
+
+) is depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Connections of a generic unit cell of the Pegasus graph.
+ (grey: Chimera graph 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:k44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; black: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; blue: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; red: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; orange: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; green: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_jp1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Solid/dashed lines start/end on the fixed 
 \begin_inset Formula $(i,j,k)$
 \end_inset
 
-) is depicted in Figure ......., 
+ unit cell.) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusone"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
- This completes the Pegasus graph.
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusLLone_crop.pdf
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1338,20 +1479,6 @@ noprefix "false"
 
  will produce a Pegasus graph, without producing the same edge twice.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-A representative part of the Pegasus graph (for 
-\begin_inset Formula $K=3$
-\end_inset
-
-) is depicted in Figure ......., 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1386,8 +1513,8 @@ name "fig:pegasus"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig_PegasusLLfull_allBlue_0_crop.pdf
-	width 50col%
+	filename metapostfigs/fig_PegasusLLfullblue_crop.pdf
+	width 90col%
 
 \end_inset
 
