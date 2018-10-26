@@ -12,10 +12,10 @@
 % One can use the bash script for multiple conversions:
 %     for f in fig*.eps; do a2ping $f; done
 % For cropping the figures:
-%     pdfcrop --margins '0 0 -160 -160' fig_ChimeraLL.pdf fig_ChimeraLL_crop.pdf
-%     pdfcrop --margins '0 0 -125 -125' fig_PegasusLL.pdf fig_PegasusLL_crop.pdf
-%     pdfcrop --margins '0 0 -200 -200' fig_PegasusLLfull.pdf fig_PegasusLLfull_crop.pdf
-%     pdfcrop --margins '0 0 -200 -200' fig_PegasusLLfull_allBlue_0.pdf fig_PegasusLLfull_allBlue_0_crop.pdf
+%     pdfcrop --margins '0 0 -1000 -1000' fig_ChimeraLL.pdf fig_ChimeraLL_crop.pdf
+%     pdfcrop --margins '-500 -500 -500 -500' fig_PegasusLLone.pdf fig_PegasusLLone_crop.pdf
+%     pdfcrop --margins '0 0 -1000 -1000' fig_PegasusLLfull.pdf fig_PegasusLLfull_crop.pdf
+%     pdfcrop --margins '0 0 -1000 -1000' fig_PegasusLLfullblue.pdf fig_PegasusLLfullblue_crop.pdf
 
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
