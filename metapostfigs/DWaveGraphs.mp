@@ -33,16 +33,20 @@ fi;
 
 
 % ** color definitions *********************************************************
-color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   ?,  0,  0
-color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;	% hsv:   
-color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
-color clblue; 	clblue := ( 180    , 206    , 256    )/256;       % hsv: 
-color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;       % hsv: 240, 22, 67
-color cdblue;	cdblue := ( 45     , 98     ,     255)/256;       % hsv: 
+color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   0,  0,  0
+color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;
+%color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
+color cred;	cred   := (       1,       0,       0);
+color clblue; 	clblue := ( 180    , 206    , 256    )/256;     
+color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
+%color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     
+color cdblue;	cdblue := (       0,       0,       1);
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
 
-color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
-color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
+%color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
+color cgreen;	cgreen := (       0,    0.95,       0);
+%color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
+color corange;	corange:= (       1,     0.5,       0);
 
 
 
@@ -55,19 +59,19 @@ numeric ut; ut := 24bp;
 numeric vt; vt := 4.5ut;
 
 % size of a vertex
-numeric dt; dt := .2ut;
+numeric dt; dt := .25ut;
 
 % width of an edge
 %numeric it; it := .7bp;
-numeric it; it := 1.0bp;
+numeric it; it := 1.5bp;
 
 % rotation of the unit cell
-%numeric urt; urt := 10;
-numeric urt; urt := 0;
+numeric urt; urt := 12;
+%numeric urt; urt := 0;
 
 % horizontal scale factor
-%numeric sfh; sfh := 1.8;
-numeric sfh; sfh := 1;
+numeric sfh; sfh := 0.7;
+%numeric sfh; sfh := 1;
 
 
 % ** drawing routines **********************************************************
@@ -101,9 +105,6 @@ vardef PV(expr c,i,j,u,p,q) =
 enddef;
 
 numeric L; L := 5;	% size of the Chimera blocks, $L\times L$
-
-
-
 
 % ** Graph definitions ********************************************************
 
@@ -217,14 +218,6 @@ vardef ucvertex(expr c,i,j) =
 				endfor;
 enddef;
 
-
-
-
-
-
-
-
-
 % ** unit cells ***************************************************************
 outputtemplate := "fig_ChimeraUC.eps";
 beginfig(0)
@@ -306,14 +299,14 @@ PegasusLLone := image(
 	c := 1;
 	i := 2;
 	j := 2;
-				edgeeq("2a",c,i,j,cblue,"continuous");
+				edgeeq("2a",c,i,j,cdblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
 				edgeeq("3",c,i,j,corange,"continuous");
 				edgeeq("4",c,i,j,cgreen,"continuous");
-				edgeeq("5a",c,i,j,cred,"dashed");
-				edgeeq("5b",c,i,j,cblue,"dashed");
-				edgeeq("6",c,i,j,corange,"dashed");
-				edgeeq("7",c,i,j,cgreen,"dashed");
+				edgeeq("5a",c,i,j,cred,"continuous");
+				edgeeq("5b",c,i,j,cdblue,"continuous");
+				edgeeq("6",c,i,j,corange,"continous");
+				edgeeq("7",c,i,j,cgreen,"continous");
 ); % of PegasusLL
 
 
@@ -345,7 +338,7 @@ PegasusLLfull := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("2a",c,i,j,cblue,"continuous");
+				edgeeq("2a",c,i,j,cdblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
 			endfor;
 		endfor;
@@ -396,7 +389,7 @@ PegasusLLfullblue := image(
 		endfor;
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("3",c,i,j,clblue,"continuous");
+				edgeeq("3",c,i,j,cdblue,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
