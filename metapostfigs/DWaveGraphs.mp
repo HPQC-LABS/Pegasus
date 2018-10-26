@@ -34,7 +34,7 @@ fi;
 
 % ** color definitions *********************************************************
 color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   ?,  0,  0
-color cgrey;	cgrey  := ( 7*16+ 0, 7*16+ 0, 7*16+ 0)/256;	% hsv:   
+color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;	% hsv:   
 color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
 color clblue; 	clblue := ( 180    , 206    , 256    )/256;       % hsv: 
 color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;       % hsv: 240, 22, 67
