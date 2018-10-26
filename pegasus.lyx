@@ -1197,7 +1197,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\negthickspace}\negthickspace(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
+\boldsymbol{\negthickspace}\boldsymbol{\negthickspace}(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
 \end{equation}
 
 \end_inset
@@ -1208,12 +1208,15 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\boldsymbol{\negthickspace}\boldsymbol{\negthickspace}(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
+\boldsymbol{\negthickspace}\negthickspace(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
