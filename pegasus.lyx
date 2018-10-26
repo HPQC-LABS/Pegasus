@@ -2110,6 +2110,11 @@ which means that all three logical qubits and the auxiliary qubit can be
  connected in any way, without any minor-embedding.
 \end_layout
 
+\begin_layout Subsection
+Application: Nike will embed two problems on Chimera and Pegasus to show
+ reduction in # of auxiliary qubits.
+\end_layout
+
 \begin_layout Standard
 
 \lang british
