@@ -6,16 +6,9 @@
 %     mpost DWaveGraphs.mp
 % if there are LaTeX labels:
 %     TEX=pdflatex mpost DWaveGraphs.mp
-% The script a2ping is for converting .eps figures to .pdf figures,
-% while not screwing up the bounding box.
-% It gives an error message, but it works fine...
-% One can use the bash script for multiple conversions:
-%     for f in fig*.eps; do a2ping $f; done
-% For cropping the figures:
-%     pdfcrop --margins '0 0 -1000 -1000' fig_ChimeraLL.pdf fig_ChimeraLL_crop.pdf
-%     pdfcrop --margins '-500 -500 -500 -500' fig_PegasusLLone.pdf fig_PegasusLLone_crop.pdf
-%     pdfcrop --margins '0 0 -1000 -1000' fig_PegasusLLfull.pdf fig_PegasusLLfull_crop.pdf
-%     pdfcrop --margins '0 0 -1000 -1000' fig_PegasusLLfullblue.pdf fig_PegasusLLfullblue_crop.pdf
+% for converting and cropping pdf-s, see the makepdf.sh
+
+
 
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
@@ -30,6 +23,7 @@ if showindices=1:
 	TEXPRE("%&latex" & char(10) & "\documentclass{article}\begin{document}");
 	TEXPOST("\end{document}");
 fi;
+
 
 
 % ** color definitions *********************************************************
@@ -48,27 +42,27 @@ color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
 
 % ** units *********************************************************************
 
-% base unit (general, and for unit cells)
-numeric ut; ut := 24bp;
+numeric drawingmode;
+%drawingmode := 1;			% diamond shape unit cells
+drawingmode := 2;			% 2x4 shape unit cells
 
-% base unit (for graph)
-numeric vt; vt := 4.5ut;
+numeric ut, vt, urt, sfh; 
+numeric th,tv;
 
-% size of a vertex
-numeric dt; dt := .2ut;
+if drawingmode=1:
+	ut := 24bp;			% base unit (general, and for unit cells)
+	vt := 4.5ut;			% base unit (for graph)
+	urt := 0; % 10;			% rotation of the unit cell
+	sfh := 1; % 1.8			% horizontal scale factor
+elseif drawingmode=2:
+	ut := 24bp;			% base unit (general, and for unit cells)
+	vt := 4.5ut;			% base unit (for graph)
+	th :=-0.75;		% horizontal
+	tv :=-0.15; % vertical
+fi;
 
-% width of an edge
-%numeric it; it := .7bp;
-numeric it; it := 1.0bp;
-
-% rotation of the unit cell
-%numeric urt; urt := 10;
-numeric urt; urt := 0;
-
-% horizontal scale factor
-%numeric sfh; sfh := 1.8;
-numeric sfh; sfh := 1;
-
+numeric dt; dt := .2ut;			% size of a vertex
+numeric it; it := 1.0bp; % 0.7bp	% width of an edge
 
 % ** drawing routines **********************************************************
 
@@ -94,14 +88,22 @@ enddef;
 
 % calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-	- c*(sfh*vt,vt)	% c: index of the Chimera layers
-	+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
-	+ j*(0,3.25vt)		% j: vertical index of the unit cells
-	+ (2*p+q-1.5)*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
+	if drawingmode=1:	% diamond shape unit cells
+		+ c*(-sfh*vt,-vt)		% c: index of the Chimera layers
+		+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
+		+ j*(0,3.25vt)			% j: vertical index of the unit cells
+		+ (2*p+q-1.5)*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
+	elseif drawingmode=2:	% 2x4 shape unit cells
+		+ c*(-vt,-vt)			% c: index of the Chimera layers
+		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
+		+ j*(0,3.25vt)			% j: vertical index of the unit cells
+		- (u-0.5)*(1.3ut,0)		% u: horizontal index of the vertices inside the unit cells
+		+ (2*p+q-1.5)*(0,ut)		% 2*p+q: vertical index of the vertices inside the unit cells
+		+ ( (2*p+q-1.5)*th*ut, (-1)**u*tv*ut ) 				% tilting of the unit cells
+	fi
 enddef;
 
 numeric L; L := 5;	% size of the Chimera blocks, $L\times L$
-
 
 
 
@@ -226,7 +228,8 @@ enddef;
 
 
 % ** unit cells ***************************************************************
-outputtemplate := "fig_ChimeraUC.eps";
+
+outputtemplate := "fig_Chimera"&decimal(drawingmode)&"UC.eps";
 beginfig(0)
 	numeric c,i,j;
 	c := 0;
@@ -236,22 +239,21 @@ beginfig(0)
 				ucvertex(c,i,j);
 endfig;
 
-outputtemplate := "fig_PegasusUC.eps";
+outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"UC.eps";
 beginfig(0)
 	numeric c,i,j;
 	c := 0;
 	i := 0;
 	j := 0;
 				edgeeq("1",c,i,j,cblack,"continuous");
-				ucvertex(c,i,j);
 				edgeeq("8",c,i,j,cgrey,"continuous");
+				ucvertex(c,i,j);
 
 endfig;
 
 
 
 % ** 3xLxL layout *************************************************************
-
 
 picture ChimeraLL;
 ChimeraLL := image(
@@ -275,7 +277,6 @@ ChimeraLL := image(
 
 
 ); % of ChimeraLL
-
 
 
 picture PegasusLLone;
@@ -314,7 +315,7 @@ PegasusLLone := image(
 				edgeeq("5b",c,i,j,cblue,"dashed");
 				edgeeq("6",c,i,j,corange,"dashed");
 				edgeeq("7",c,i,j,cgreen,"dashed");
-); % of PegasusLL
+); % of PegasusLLone
 
 
 picture PegasusLLfull;
@@ -435,34 +436,28 @@ PegasusLLDots := image(
 
 
 % output
-outputtemplate := "fig_ChimeraLL.eps";
+outputtemplate := "fig_Chimera"&decimal(drawingmode)&"LL.eps";
 beginfig(0)
 	draw ChimeraLL;
 	draw ChimeraLLDots;
 endfig;
 
-outputtemplate := "fig_PegasusLLone.eps";
+outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLone.eps";
 beginfig(0)
 	draw PegasusLLone;
 	draw PegasusLLDots;
 endfig;
 
-outputtemplate := "fig_PegasusLLfull.eps";
+outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLfull.eps";
 beginfig(0)
 	draw PegasusLLfull;
 	draw PegasusLLDots;
 endfig;
 
-outputtemplate := "fig_PegasusLLfullblue.eps";
+outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLfullblue.eps";
 beginfig(0)
 	draw PegasusLLfullblue;
 	draw PegasusLLDots;
 endfig;
-
-
-
-
-
-
 
 end;
