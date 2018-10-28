@@ -138,19 +138,41 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), clr, emode ); 
 					endfor;
 				endfor;
-	elseif eq = "2a":	% equation (2) for u=0
+	elseif eq = "2a":	% equation (2) for u=0, c=0 
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(c,i,j,0,0,q), PV((c+1)mod3,i,j,1,pp,qp), clr, emode ); 
+							gredge( PV(0,i,j,0,0,q), PV((0+1)mod3,i,j,1,pp,qp), clr, emode ); 
 						endfor;
 						endfor;
 					endfor;
-	elseif eq = "2b":	% equation (2) for u=1
+	elseif eq = "2b":	% equation (2) for u=1, c=0
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
+							gredge( PV(0,i,j,1,0,q), PV((0+1)mod3,i,j,0,pp,qp), clr, emode ); 
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "2c":	% equation (2) for u=0, c > 1
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+%                                               for c = 1 upto 2:
+%                                               for c = 1 upto 1:
+%                                               for c = 2 upto 2:
+							gredge( PV(1,i,j,0,0,q), PV(2,i,j,1,pp,qp), clr, emode ); 
+%                                               endfor;
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "2d":	% equation (2) for u=1, c > 1
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+                                                for c = 1 upto 2:
 							gredge( PV(c,i,j,1,0,q), PV((c+1)mod3,i,j,0,pp,qp), clr, emode ); 
+                                                endfor;
 						endfor;
 						endfor;
 					endfor;
@@ -301,6 +323,8 @@ PegasusLLone := image(
 	j := 2;
 				edgeeq("2a",c,i,j,cdblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
+%				edgeeq("2c",c,i,j,cdblue,"continuous");
+%				edgeeq("2d",c,i,j,cred,"continuous");
 				edgeeq("3",c,i,j,corange,"continuous");
 				edgeeq("4",c,i,j,cgreen,"continuous");
 				edgeeq("5a",c,i,j,cred,"continuous");
@@ -340,6 +364,8 @@ PegasusLLfull := image(
 			for j = 0 upto L-1:
 				edgeeq("2a",c,i,j,cdblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
+%				edgeeq("2c",c,i,j,cdblue,"continuous");
+%				edgeeq("2d",c,i,j,cred,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-1:
@@ -380,13 +406,15 @@ PegasusLLfullblue := image(
 			endfor;
 		endfor;
 	endfor;
-	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("2a",c,i,j,cdblue,"continuous");
-				edgeeq("2b",c,i,j,clblue,"continuous");
-			endfor;
-		endfor;
+				edgeeq("2a",0,i,j,clblue,"continuous");
+				edgeeq("2b",0,i,j,clblue,"continuous");
+%				edgeeq("2c",1,i,j,cdblue,"continuous");
+%				edgeeq("2d",1,i,j,cdblue,"continuous");
+                        endfor;
+                endfor;
+	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
 				edgeeq("3",c,i,j,cdblue,"continuous");
