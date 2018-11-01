@@ -1,25 +1,25 @@
 #!/bin/bash
 
 for f in fig*.eps; do ./a2ping.pl $f; done
-#for f in fig*.eps; do epspdf $f; done
 
-pdfcrop --margins '0 0 -1000 -1000'       fig_Chimera1LL.pdf          fig_Chimera1LL_crop.pdf
-pdfcrop --margins '-500 -500 -500 -500'   fig_Pegasus1LLone.pdf       fig_Pegasus1LLone_crop.pdf
-pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus1LLfull.pdf      fig_Pegasus1LLfull_crop.pdf
-pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus1LLfullblue.pdf  fig_Pegasus1LLfullblue_crop.pdf
+pdfcrop --margins '0 0 -200 -280'	fig_ChimeraDmdRect3x3.pdf		fig_ChimeraDmdRect3x3_crop.pdf
+pdfcrop --margins '-140 -200 -140 -200'	fig_PegasusDmdRect3x3one.pdf		fig_PegasusDmdRect3x3one_crop.pdf
+pdfcrop --margins '0 0 -220 -320'	fig_PegasusDmdRect3x3full.pdf		fig_PegasusDmdRect3x3full_crop.pdf
+pdfcrop --margins '0 0 -220 -320'	fig_PegasusDmdRect3x3fullblue.pdf	fig_PegasusDmdRect3x3fullblue_crop.pdf
 
-pdfcrop --margins '0 0 -1000 -1000'       fig_Chimera2LL.pdf          fig_Chimera2LL_crop.pdf
-pdfcrop --margins '-500 -500 -500 -500'   fig_Pegasus2LLone.pdf       fig_Pegasus2LLone_crop.pdf
-pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus2LLfull.pdf      fig_Pegasus2LLfull_crop.pdf
-pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus2LLfullblue.pdf  fig_Pegasus2LLfullblue_crop.pdf
+pdfcrop --margins '0 0 -280 -280'	fig_ChimeraStdRect3x3.pdf		fig_ChimeraStdRect3x3_crop.pdf
+pdfcrop --margins '-200 -200 -200 -200'	fig_PegasusStdRect3x3one.pdf		fig_PegasusStdRect3x3one_crop.pdf
+pdfcrop --margins '0 0 -320 -340'	fig_PegasusStdRect3x3full.pdf		fig_PegasusStdRect3x3full_crop.pdf
+pdfcrop --margins '0 0 -320 -340'	fig_PegasusStdRect3x3fullblue.pdf	fig_PegasusStdRect3x3fullblue_crop.pdf
+
+pdfcrop --margins '0 0 -200 -320'	fig_ChimeraDmdTilt3x3.pdf		fig_ChimeraDmdTilt3x3_crop.pdf
+pdfcrop --margins '-140 -240 -140 -240'	fig_PegasusDmdTilt3x3one.pdf		fig_PegasusDmdTilt3x3one_crop.pdf
+pdfcrop --margins '0 0 -220 -320'	fig_PegasusDmdTilt3x3full.pdf		fig_PegasusDmdTilt3x3full_crop.pdf
+pdfcrop --margins '0 0 -220 -320'	fig_PegasusDmdTilt3x3fullblue.pdf	fig_PegasusDmdTilt3x3fullblue_crop.pdf
 
 
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Chimera1LL_3x3.pdf          fig_Chimera1LL_crop_3x3.pdf
-#pdfcrop --margins '-500 -500 -500 -500'   fig_Pegasus1LLone_3x3.pdf       fig_Pegasus1LLone_crop_3x3.pdf
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus1LLfull_3x3.pdf      fig_Pegasus1LLfull_crop_3x3.pdf
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus1LLfullblue_3x3.pdf  fig_Pegasus1LLfullblue_crop_3x3.pdf
-#
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Chimera2LL_3x3.pdf          fig_Chimera2LL_crop-3x3.pdf
-#pdfcrop --margins '-500 -500 -500 -500'   fig_Pegasus2LLone_3x3.pdf       fig_Pegasus2LLone_crop_3x3.pdf
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus2LLfull_3x3.pdf      fig_Pegasus2LLfull_crop_3x3.pdf
-#pdfcrop --margins '0 0 -1000 -1000'       fig_Pegasus2LLfullblue_3x3.pdf  fig_Pegasus2LLfullblue_crop_3x3.pdf
+pdfcrop --margins '0 0 -240 -320'	fig_ChimeraStdTilt3x3.pdf		fig_ChimeraStdTilt3x3_crop.pdf
+pdfcrop --margins '-200 -260 -200 -260'	fig_PegasusStdTilt3x3one.pdf		fig_PegasusStdTilt3x3one_crop.pdf
+pdfcrop --margins '0 0 -330 -320'	fig_PegasusStdTilt3x3full.pdf		fig_PegasusStdTilt3x3full_crop.pdf
+pdfcrop --margins '0 0 -330 -320'	fig_PegasusStdTilt3x3fullblue.pdf	fig_PegasusStdTilt3x3fullblue_crop.pdf
+
