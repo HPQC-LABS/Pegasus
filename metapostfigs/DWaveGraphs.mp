@@ -6,9 +6,7 @@
 %     mpost DWaveGraphs.mp
 % if there are LaTeX labels:
 %     TEX=pdflatex mpost DWaveGraphs.mp
-% for converting and cropping pdf-s, see the makepdf.sh
-
-
+% for converting and cropping PDFs, use the shell script makepdf.sh
 
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
@@ -24,10 +22,9 @@ if showindices=1:
 	TEXPOST("\end{document}");
 fi;
 
-
-
 % ** color definitions *********************************************************
 color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   0,  0,  0
+<<<<<<< HEAD
 color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;
 %color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
 color cred;	cred   := (       1,       0,       0);
@@ -35,8 +32,19 @@ color clblue; 	clblue := ( 180    , 206    , 256    )/256;
 color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
 %color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     
 color cdblue;	cdblue := (       0,       0,       1);
+=======
+color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;	% hsv:   
+%color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
+color cred;	cred   := (       1,       0,       0)    ;	% hsv:   
+color clblue; 	clblue := ( 180    , 206    , 256    )/256;     % hsv: 
+%color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
+color cblue;	cblue  := (       0,       0,       1)    ;     % hsv: 
+color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
+>>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
+color cgreen ;	cgreen := (       0,       1,       0)    ;	% hsv: 
 
+<<<<<<< HEAD
 %color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
 color cgreen;	cgreen := (       0,    0.95,       0);
 %color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
@@ -71,24 +79,61 @@ numeric sfh; sfh := 0.7;
 numeric drawingmode;
 %drawingmode := 1;			% diamond shape unit cells
 drawingmode := 2;			% 2x4 shape unit cells
+=======
+color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
+%color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
+color corange;	corange:= (       1,     0.5,       0)    ;	% hsv:  37,100,100
+
+% ** units *********************************************************************
+
+numeric L;	% size of the Chimera blocks, $L\times L$
+L := 3;
+
+string drawingmode;			% unit cells:	layers:
+drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
+%drawingmode := "StdRect";		%   2x4		  rectangular, one behind the other
+%drawingmode := "DmdTilt"; 		%   diamond	  parallelogram, one behind the other
+%drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
+% not implemented yet:
+%drawingmode := "DmdStck";		%   diamond	  parallelogram, stacked one on top of the other
+%drawingmode := "StdStck";		%   2x4		  parallelogram, stacked one on top of the other
+>>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 
 numeric ut, vt, urt, sfh; 
-numeric th,tv;
+numeric th,tv,tlh,tlv;
 
-if drawingmode=1:
+if drawingmode="DmdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	urt := 0; % 10;			% rotation of the unit cell
-	sfh := 1; % 1.8			% horizontal scale factor
-elseif drawingmode=2:
+	urt :=-10;			% rotation of the unit cell
+	sfh := 0.7;			% horizontal scale factor
+elseif drawingmode="StdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	th :=-0.75;		% horizontal
-	tv :=-0.15; % vertical
+	th :=-0.75;      		% horizontal tilt factor of the unit cell
+	tv :=-0.15;			% vertical tilt factor of the unit cell
+elseif drawingmode="DmdTilt":
+	ut := 24bp;			% base unit (general, and for unit cells)
+	vt := 4.5ut;			% base unit (for graph)
+	urt :=-10;			% rotation of the unit cell
+	sfh := 0.7;			% horizontal scale factor
+	tlh := 0.00;			% horizontal tilt factor of the layer
+	tlv :=-0.15;			% vertical tilt factor of the layer
+elseif drawingmode="StdTilt":
+	ut := 24bp;			% base unit (general, and for unit cells)
+	vt := 4.5ut;			% base unit (for graph)
+	th :=-0.75;      		% horizontal tilt factor of the unit cell
+	tv :=-0.15;			% vertical tilt factor of the unit cell
+	tlh := 0.00;			% horizontal tilt factor of the layer
+	tlv :=-0.15;			% vertical tilt factor of the layer
+elseif drawingmode="DmdStck":	% to be implemented
+	show "not implemented yet";
+elseif drawingmode="StdStck":	% to be implemented
+	show "not implemented yet";
 fi;
 >>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
 
-numeric dt; dt := .2ut;			% size of a vertex
+numeric dt; dt := .25ut;		% size of a vertex
 numeric it; it := 1.0bp; % 0.7bp	% width of an edge
 
 % ** drawing routines **********************************************************
@@ -109,32 +154,51 @@ vardef gredge(expr A,B,clr,emode) =
 	fi;
 enddef;
 
-
-
 % ** definition of the vertex positions ***************************************
 
-% calculates che coordinates of vertices, based on the .pdf dated Sept 8, 2018
+% calculates the coordinates of vertices, based on the .pdf dated Sept 8, 2018
 vardef PV(expr c,i,j,u,p,q) =
-	if drawingmode=1:	% diamond shape unit cells
+numeric pqb; pqb := 2*p+q-1.5;		% balanced unit-cell coordinate
+numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
+	if drawingmode="DmdRect":
 		+ c*(-sfh*vt,-vt)		% c: index of the Chimera layers
 		+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
-		+ (2*p+q-1.5)*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
-	elseif drawingmode=2:	% 2x4 shape unit cells
+		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
+	elseif drawingmode="StdRect":
 		+ c*(-vt,-vt)			% c: index of the Chimera layers
 		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
-		- (u-0.5)*(1.3ut,0)		% u: horizontal index of the vertices inside the unit cells
-		+ (2*p+q-1.5)*(0,ut)		% 2*p+q: vertical index of the vertices inside the unit cells
-		+ ( (2*p+q-1.5)*th*ut, (-1)**u*tv*ut ) 				% tilting of the unit cells
+		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
+		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
+		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
+	elseif drawingmode="DmdTilt":
+		+ c*(-sfh*vt,-vt)		% c: index of the Chimera layers
+		+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
+		+ j*(0,3.25vt)			% j: vertical index of the unit cells
+		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
+		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
+	elseif drawingmode="StdTilt":
+		+ c*(-vt,-vt)			% c: index of the Chimera layers
+		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
+		+ j*(0,3.25vt)			% j: vertical index of the unit cells
+		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
+		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
+		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
+		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
+	elseif drawingmode="DmdStck":	% to be implemented
+	elseif drawingmode="StdStck":	% to be implemented
 	fi
 enddef;
 
+<<<<<<< HEAD
 numeric L; L := 5;	% size of the Chimera blocks, $L\times L$
 
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 
 >>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
 % ** Graph definitions ********************************************************
@@ -258,7 +322,6 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 	fi;
 enddef;
 
-
 % drawing vertices for unit cell of coordinates c,i,j
 vardef ucvertex(expr c,i,j) =
 				for u = 0 upto 1:
@@ -273,7 +336,7 @@ enddef;
 
 % ** unit cells ***************************************************************
 
-outputtemplate := "fig_Chimera"&decimal(drawingmode)&"UC.eps";
+outputtemplate := "fig_Chimera"&drawingmode&"UC.eps";
 beginfig(0)
 	numeric c,i,j;
 	c := 0;
@@ -283,7 +346,7 @@ beginfig(0)
 				ucvertex(c,i,j);
 endfig;
 
-outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"UC.eps";
+outputtemplate := "fig_Pegasus"&drawingmode&"UC.eps";
 beginfig(0)
 	numeric c,i,j;
 	c := 0;
@@ -294,8 +357,6 @@ beginfig(0)
 				ucvertex(c,i,j);
 
 endfig;
-
-
 
 % ** 3xLxL layout *************************************************************
 
@@ -318,10 +379,7 @@ ChimeraLL := image(
 				edgeeq("10",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
-
-
 ); % of ChimeraLL
-
 
 picture PegasusLLone;
 PegasusLLone := image(
@@ -349,14 +407,21 @@ PegasusLLone := image(
 	endfor;
 	numeric c,i,j;
 	c := 1;
+<<<<<<< HEAD
 	i := 2;
 	j := 2;
 				edgeeq("2a",c,i,j,cdblue,"continuous");
+=======
+	i := 1;
+	j := 1;
+				edgeeq("2a",c,i,j,cblue,"continuous");
+>>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 				edgeeq("2b",c,i,j,cred,"continuous");
 %				edgeeq("2c",c,i,j,cdblue,"continuous");
 %				edgeeq("2d",c,i,j,cred,"continuous");
 				edgeeq("3",c,i,j,corange,"continuous");
 				edgeeq("4",c,i,j,cgreen,"continuous");
+<<<<<<< HEAD
 <<<<<<< HEAD
 				edgeeq("5a",c,i,j,cred,"continuous");
 				edgeeq("5b",c,i,j,cdblue,"continuous");
@@ -368,9 +433,14 @@ PegasusLLone := image(
 				edgeeq("5b",c,i,j,cblue,"dashed");
 				edgeeq("6",c,i,j,corange,"dashed");
 				edgeeq("7",c,i,j,cgreen,"dashed");
+=======
+				edgeeq("5a",c,i,j,cred,"continuous");
+				edgeeq("5b",c,i,j,cblue,"continuous");
+				edgeeq("6",c,i,j,corange,"continuous");
+				edgeeq("7",c,i,j,cgreen,"continuous");
+>>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 ); % of PegasusLLone
 >>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
-
 
 picture PegasusLLfull;
 PegasusLLfull := image(
@@ -466,8 +536,6 @@ PegasusLLfullblue := image(
 	endfor;
 ); % of PegasusLLfullblue
 
-
-
 picture ChimeraLLDots;
 ChimeraLLDots := image(
 	numeric c;
@@ -478,8 +546,6 @@ ChimeraLLDots := image(
 			endfor;
 		endfor;
 ); % of ChimeraLLDots
-
-
 
 picture PegasusLLDots;
 PegasusLLDots := image(
@@ -492,27 +558,26 @@ PegasusLLDots := image(
 	endfor;
 ); % of PegasusLLDots
 
-
 % output
-outputtemplate := "fig_Chimera"&decimal(drawingmode)&"LL.eps";
+outputtemplate := "fig_Chimera"&drawingmode&decimal(L)&"x"&decimal(L)&".eps";
 beginfig(0)
 	draw ChimeraLL;
 	draw ChimeraLLDots;
 endfig;
 
-outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLone.eps";
+outputtemplate := "fig_Pegasus"&drawingmode&decimal(L)&"x"&decimal(L)&"one.eps";
 beginfig(0)
 	draw PegasusLLone;
 	draw PegasusLLDots;
 endfig;
 
-outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLfull.eps";
+outputtemplate := "fig_Pegasus"&drawingmode&decimal(L)&"x"&decimal(L)&"full.eps";
 beginfig(0)
 	draw PegasusLLfull;
 	draw PegasusLLDots;
 endfig;
 
-outputtemplate := "fig_Pegasus"&decimal(drawingmode)&"LLfullblue.eps";
+outputtemplate := "fig_Pegasus"&drawingmode&decimal(L)&"x"&decimal(L)&"fullblue.eps";
 beginfig(0)
 	draw PegasusLLfullblue;
 	draw PegasusLLDots;
