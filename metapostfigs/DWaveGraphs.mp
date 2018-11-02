@@ -24,15 +24,6 @@ fi;
 
 % ** color definitions *********************************************************
 color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   0,  0,  0
-<<<<<<< HEAD
-color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;
-%color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
-color cred;	cred   := (       1,       0,       0);
-color clblue; 	clblue := ( 180    , 206    , 256    )/256;     
-color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
-%color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     
-color cdblue;	cdblue := (       0,       0,       1);
-=======
 color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;	% hsv:   
 %color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
 color cred;	cred   := (       1,       0,       0)    ;	% hsv:   
@@ -40,46 +31,9 @@ color clblue; 	clblue := ( 180    , 206    , 256    )/256;     % hsv:
 %color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
 color cblue;	cblue  := (       0,       0,       1)    ;     % hsv: 
 color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
->>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
 color cgreen ;	cgreen := (       0,       1,       0)    ;	% hsv: 
 
-<<<<<<< HEAD
-%color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
-color cgreen;	cgreen := (       0,    0.95,       0);
-%color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
-color corange;	corange:= (       1,     0.5,       0);
-
-
-
-% ** units *********************************************************************
-
-<<<<<<< HEAD
-% base unit (general, and for unit cells)
-numeric ut; ut := 24bp;
-
-% base unit (for graph)
-numeric vt; vt := 4.5ut;
-
-% size of a vertex
-numeric dt; dt := .25ut;
-
-% width of an edge
-%numeric it; it := .7bp;
-numeric it; it := 1.5bp;
-
-% rotation of the unit cell
-numeric urt; urt := 12;
-%numeric urt; urt := 0;
-
-% horizontal scale factor
-numeric sfh; sfh := 0.7;
-%numeric sfh; sfh := 1;
-=======
-numeric drawingmode;
-%drawingmode := 1;			% diamond shape unit cells
-drawingmode := 2;			% 2x4 shape unit cells
-=======
 color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
 %color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
 color corange;	corange:= (       1,     0.5,       0)    ;	% hsv:  37,100,100
@@ -97,7 +51,6 @@ drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
 % not implemented yet:
 %drawingmode := "DmdStck";		%   diamond	  parallelogram, stacked one on top of the other
 %drawingmode := "StdStck";		%   2x4		  parallelogram, stacked one on top of the other
->>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 
 numeric ut, vt, urt, sfh; 
 numeric th,tv,tlh,tlv;
@@ -131,7 +84,6 @@ elseif drawingmode="DmdStck":	% to be implemented
 elseif drawingmode="StdStck":	% to be implemented
 	show "not implemented yet";
 fi;
->>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
 
 numeric dt; dt := .25ut;		% size of a vertex
 numeric it; it := 1.0bp; % 0.7bp	% width of an edge
@@ -191,16 +143,7 @@ numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
 	fi
 enddef;
 
-<<<<<<< HEAD
-numeric L; L := 5;	% size of the Chimera blocks, $L\times L$
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
-
->>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
 % ** Graph definitions ********************************************************
 
 % drawing edges defined by the equations, for given unit cell coordinates c,i,j
@@ -233,41 +176,19 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 							gredge( PV(c,i,j,u,p,0), PV(c,i,j,u,p,1), clr, emode ); 
 					endfor;
 				endfor;
-	elseif eq = "2a":	% equation (2) for u=0, c=0 
+	elseif eq = "2a":	% equation (2) for u=0
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(0,i,j,0,0,q), PV((0+1)mod3,i,j,1,pp,qp), clr, emode ); 
+							gredge( PV(c,i,j,0,0,q), PV((c+1)mod3,i,j,1,pp,qp), clr, emode ); 
 						endfor;
 						endfor;
 					endfor;
-	elseif eq = "2b":	% equation (2) for u=1, c=0
+	elseif eq = "2b":	% equation (2) for u=1
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
-							gredge( PV(0,i,j,1,0,q), PV((0+1)mod3,i,j,0,pp,qp), clr, emode ); 
-						endfor;
-						endfor;
-					endfor;
-	elseif eq = "2c":	% equation (2) for u=0, c > 1
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-%                                               for c = 1 upto 2:
-%                                               for c = 1 upto 1:
-%                                               for c = 2 upto 2:
-							gredge( PV(1,i,j,0,0,q), PV(2,i,j,1,pp,qp), clr, emode ); 
-%                                               endfor;
-						endfor;
-						endfor;
-					endfor;
-	elseif eq = "2d":	% equation (2) for u=1, c > 1
-					for pp = 0 upto 1:
-						for q = 0 upto 1:
-						for qp = 0 upto 1:
-                                                for c = 1 upto 2:
 							gredge( PV(c,i,j,1,0,q), PV((c+1)mod3,i,j,0,pp,qp), clr, emode ); 
-                                                endfor;
 						endfor;
 						endfor;
 					endfor;
@@ -407,40 +328,17 @@ PegasusLLone := image(
 	endfor;
 	numeric c,i,j;
 	c := 1;
-<<<<<<< HEAD
-	i := 2;
-	j := 2;
-				edgeeq("2a",c,i,j,cdblue,"continuous");
-=======
 	i := 1;
 	j := 1;
 				edgeeq("2a",c,i,j,cblue,"continuous");
->>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 				edgeeq("2b",c,i,j,cred,"continuous");
-%				edgeeq("2c",c,i,j,cdblue,"continuous");
-%				edgeeq("2d",c,i,j,cred,"continuous");
 				edgeeq("3",c,i,j,corange,"continuous");
 				edgeeq("4",c,i,j,cgreen,"continuous");
-<<<<<<< HEAD
-<<<<<<< HEAD
-				edgeeq("5a",c,i,j,cred,"continuous");
-				edgeeq("5b",c,i,j,cdblue,"continuous");
-				edgeeq("6",c,i,j,corange,"continous");
-				edgeeq("7",c,i,j,cgreen,"continous");
-); % of PegasusLL
-=======
-				edgeeq("5a",c,i,j,cred,"dashed");
-				edgeeq("5b",c,i,j,cblue,"dashed");
-				edgeeq("6",c,i,j,corange,"dashed");
-				edgeeq("7",c,i,j,cgreen,"dashed");
-=======
 				edgeeq("5a",c,i,j,cred,"continuous");
 				edgeeq("5b",c,i,j,cblue,"continuous");
 				edgeeq("6",c,i,j,corange,"continuous");
 				edgeeq("7",c,i,j,cgreen,"continuous");
->>>>>>> 5093597436f0b24394e75f3cab61cbd36babe563
 ); % of PegasusLLone
->>>>>>> c497fe2992ffc6efe3c0594e2b36abc143dafdd6
 
 picture PegasusLLfull;
 PegasusLLfull := image(
@@ -470,10 +368,8 @@ PegasusLLfull := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("2a",c,i,j,cdblue,"continuous");
+				edgeeq("2a",c,i,j,cblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
-%				edgeeq("2c",c,i,j,cdblue,"continuous");
-%				edgeeq("2d",c,i,j,cred,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-1:
@@ -514,18 +410,16 @@ PegasusLLfullblue := image(
 			endfor;
 		endfor;
 	endfor;
-		for i = 0 upto L-1:
-			for j = 0 upto L-1:
-				edgeeq("2a",0,i,j,clblue,"continuous");
-				edgeeq("2b",0,i,j,clblue,"continuous");
-%				edgeeq("2c",1,i,j,cdblue,"continuous");
-%				edgeeq("2d",1,i,j,cdblue,"continuous");
-                        endfor;
-                endfor;
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("2a",c,i,j,cdblue,"continuous");
+				edgeeq("2b",c,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("3",c,i,j,cdblue,"continuous");
+				edgeeq("3",c,i,j,clblue,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
