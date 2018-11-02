@@ -32,7 +32,7 @@ color clblue; 	clblue := ( 180    , 206    , 256    )/256;     % hsv:
 color cblue;	cblue  := (       0,       0,       1)    ;     % hsv: 
 color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
-color cgreen ;	cgreen := (       0,       1,       0)    ;	% hsv: 
+color cgreen ;	cgreen := (       0,    0.95,       0)    ;	% hsv: 
 
 color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
 %color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
