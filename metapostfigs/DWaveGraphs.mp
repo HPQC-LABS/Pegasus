@@ -30,7 +30,8 @@ color cred;	cred   := (       1,       0,       0)    ;	% hsv:
 color clblue; 	clblue := ( 180    , 206    , 256    )/256;     % hsv: 
 %color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
 color cblue;	cblue  := (       0,       0,       1)    ;     % hsv: 
-color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
+%color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
+color cdblue;	cdblue := .4cblue + .6clblue;
 color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
 color cgreen ;	cgreen := (       0,    0.95,       0)    ;	% hsv: 
 
@@ -44,10 +45,10 @@ numeric L;	% size of the Chimera blocks, $L\times L$
 L := 3;
 
 string drawingmode;			% unit cells:	layers:
-drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
+%drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
 %drawingmode := "StdRect";		%   2x4		  rectangular, one behind the other
 %drawingmode := "DmdTilt"; 		%   diamond	  parallelogram, one behind the other
-%drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
+drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
 % not implemented yet:
 %drawingmode := "DmdStck";		%   diamond	  parallelogram, stacked one on top of the other
 %drawingmode := "StdStck";		%   2x4		  parallelogram, stacked one on top of the other
@@ -410,21 +411,25 @@ PegasusLLfullblue := image(
 			endfor;
 		endfor;
 	endfor;
+	color cblues[];
+	cblues[0] := cdblue;
+	cblues[1] := cblue;
+	cblues[2] := clblue;
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("2a",c,i,j,cdblue,"continuous");
-				edgeeq("2b",c,i,j,clblue,"continuous");
+				edgeeq("2a",c,i,j,cblues[c],"continuous");
+				edgeeq("2b",c,i,j,cblues[c],"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("3",c,i,j,clblue,"continuous");
+				edgeeq("3",c,i,j,cblues[c],"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("4",c,i,j,cdblue,"continuous");
+				edgeeq("4",c,i,j,cblues[c],"continuous");
 			endfor;
 		endfor;
 	endfor;
