@@ -145,6 +145,8 @@ numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
 		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
 		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
+	elseif drawingmode="DmdHexa":	% to be implemented
+	elseif drawingmode="StdHexa":	% to be implemented
 	elseif drawingmode="DmdStck":	% to be implemented
 	elseif drawingmode="StdStck":	% to be implemented
 	fi
