@@ -42,7 +42,7 @@ color corange;	corange:= (       1,     0.5,       0)    ;	% hsv:  37,100,100
 % ** units *********************************************************************
 
 numeric L;	% size of the Chimera blocks, $L\times L$
-L := 3;
+L := 5;
 
 string drawingmode;			% unit cells:	layers:
 %drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
@@ -50,6 +50,8 @@ string drawingmode;			% unit cells:	layers:
 %drawingmode := "DmdTilt"; 		%   diamond	  parallelogram, one behind the other
 drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
 % not implemented yet:
+%drawingmode := "DmdHexa";		%   diamond	  hexagonal-like, one behind the other
+%drawingmode := "StdHexa";		%   2x4		  hexagonal-like, one behind the other
 %drawingmode := "DmdStck";		%   diamond	  parallelogram, stacked one on top of the other
 %drawingmode := "StdStck";		%   2x4		  parallelogram, stacked one on top of the other
 
@@ -59,27 +61,31 @@ numeric th,tv,tlh,tlv;
 if drawingmode="DmdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	urt :=-10;			% rotation of the unit cell
-	sfh := 0.7;			% horizontal scale factor
+	urt :=-24;			% rotation of the unit cell
+	sfh := 1.3;			% horizontal scale factor
 elseif drawingmode="StdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	th :=-0.75;      		% horizontal tilt factor of the unit cell
+	th :=-0.55;      		% horizontal tilt factor of the unit cell
 	tv :=-0.15;			% vertical tilt factor of the unit cell
 elseif drawingmode="DmdTilt":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	urt :=-10;			% rotation of the unit cell
-	sfh := 0.7;			% horizontal scale factor
+	urt :=-30;			% rotation of the unit cell
+	sfh := 1.3;			% horizontal scale factor
 	tlh := 0.00;			% horizontal tilt factor of the layer
 	tlv :=-0.15;			% vertical tilt factor of the layer
 elseif drawingmode="StdTilt":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	th :=-0.75;      		% horizontal tilt factor of the unit cell
-	tv :=-0.15;			% vertical tilt factor of the unit cell
+	th :=-0.55;      		% horizontal tilt factor of the unit cell
+	tv :=-0.25;			% vertical tilt factor of the unit cell
 	tlh := 0.00;			% horizontal tilt factor of the layer
 	tlv :=-0.15;			% vertical tilt factor of the layer
+elseif drawingmode="DmdHexa":	% to be implemented
+	show "not implemented yet";
+elseif drawingmode="StdHexa":	% to be implemented
+	show "not implemented yet";
 elseif drawingmode="DmdStck":	% to be implemented
 	show "not implemented yet";
 elseif drawingmode="StdStck":	% to be implemented
@@ -109,36 +115,38 @@ enddef;
 
 % ** definition of the vertex positions ***************************************
 
-% calculates the coordinates of vertices, based on the .pdf dated Sept 8, 2018
+% calculates the coordinates of vertices,
 vardef PV(expr c,i,j,u,p,q) =
 numeric pqb; pqb := 2*p+q-1.5;		% balanced unit-cell coordinate
 numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
 	if drawingmode="DmdRect":
-		+ c*(-sfh*vt,-vt)		% c: index of the Chimera layers
+		+ c*(sfh*vt,vt)			% c: index of the Chimera layers
 		+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
 		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
 	elseif drawingmode="StdRect":
-		+ c*(-vt,-vt)			% c: index of the Chimera layers
+		+ c*(vt,vt)			% c: index of the Chimera layers
 		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
 		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
 		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
 	elseif drawingmode="DmdTilt":
-		+ c*(-sfh*vt,-vt)		% c: index of the Chimera layers
+		+ c*(sfh*vt,vt)			% c: index of the Chimera layers
 		+ i*(sfh*3.25vt,0)		% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
 		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
 		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
 	elseif drawingmode="StdTilt":
-		+ c*(-vt,-vt)			% c: index of the Chimera layers
+		+ c*(vt,vt)			% c: index of the Chimera layers
 		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
 		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
 		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
 		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
+	elseif drawingmode="DmdHexa":	% to be implemented
+	elseif drawingmode="StdHexa":	% to be implemented
 	elseif drawingmode="DmdStck":	% to be implemented
 	elseif drawingmode="StdStck":	% to be implemented
 	fi
@@ -148,8 +156,9 @@ enddef;
 % ** Graph definitions ********************************************************
 
 % drawing edges defined by the equations, for given unit cell coordinates c,i,j
+% based on the .pdf dated Nov 8, 2018
 vardef edgeeq(expr eq, c,i,j,clr,emode) =
-	if eq = "8":		% equation (8): K_{4,4} edges in unit cells
+	if eq = "10":		% equation (10): K_{4,4} edges in unit cells
 					for p = 0 upto 1:
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
@@ -159,13 +168,13 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 						endfor;
 					endfor;
 					endfor;
-	elseif eq = "9":	% equation (9): vertical couplings
+	elseif eq = "11":	% equation (11): vertical couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,0,p,q), PV(c,i,j+1,0,p,q), clr, emode ); 
 						endfor;
 					endfor;
-	elseif eq = "10":	% equation (10): horizontal couplings
+	elseif eq = "12":	% equation (12): horizontal couplings
 					for p = 0 upto 1:
 						for q = 0 upto 1:
 							gredge( PV(c,i,j,1,p,q), PV(c,i+1,j,1,p,q), clr, emode ); 
@@ -210,6 +219,22 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 						endfor;
 					endfor;
 	elseif eq = "5a":	% equation (5) for u=0
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(2,i,j,0,0,q), PV(0,i+1,j+1,1,pp,qp), clr, emode ); 
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "5b":	% equation (5) for u=1
+					for pp = 0 upto 1:
+						for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(2,i,j,1,0,q), PV(0,i+1,j+1,0,pp,qp), clr, emode ); 
+						endfor;
+						endfor;
+					endfor;
+	elseif eq = "6a":	% equation (6a) for u=0
 					for p = 0 upto 1:
 					for q = 0 upto 1:
 						for qp = 0 upto 1:
@@ -217,7 +242,7 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 						endfor;
 					endfor;
 					endfor;
-	elseif eq = "5b":	% equation (5) for u=1
+	elseif eq = "6b":	% equation (6b) for u=1
 					for p = 0 upto 1:
 					for q = 0 upto 1:
 						for qp = 0 upto 1:
@@ -225,7 +250,7 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 						endfor;
 					endfor;
 					endfor;
-	elseif eq = "6":	% equation (6)
+	elseif eq = "7":	% equation (7)
 					for p = 0 upto 1:
 					for q = 0 upto 1:
 						for qp = 0 upto 1:
@@ -233,11 +258,27 @@ vardef edgeeq(expr eq, c,i,j,clr,emode) =
 						endfor;
 					endfor;
 					endfor;
-	elseif eq = "7":	% equation (7)
+	elseif eq = "8":	% equation (8)
 					for p = 0 upto 1:
 					for q = 0 upto 1:
 						for qp = 0 upto 1:
 							gredge( PV(c,i,j,1,p,q), PV((c-1)mod3,i-1,j,0,1,qp), clr, emode );
+						endfor;
+					endfor;
+					endfor;
+	elseif eq = "9a":	% equation (9) for u=0
+					for p = 0 upto 1:
+					for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(0,i,j,0,p,q), PV(2,i-1,j-1,1,0,qp), clr, emode );
+						endfor;
+					endfor;
+					endfor;
+	elseif eq = "9b":	% equation (9) for u=1
+					for p = 0 upto 1:
+					for q = 0 upto 1:
+						for qp = 0 upto 1:
+							gredge( PV(0,i,j,1,p,q), PV(2,i-1,j-1,0,0,qp), clr, emode );
 						endfor;
 					endfor;
 					endfor;
@@ -264,7 +305,7 @@ beginfig(0)
 	c := 0;
 	i := 0;
 	j := 0;
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 				ucvertex(c,i,j);
 endfig;
 
@@ -275,7 +316,7 @@ beginfig(0)
 	i := 0;
 	j := 0;
 				edgeeq("1",c,i,j,cblack,"continuous");
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 				ucvertex(c,i,j);
 
 endfig;
@@ -288,17 +329,17 @@ ChimeraLL := image(
 	c := 2;
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("9",c,i,j,cgrey,"continuous");
+				edgeeq("11",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("10",c,i,j,cgrey,"continuous");
+				edgeeq("12",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 ); % of ChimeraLL
@@ -308,7 +349,7 @@ PegasusLLone := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 				edgeeq("1",c,i,j,cblack,"continuous");
 			endfor;
 		endfor;
@@ -316,29 +357,29 @@ PegasusLLone := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("9",c,i,j,cgrey,"continuous");
+				edgeeq("11",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
 	for c = 0 upto 2:
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("10",c,i,j,cgrey,"continuous");
+				edgeeq("12",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
 	numeric c,i,j;
 	c := 1;
-	i := 1;
-	j := 1;
+	i := 2;
+	j := 2;
 				edgeeq("2a",c,i,j,cblue,"continuous");
 				edgeeq("2b",c,i,j,cred,"continuous");
 				edgeeq("3",c,i,j,corange,"continuous");
 				edgeeq("4",c,i,j,cgreen,"continuous");
-				edgeeq("5a",c,i,j,cred,"continuous");
-				edgeeq("5b",c,i,j,cblue,"continuous");
-				edgeeq("6",c,i,j,corange,"continuous");
-				edgeeq("7",c,i,j,cgreen,"continuous");
+				edgeeq("6a",c,i,j,cred,"continuous");
+				edgeeq("6b",c,i,j,cblue,"continuous");
+				edgeeq("7",c,i,j,corange,"continuous");
+				edgeeq("8",c,i,j,cgreen,"continuous");
 ); % of PegasusLLone
 
 picture PegasusLLfull;
@@ -347,7 +388,7 @@ PegasusLLfull := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 				edgeeq("1",c,i,j,cblack,"continuous");
 			endfor;
 		endfor;
@@ -355,18 +396,18 @@ PegasusLLfull := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("9",c,i,j,cgrey,"continuous");
+				edgeeq("11",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
 	for c = 0 upto 2:
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("10",c,i,j,cgrey,"continuous");
+				edgeeq("12",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
-	for c = 0 upto 2:
+	for c = 0 upto 1:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
 				edgeeq("2a",c,i,j,cblue,"continuous");
@@ -384,6 +425,13 @@ PegasusLLfull := image(
 			endfor;
 		endfor;
 	endfor;
+
+		for i = 0 upto L-2:
+			for j = 0 upto L-2:
+				edgeeq("5a",2,i,j,cblue,"continuous");
+				edgeeq("5b",2,i,j,cred,"continuous");
+			endfor;
+		endfor;
 ); % of PegasusLLfull
 
 picture PegasusLLfullblue;
@@ -392,7 +440,7 @@ PegasusLLfullblue := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
-				edgeeq("8",c,i,j,cgrey,"continuous");
+				edgeeq("10",c,i,j,cgrey,"continuous");
 				edgeeq("1",c,i,j,cblack,"continuous");
 			endfor;
 		endfor;
@@ -400,14 +448,14 @@ PegasusLLfullblue := image(
 	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("9",c,i,j,cgrey,"continuous");
+				edgeeq("11",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
 	for c = 0 upto 2:
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("10",c,i,j,cgrey,"continuous");
+				edgeeq("12",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
@@ -415,7 +463,7 @@ PegasusLLfullblue := image(
 	cblues[0] := cdblue;
 	cblues[1] := cblue;
 	cblues[2] := clblue;
-	for c = 0 upto 2:
+	for c = 0 upto 1:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
 				edgeeq("2a",c,i,j,cblues[c],"continuous");
@@ -433,6 +481,13 @@ PegasusLLfullblue := image(
 			endfor;
 		endfor;
 	endfor;
+
+		for i = 0 upto L-2:
+			for j = 0 upto L-2:
+				edgeeq("5a",2,i,j,cblues[2],"continuous");
+				edgeeq("5b",2,i,j,cblues[2],"continuous");
+			endfor;
+		endfor;
 ); % of PegasusLLfullblue
 
 picture ChimeraLLDots;

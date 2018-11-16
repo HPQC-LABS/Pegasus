@@ -94,6 +94,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -106,6 +107,7 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
+
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -146,6 +148,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -278,7 +281,7 @@ name "fig:chimera"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdRect3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
 	width 90col%
 
 \end_inset
@@ -908,7 +911,7 @@ The
  cells are given by the equation
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=0,m,n)\rightarrow(i,j,k,l=1,m',n').\label{eq:k44}
+(i,j,k,0,m,n)\rightarrow(i,j,k,1,m',n').\label{eq:k44}
 \end{equation}
 
 \end_inset
@@ -952,7 +955,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=1,m,n)\rightarrow(i+1,j,k,l=1,m,n),\label{eq:chimera_horizontal}
+(i,j,k,1,m,n)\rightarrow(i+1,j,k,1,m,n),\label{eq:chimera_horizontal}
 \end{equation}
 
 \end_inset
@@ -971,7 +974,7 @@ and the vertical lines can be described by adding 1 to
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=0,m,n)\rightarrow(i,j+1,k,l=0,m,n).\label{eq:chimera_vertical}
+(i,j,k,0,m,n)\rightarrow(i,j+1,k,0,m,n).\label{eq:chimera_vertical}
 \end{equation}
 
 \end_inset
@@ -1065,7 +1068,7 @@ Pegasus first adds connections within each
  cell, given by the equation
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l,m,n=0)\rightarrow(i,j,k,l,m,n=1).\label{eq:uc_add}
+(i,j,k,l,m,0)\rightarrow(i,j,k,l,m,1).\label{eq:uc_add}
 \end{equation}
 
 \end_inset
@@ -1126,6 +1129,10 @@ The rest of the new connections in Pegasus come from connecting the
 
 \begin_layout Standard
 For the 
+\begin_inset Formula $k=0,1$
+\end_inset
+
+ layers, for the 
 \begin_inset Formula $m=0$
 \end_inset
 
@@ -1152,7 +1159,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=0,m=0,n)\rightarrow(i,j,k+1,l=1,m',n'),\label{eq:outgoing_same_ij1}
+(i,j,k,0,0,n)\rightarrow(i,j,k+1,1,m',n'),\label{eq:outgoing_same_ij1}
 \end{equation}
 
 \end_inset
@@ -1160,25 +1167,20 @@ For the
 
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=1,m=0,n)\rightarrow(i,j,k+1,l=0,m',n').\label{eq:outgoing_same_ij2}
+(i,j,k,1,0,n)\rightarrow(i,j,k+1,0,m',n').\label{eq:outgoing_same_ij2}
 \end{equation}
 
 \end_inset
 
-Note that we have periodicity for the layers: addition for index 
-\begin_inset Formula $k$
-\end_inset
 
- is understood modulo 
-\begin_inset Formula $K=3$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
 For the 
+\begin_inset Formula $k=0,1$
+\end_inset
+
+ layers, for the 
 \begin_inset Formula $m=1$
 \end_inset
 
@@ -1193,7 +1195,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=0,m=1,n)\rightarrow(i+1,j,k+1,l=1,m',n'),\label{eq:outgoing_ip1}
+(i,j,k,0,1,n)\rightarrow(i+1,j,k+1,1,m',n'),\label{eq:outgoing_ip1}
 \end{equation}
 
 \end_inset
@@ -1204,7 +1206,7 @@ For the
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l=1,m=1,n)\rightarrow(i,j+1,k+1,l=0,m',n'),\label{eq:outgoing_jp1}
+(i,j,k,1,1,n)\rightarrow(i,j+1,k+1,0,m',n'),\label{eq:outgoing_jp1}
 \end{equation}
 
 \end_inset
@@ -1231,9 +1233,53 @@ where
 
 \end_inset
 
- Equations 
+ 
+\end_layout
+
+\begin_layout Standard
+For the 
+\begin_inset Formula $k=2$
+\end_inset
+
+ layers, for the 
+\begin_inset Formula $m=0$
+\end_inset
+
+ vertices, there will be connections to the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells in the 
+\begin_inset Formula $k=0$
+\end_inset
+
+ layer.
+ These are defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(i,j,2,0,0,n)\rightarrow(i+1,j+1,0,1,m',n'),\label{eq:outgoing_last_ip1jp11}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+(i,j,2,1,0,n)\rightarrow(i+1,j+1,0,0,m',n').\label{eq:outgoing_last_ip1jp12}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equations 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:outgoing_same_ij1"
 plural "false"
 caps "false"
@@ -1243,7 +1289,7 @@ noprefix "false"
 
 -
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:outgoing_ip1"
 plural "false"
 caps "false"
@@ -1255,12 +1301,48 @@ noprefix "false"
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell.
+ cell in the 
+\begin_inset Formula $k=0,1$
+\end_inset
+
+ layers, while 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_last_ip1jp11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_last_ip1jp12"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ give two types of edges for each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell in the 
+\begin_inset Formula $k=2$
+\end_inset
+
+ layer.
  One Pegasus 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell with the edges given above is depicted in Figure 
+ cell in layer 
+\begin_inset Formula $k=1$
+\end_inset
+
+ with the edges given above is depicted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pegasusone"
@@ -1402,7 +1484,7 @@ name "fig:pegasusone"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdRect3x3one_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
 	width 90col%
 
 \end_inset
@@ -1506,7 +1588,7 @@ name "fig:pegasus"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdRect3x3fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
 	width 90col%
 
 \end_inset
@@ -1575,7 +1657,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdTilt3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraDmdTilt5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1587,7 +1669,7 @@ name "fig:ChimeraAndPegasus3"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdRect3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1599,7 +1681,7 @@ name "fig:ChimeraAndPegasus3"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdTilt3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1617,7 +1699,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdTilt3x3one_crop.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5one_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1629,7 +1711,7 @@ name "fig:ChimeraAndPegasus3"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdRect3x3one_crop.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1641,7 +1723,7 @@ name "fig:ChimeraAndPegasus3"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdTilt3x3one_crop.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5one_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1770,7 +1852,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdTilt3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraDmdTilt5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1782,7 +1864,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdRect3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1794,7 +1876,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdTilt3x3_crop.pdf
+	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1812,7 +1894,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdTilt3x3fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1824,7 +1906,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdRect3x3fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
 	width 25text%
 	height 25text%
 
@@ -1836,7 +1918,7 @@ name "fig:ChimeraAndPegasus3_repeated"
 
 
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdTilt3x3fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
 	width 25text%
 	height 25text%
 
