@@ -46,9 +46,9 @@ L := 5;
 
 string drawingmode;			% unit cells:	layers:
 %drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
-%drawingmode := "StdRect";		%   2x4		  rectangular, one behind the other
+drawingmode := "StdRect";		%   2x4		  rectangular, one behind the other
 %drawingmode := "DmdTilt"; 		%   diamond	  parallelogram, one behind the other
-drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
+%drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
 % not implemented yet:
 %drawingmode := "DmdHexa";		%   diamond	  hexagonal-like, one behind the other
 %drawingmode := "StdHexa";		%   2x4		  hexagonal-like, one behind the other
