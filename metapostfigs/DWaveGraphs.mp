@@ -45,10 +45,10 @@ numeric L;	% size of the Chimera blocks, $L\times L$
 L := 5;
 
 string drawingmode;			% unit cells:	layers:
-%drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
+drawingmode := "DmdRect";		%   diamond	  rectangular, one behind the other
 %drawingmode := "StdRect";		%   2x4		  rectangular, one behind the other
 %drawingmode := "DmdTilt"; 		%   diamond	  parallelogram, one behind the other
-drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
+%drawingmode := "StdTilt";		%   2x4		  parallelogram, one behind the other
 % not implemented yet:
 %drawingmode := "DmdHexa";		%   diamond	  hexagonal-like, one behind the other
 %drawingmode := "StdHexa";		%   2x4		  hexagonal-like, one behind the other
@@ -61,13 +61,13 @@ numeric th,tv,tlh,tlv;
 if drawingmode="DmdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	urt :=-24;			% rotation of the unit cell
+	urt :=-30;			% rotation of the unit cell
 	sfh := 1.3;			% horizontal scale factor
 elseif drawingmode="StdRect":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	th :=-0.55;      		% horizontal tilt factor of the unit cell
-	tv :=-0.15;			% vertical tilt factor of the unit cell
+	th :=-0.85;      		% horizontal tilt factor of the unit cell
+	tv :=-0.20;			% vertical tilt factor of the unit cell
 elseif drawingmode="DmdTilt":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
@@ -78,7 +78,7 @@ elseif drawingmode="DmdTilt":
 elseif drawingmode="StdTilt":
 	ut := 24bp;			% base unit (general, and for unit cells)
 	vt := 4.5ut;			% base unit (for graph)
-	th :=-0.55;      		% horizontal tilt factor of the unit cell
+	th :=-0.85;      		% horizontal tilt factor of the unit cell
 	tv :=-0.25;			% vertical tilt factor of the unit cell
 	tlh := 0.00;			% horizontal tilt factor of the layer
 	tlv :=-0.15;			% vertical tilt factor of the layer
@@ -125,11 +125,11 @@ numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
 		+ j*(0,3.25vt)			% j: vertical index of the unit cells
 		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
 	elseif drawingmode="StdRect":
-		+ c*(vt,vt)			% c: index of the Chimera layers
+		+ c*(vt,1.2vt)			% c: index of the Chimera layers
 		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
-		+ j*(0,3.25vt)			% j: vertical index of the unit cells
-		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
-		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
+		+ j*(0,1.2*3.25vt)			% j: vertical index of the unit cells
+		- ub*(1.5ut,0)			% u: horizontal index of the vertices inside the unit cells
+		+ pqb*(0,1.2ut)			% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
 	elseif drawingmode="DmdTilt":
 		+ c*(sfh*vt,vt)			% c: index of the Chimera layers
@@ -138,12 +138,12 @@ numeric ub; ub := u-0.5;		% balanced unit-cell coordinate
 		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
 		+ pqb*(u,-sfh*(1-u))*ut rotated (+90+urt)		% 2*p+q:  u: vertical or horizontal
 	elseif drawingmode="StdTilt":
-		+ c*(vt,vt)			% c: index of the Chimera layers
+		+ c*(vt,1.2vt)			% c: index of the Chimera layers
 		+ i*(3.25vt,0)			% i: horizontal index of the unit cells
-		+ j*(0,3.25vt)			% j: vertical index of the unit cells
-		+ (j*tlh*3.25vt,i*tlv*3.25vt)	% tilting of the lattice
-		- ub*(1.3ut,0)			% u: horizontal index of the vertices inside the unit cells
-		+ pqb*(0,ut)			% 2*p+q: vertical index of the vertices inside the unit cells
+		+ j*(0,1.2*3.25vt)			% j: vertical index of the unit cells
+		+ (j*tlh*3.25vt,i*tlv*1.2*3.25vt)	% tilting of the lattice
+		- ub*(1.5ut,0)			% u: horizontal index of the vertices inside the unit cells
+		+ pqb*(0,1.2ut)			% 2*p+q: vertical index of the vertices inside the unit cells
 		+ ( pqb*th*ut, (-1)**u*tv*ut )	% tilting of the unit cells
 	elseif drawingmode="DmdHexa":	% to be implemented
 	elseif drawingmode="StdHexa":	% to be implemented
@@ -414,6 +414,8 @@ PegasusLLfull := image(
 				edgeeq("2b",c,i,j,cred,"continuous");
 			endfor;
 		endfor;
+	endfor;
+	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
 				edgeeq("3",c,i,j,corange,"continuous");
@@ -470,6 +472,8 @@ PegasusLLfullblue := image(
 				edgeeq("2b",c,i,j,cblues[c],"continuous");
 			endfor;
 		endfor;
+	endfor;
+	for c = 0 upto 2:
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
 				edgeeq("3",c,i,j,cblues[c],"continuous");

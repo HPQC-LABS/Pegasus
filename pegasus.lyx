@@ -1173,8 +1173,8 @@ For the
 \end_layout
 
 \begin_layout Standard
-For the 
-\begin_inset Formula $k=0,1$
+For all the 
+\begin_inset Formula $k$
 \end_inset
 
  layers, for the 
@@ -1287,7 +1287,7 @@ noprefix "false"
 -
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_ip1"
+reference "eq:outgoing_jp1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1305,7 +1305,7 @@ noprefix "false"
  layers, while 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_last_ip1jp11"
+reference "eq:outgoing_ip1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1322,7 +1322,7 @@ noprefix "false"
 
 \end_inset
 
- give two types of edges for each 
+ give four types of edges for each 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1429,10 +1429,30 @@ noprefix "false"
 
 \end_inset
 
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_last_ip1jp11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
 ; red: 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:outgoing_same_ij2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_last_ip1jp12"
 plural "false"
 caps "false"
 noprefix "false"
