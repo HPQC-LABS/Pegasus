@@ -94,6 +94,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -106,6 +107,7 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
+
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -146,6 +148,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -511,11 +514,11 @@ The vertices (qubits)
 
 \begin_layout Standard
 Start with 
-\begin_inset Formula $K$
+\begin_inset Formula $Z$
 \end_inset
 
  layers of Chimera graphs, each being an 
-\begin_inset Formula $I\times J$
+\begin_inset Formula $X\times Y$
 \end_inset
 
  array of 
@@ -523,7 +526,7 @@ Start with
 \end_inset
 
  unit cells (therefore we have an 
-\begin_inset Formula $I\times J\times K$
+\begin_inset Formula $X\times Y\times Z$
 \end_inset
 
  array of 
@@ -532,25 +535,25 @@ Start with
 
  unit cells).
  The indices 
-\begin_inset Formula $(i,j,k)$
+\begin_inset Formula $(x,y,z)$
 \end_inset
 
  will be used to describe the location of each unit cell along the indices
  corresponding to the dimension picked from (
-\begin_inset Formula $I,J,K)$
+\begin_inset Formula $X,Y,Z)$
 \end_inset
 
 .
  The values of 
-\begin_inset Formula $I$
+\begin_inset Formula $X$
 \end_inset
 
  and 
-\begin_inset Formula $J$
+\begin_inset Formula $Y$
 \end_inset
 
  are somewhat flexible, but for Pegasus, 
-\begin_inset Formula $K=3$
+\begin_inset Formula $Z=3$
 \end_inset
 
 .
@@ -559,20 +562,20 @@ Start with
 \end_inset
 
  cell has two parts, labeled 
-\begin_inset Formula $l\in\{0,1\}$
+\begin_inset Formula $i\in\{0,1\}$
 \end_inset
 
 , so that there are 4 qubits (vertices) for every 
-\begin_inset Formula $(i,j,k,l).$
+\begin_inset Formula $(x,y,z,i).$
 \end_inset
 
  We will arbitrarily label these 4 qubits using two more labels: 
-\begin_inset Formula $(m,n)\in\{0,1\}^{2}$
+\begin_inset Formula $(j,k)\in\{0,1\}^{2}$
 \end_inset
 
 .
  Therefore every qubit is associated with 6 indices: 
-\begin_inset Formula $(i,j,k,l,m,n)$
+\begin_inset Formula $(x,y,z,i,j,k)$
 \end_inset
 
 , with their ranges and descriptions given in Table 
@@ -655,7 +658,7 @@ name "tab:IndicesInPegasus"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $i$
+\begin_inset Formula $x$
 \end_inset
 
 
@@ -671,7 +674,7 @@ name "tab:IndicesInPegasus"
 \end_inset
 
  to 
-\begin_inset Formula $I-1$
+\begin_inset Formula $X-1$
 \end_inset
 
 
@@ -694,7 +697,7 @@ Row within a Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $j$
+\begin_inset Formula $y$
 \end_inset
 
 
@@ -710,7 +713,7 @@ Row within a Chimera layer
 \end_inset
 
  to 
-\begin_inset Formula $J-1$
+\begin_inset Formula $Y-1$
 \end_inset
 
 
@@ -733,7 +736,7 @@ Column within a Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $k$
+\begin_inset Formula $z$
 \end_inset
 
 
@@ -772,7 +775,7 @@ Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $l$
+\begin_inset Formula $i$
 \end_inset
 
 
@@ -811,7 +814,7 @@ Bi-partition within
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $m$
+\begin_inset Formula $j$
 \end_inset
 
 
@@ -850,7 +853,7 @@ First index within each part of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $n$
+\begin_inset Formula $k$
 \end_inset
 
 
@@ -905,15 +908,39 @@ The
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells are given by the equation
+ cells are given by:
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,0,m,n)\rightarrow(i,j,k,1,m',n').\label{eq:k44}
+(x,y,z,0,j,k)\longleftrightarrow(x,y,z,1,j',k').\label{eq:k44}
 \end{equation}
 
 \end_inset
 
+This means for each 
+\begin_inset Formula $K_{4,4}$
+\end_inset
 
+ cell, all vertices 
+\begin_inset Formula $(j,k)$
+\end_inset
+
+ for partition 
+\begin_inset Formula $i=0$
+\end_inset
+
+ are coupled to all vertices 
+\begin_inset Formula $(j^{\prime},k^{\prime})$
+\end_inset
+
+ of partition 
+\begin_inset Formula $i=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -939,11 +966,11 @@ noprefix "false"
 \end_inset
 
  can be described by adding 1 to 
-\begin_inset Formula $i$
+\begin_inset Formula $x$
 \end_inset
 
  while keeping all other variables constant and setting 
-\begin_inset Formula $l=1$
+\begin_inset Formula $i=1$
 \end_inset
 
 :
@@ -952,17 +979,17 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,1,m,n)\rightarrow(i+1,j,k,1,m,n),\label{eq:chimera_horizontal}
+(x,y,z,1,j,k)\longleftrightarrow(x+1,y,z,1,j,k),\label{eq:chimera_horizontal}
 \end{equation}
 
 \end_inset
 
 and the vertical lines can be described by adding 1 to 
-\begin_inset Formula $j$
+\begin_inset Formula $y$
 \end_inset
 
  while keeping all other variables constant and setting 
-\begin_inset Formula $l=0$
+\begin_inset Formula $i=0$
 \end_inset
 
 :
@@ -971,7 +998,7 @@ and the vertical lines can be described by adding 1 to
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,0,m,n)\rightarrow(i,j+1,k,0,m,n).\label{eq:chimera_vertical}
+(x,y,z,0,j,k)\longleftrightarrow(x,y+1,z,0,j,k).\label{eq:chimera_vertical}
 \end{equation}
 
 \end_inset
@@ -995,7 +1022,7 @@ where
 \end_inset
 
 For each 
-\begin_inset Formula $k$
+\begin_inset Formula $z$
 \end_inset
 
 , Equations 
@@ -1029,11 +1056,11 @@ noprefix "false"
 \end_inset
 
  define edges connecting vertices labeled by 
-\begin_inset Formula $i,j,m,$
+\begin_inset Formula $x,y,i,$
 \end_inset
 
  and or 
-\begin_inset Formula $n$
+\begin_inset Formula $j$
 \end_inset
 
 .
@@ -1062,10 +1089,18 @@ Pegasus first adds connections within each
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell, given by the equation
+ cell, given by simply coupling each vertex labeled as 
+\begin_inset Formula $k=0$
+\end_inset
+
+ to its 
+\begin_inset Formula $k=1$
+\end_inset
+
+ counterpart with all other variables unchanged:
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,l,m,0)\rightarrow(i,j,k,l,m,1).\label{eq:uc_add}
+(x,y,z,i,j,0)\longleftrightarrow(x,y,z,i,j,1).\label{eq:uc_add}
 \end{equation}
 
 \end_inset
@@ -1088,7 +1123,7 @@ The rest of the new connections in Pegasus come from connecting the
 \end_inset
 
  cells between different layers (different 
-\begin_inset Formula $k$
+\begin_inset Formula $z$
 \end_inset
 
 ) of Chimera graphs.
@@ -1097,11 +1132,11 @@ The rest of the new connections in Pegasus come from connecting the
 \end_inset
 
  cell located at coordinates 
-\begin_inset Formula $(i,j,k)$
+\begin_inset Formula $(x,y,z)$
 \end_inset
 
  will be connected to 
-\begin_inset Formula $2\times3=6$
+\begin_inset Formula $6$
 \end_inset
 
  different 
@@ -1113,58 +1148,102 @@ The rest of the new connections in Pegasus come from connecting the
 \end_inset
 
  cells connected in this way will have 
-\begin_inset Formula $2\times8=16$
+\begin_inset Formula $16$
 \end_inset
 
- different connections in the form of 
-\begin_inset Formula $K_{2,2}$
+ different connections in the form of 2 sets of 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ graphs (each containing 8 connections).
+ All of these connections are between vertices of one 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ partition 
+\begin_inset Formula $i$
+\end_inset
+
+ the complementary partition 
+\begin_inset Formula $\bar{i}$
+\end_inset
+
+ in a different 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ (so 
+\begin_inset Formula $i=0$
+\end_inset
+
+ vertices are coupled to 
+\begin_inset Formula $i=1$
+\end_inset
+
+ vertices).
+ In fact all connections will be of the form 
+\begin_inset Formula $(i,j,k)\rightarrow(\bar{i},j^{\prime},k^{\prime})$
+\end_inset
+
+ where 
+\begin_inset Formula $j^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $k^{\prime}$
+\end_inset
+
+ can be any value in 
+\begin_inset Formula ${0,1}$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $k=0,1$
+\begin_inset Formula $z=0,1$
 \end_inset
 
- layers, for the 
-\begin_inset Formula $m=0$
+ layers, all 
+\begin_inset Formula $j=0$
 \end_inset
 
  vertices of a 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell, there will be connections to the 
+ cell are connected to all 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ vertices of the opposite partition 
+\begin_inset Formula $\bar{i}$
+\end_inset
+
+ in the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
  cell with the same 
-\begin_inset Formula $(i,j)$
+\begin_inset Formula $(x,y)$
 \end_inset
 
-, but in the next layer 
-\begin_inset Formula $k$
+, but next layer 
+\begin_inset Formula $z$
 \end_inset
 
-+1.
- These are defined as 
++1: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,0,0,n)\rightarrow(i,j,k+1,1,m',n'),\label{eq:outgoing_same_ij1}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-(i,j,k,1,0,n)\rightarrow(i,j,k+1,0,m',n').\label{eq:outgoing_same_ij2}
+(x,y,z,i,0,k)\longleftrightarrow(x,y,z+1,\bar{i},j',k'),\label{eq:(x,y) -> (x,y)}
 \end{equation}
 
 \end_inset
@@ -1173,26 +1252,62 @@ For the
 \end_layout
 
 \begin_layout Standard
-For all the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+(x,y,z,1,0,k) & \longleftrightarrow(x,y,z+1,0,j',k').\label{eq:outgoing_same_ij2}\\
+(x,y,z,0,0,k) & \longleftrightarrow(x,y,z+1,1,j',k'),
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+and all 
+\begin_inset Formula $j=1$
+\end_inset
+
+ vertices are also connected to all 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
 \begin_inset Formula $k$
 \end_inset
 
- layers, for the 
-\begin_inset Formula $m=1$
+ vertices in the opposite partition 
+\begin_inset Formula $\bar{i}$
 \end_inset
 
- vertices, there will be connections to the 
+ in a 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells in the next layer.
- These are defined as 
+ cell in the next layer 
+\begin_inset Formula $z+1$
+\end_inset
+
+, but with 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ coordinates shifted by 1 in the following way: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,0,1,n)\rightarrow(i+1,j,k+1,1,m',n'),\label{eq:outgoing_ip1}
+(x,y,z,i,1,k)\longleftrightarrow(x+\bar{i},y+i,z+1,\bar{i},j',k'),\label{eq:(x,y)->(x+1,y) or (x,y)->(x,y+1)}
 \end{equation}
 
 \end_inset
@@ -1201,10 +1316,30 @@ For all the
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{equation}
-(i,j,k,1,1,n)\rightarrow(i,j+1,k+1,0,m',n'),\label{eq:outgoing_jp1}
+(x,y,z,0,1,k)\longleftrightarrow(x+1,y,z+1,1,j',k'),\label{eq:outgoing_ip1}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+(x,y,z,1,1,k)\longleftrightarrow(x,y+1,z+1,0,j',k'),\label{eq:outgoing_jp1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1235,29 +1370,59 @@ where
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $k=2$
+\begin_inset Formula $z=2$
 \end_inset
 
- layers, for the 
-\begin_inset Formula $m=0$
+ layer, all 
+\begin_inset Formula $j=0$
 \end_inset
 
- vertices, there will be connections to the 
+ vertices of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell are connected to the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
  cells in the 
-\begin_inset Formula $k=0$
+\begin_inset Formula $z=0$
 \end_inset
 
- layer.
- These are defined as
+ layer, but with 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ coordinates 
+\emph on
+both
+\emph default
+ shifted by 1:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
+\begin{align}
+(x,y,2,i,0,k) & \longleftrightarrow(x+1,y+1,0,\bar{i},j',k').\label{eq:(x,y)->(x+1,y+1)}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
 \begin{equation}
-(i,j,2,0,0,n)\rightarrow(i+1,j+1,0,1,m',n'),\label{eq:outgoing_last_ip1jp11}
+(x,y,2,0,0,k)\longleftrightarrow(x+1,y+1,0,1,j',k'),\label{eq:outgoing_last_ip1jp11}
 \end{equation}
 
 \end_inset
@@ -1265,8 +1430,13 @@ For the
 
 \begin_inset Formula 
 \begin{equation}
-(i,j,2,1,0,n)\rightarrow(i+1,j+1,0,0,m',n').\label{eq:outgoing_last_ip1jp12}
+(x,y,2,1,0,k)\longleftrightarrow(x+1,y+1,0,0,j',k').\label{eq:outgoing_last_ip1jp12}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1276,8 +1446,124 @@ For the
 \begin_layout Standard
 Equations 
 \begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:(x,y) -> (x,y)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:(x,y)->(x+1,y+1)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ each describe a pair of 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ graphs (16 edges in total), one connecting the 
+\begin_inset Formula $i=0$
+\end_inset
+
+ partition of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell at 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+ to the 
+\begin_inset Formula $i=1$
+\end_inset
+
+ partition of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ on a different layer 
+\begin_inset Formula $z$
+\end_inset
+
+ and possibly different coordiante 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+, and the other 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ connecting the 
+\begin_inset Formula $i=1$
+\end_inset
+
+ partition to the 
+\begin_inset Formula $i=0$
+\end_inset
+
+ partition of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ on a different layer 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+All three equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:(x,y) -> (x,y)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:(x,y)->(x+1,y+1)"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ can be sumarized by one:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z,2},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z,2},\negthinspace(\negthinspace z\negthinspace+\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Equations 
+\begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_same_ij1"
+reference "eq:(x,y) -> (x,y)"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1350,11 +1636,26 @@ noprefix "false"
 \end_inset
 
 .
- A representative part of the Pegasus graph (
+ 
+\end_layout
+
+\end_inset
+
+A representative part of the Pegasus graph 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(
 \begin_inset Formula $K=3$
 \end_inset
 
-) is depicted in Figure 
+) 
+\end_layout
+
+\end_inset
+
+is depicted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pegasus"
@@ -1422,7 +1723,7 @@ noprefix "false"
 ; blue: 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_same_ij1"
+reference "eq:(x,y) -> (x,y)"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1986,7 +2287,7 @@ outgoing
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_same_ij1"
+reference "eq:(x,y) -> (x,y)"
 plural "false"
 caps "false"
 noprefix "false"
@@ -2147,7 +2448,7 @@ noprefix "false"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_same_ij1"
+reference "eq:(x,y) -> (x,y)"
 plural "false"
 caps "false"
 noprefix "false"
