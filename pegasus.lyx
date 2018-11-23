@@ -94,7 +94,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -107,7 +106,6 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
-
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -148,7 +146,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -1202,7 +1199,7 @@ The rest of the new connections in Pegasus come from connecting the
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $z=0,1$
+\begin_inset Formula $z=1,2$
 \end_inset
 
  layers, all 
@@ -1233,17 +1230,17 @@ For the
 \begin_inset Formula $(x,y)$
 \end_inset
 
-, but next layer 
+, but previous layer 
 \begin_inset Formula $z$
 \end_inset
 
-+1: 
+-1: 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(x,y,z,i,0,k)\longleftrightarrow(x,y,z+1,\bar{i},j',k'),\label{eq:(x,y) -> (x,y)}
+(x,y,z,i,0,k)\longleftrightarrow(x,y,z-1,\bar{i},j',k'),\label{eq:(x,y) -> (x,y)}
 \end{equation}
 
 \end_inset
@@ -1290,7 +1287,7 @@ and all
 \end_inset
 
  cell in the next layer 
-\begin_inset Formula $z+1$
+\begin_inset Formula $z-1$
 \end_inset
 
 , but with 
@@ -1307,7 +1304,7 @@ and all
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(x,y,z,i,1,k)\longleftrightarrow(x+\bar{i},y+i,z+1,\bar{i},j',k'),\label{eq:(x,y)->(x+1,y) or (x,y)->(x,y+1)}
+(x,y,z,i,1,k)\longleftrightarrow(x+\bar{i},y+i,z-1,\bar{i},j',k'),\label{eq:(x,y)->(x+1,y) or (x,y)->(x,y+1)}
 \end{equation}
 
 \end_inset
@@ -1370,7 +1367,7 @@ where
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $z=2$
+\begin_inset Formula $z=0$
 \end_inset
 
  layer, all 
@@ -1386,7 +1383,7 @@ For the
 \end_inset
 
  cells in the 
-\begin_inset Formula $z=0$
+\begin_inset Formula $z=2$
 \end_inset
 
  layer, but with 
@@ -1547,7 +1544,7 @@ noprefix "false"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z,2},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z,2},\negthinspace(\negthinspace z\negthinspace+\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z2},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z2},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
 \]
 
 \end_inset
