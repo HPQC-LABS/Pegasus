@@ -184,7 +184,7 @@ As Supplemental Material, we provide open source codes for generating Pegasus
 The 128 qubits of the first commercial quantum annealer (D-Wave One, released
  in 2011) were connected by a graph called Chimera 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "Neven2009"
 literal "false"
 
