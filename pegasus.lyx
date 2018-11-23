@@ -94,6 +94,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -106,6 +107,7 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
+
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -146,6 +148,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -157,8 +160,8 @@ Durham University
 Pegasus is a graph which offers substantially increased connectivity between
  the qubits of quantum annealing hardware compared to the graph Chimera.
  It is the first fundamental change in the connectivity graph of quantum
- annealers built by D-Wave since Chimera was introduced in 2011 for D-Wave's
- first commercial quantum annealer.
+ annealers built by D-Wave since Chimera was introduced in 2009 and then
+ used in 2011 for D-Wave's first commercial quantum annealer.
  In this article we describe an algorithm which defines the connectivity
  of Pegasus and we provide what we believe to be the best way to graphically
  visualize Pegasus in 2D and 3D in order to see which qubits couple to each
@@ -179,8 +182,15 @@ As Supplemental Material, we provide open source codes for generating Pegasus
 
 \begin_layout Standard
 The 128 qubits of the first commercial quantum annealer (D-Wave One, released
- in 2011) were connected by a graph called Chimera, which is rather easy
- to describe: A 2D array of 
+ in 2011) were connected by a graph called Chimera 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Neven2009"
+literal "false"
+
+\end_inset
+
+, which is rather easy to describe: A 2D array of 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -188,7 +198,7 @@ The 128 qubits of the first commercial quantum annealer (D-Wave One, released
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- being also connected to the same corresponding partition on the 
+ being connected to the same corresponding partition on the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -302,7 +312,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Chimera graphs in all commercial quantum computers to date.
+Chimera graphs in all commercial quantum annealers to date.
 \end_layout
 
 \end_inset
@@ -497,8 +507,10 @@ In 2018, D-Wave announced the construction of a (not yet commercial) quantum
  of arbitrary size.
  However, no explicit description of the graph connectivity in Pegasus has
  been published yet, so we have had to apply the process of reverse engineering
- to determine it, and the following section describes our algorithm for
- generating Pegasus.
+ to determine it, and the following section describes the algorithm we have
+ come up with for generating Pegasus.
+ Our algorithm only generates edges in the inside of Pegasus, and not at
+ the boundary, where the definition will have to be a bit different.
 \end_layout
 
 \begin_layout Section
@@ -541,7 +553,7 @@ Start with
 \end_inset
 
 .
- The values of 
+  The values of 
 \begin_inset Formula $X$
 \end_inset
 
@@ -549,16 +561,16 @@ Start with
 \begin_inset Formula $Y$
 \end_inset
 
- are somewhat flexible, but for Pegasus, 
+ are somewhat flexible, but 
 \begin_inset Formula $Z=3$
 \end_inset
 
-.
+ in Pegasus.
  Each 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell has two parts, labeled 
+ cell has two partitions, labeled 
 \begin_inset Formula $i\in\{0,1\}$
 \end_inset
 
@@ -586,6 +598,40 @@ noprefix "false"
 \end_inset
 
 .
+ In all of our figures, 
+\begin_inset Formula $x$
+\end_inset
+
+ will increase to the right, 
+\begin_inset Formula $y$
+\end_inset
+
+ will increase upwards, and 
+\begin_inset Formula $z$
+\end_inset
+
+ will increase in the up-and-to-the-right direction; then 
+\begin_inset Formula $i=0$
+\end_inset
+
+ will represent the left partition in the classic 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ depiction, or the horizontal partition in the diamond-shaped depiction,
+ while 
+\begin_inset Formula $i=1$
+\end_inset
+
+ will represent the right partition in the classic and vertical partition
+ in the diamond.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -599,7 +645,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Indices used to describe each qubit (vertex) in Pegasus
+Indices used to describe each qubit (vertex) in Pegasus.
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:IndicesInPegasus"
@@ -626,7 +672,7 @@ name "tab:IndicesInPegasus"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Index
 \end_layout
 
 \end_inset
@@ -635,7 +681,7 @@ name "tab:IndicesInPegasus"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Range
 \end_layout
 
 \end_inset
@@ -644,7 +690,7 @@ name "tab:IndicesInPegasus"
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Description
 \end_layout
 
 \end_inset
@@ -896,8 +942,52 @@ Second index within each part of
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 The edges (couplings) in Chimera
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -939,7 +1029,7 @@ This means for each
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 (In our convention, such an equation is understood to all valid indices.)
@@ -974,6 +1064,20 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 (x,y,z,1,j,k)\longleftrightarrow(x+1,y,z,1,j,k),\label{eq:chimera_horizontal}
@@ -993,6 +1097,20 @@ and the vertical lines can be described by adding 1 to
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 (x,y,z,0,j,k)\longleftrightarrow(x,y+1,z,0,j,k).\label{eq:chimera_vertical}
@@ -1002,7 +1120,7 @@ and the vertical lines can be described by adding 1 to
 
 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 where 
@@ -1056,8 +1174,12 @@ noprefix "false"
 \begin_inset Formula $x,y,i,$
 \end_inset
 
- and or 
+ 
 \begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
 \end_inset
 
 .
@@ -1073,12 +1195,26 @@ new
  edges (couplings) in Pegasus
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Edges within each 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
  cell:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1112,6 +1248,20 @@ Edges connecting different
 \end_inset
 
  cells:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1161,7 +1311,7 @@ The rest of the new connections in Pegasus come from connecting the
 \begin_inset Formula $i$
 \end_inset
 
- the complementary partition 
+ and its complementary partition 
 \begin_inset Formula $\bar{i}$
 \end_inset
 
@@ -1177,9 +1327,13 @@ The rest of the new connections in Pegasus come from connecting the
 \begin_inset Formula $i=1$
 \end_inset
 
- vertices).
+ vertices of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ in a different layer).
  In fact all connections will be of the form 
-\begin_inset Formula $(i,j,k)\rightarrow(\bar{i},j^{\prime},k^{\prime})$
+\begin_inset Formula $(i,j,k)\leftrightarrow(\bar{i},j^{\prime},k^{\prime})$
 \end_inset
 
  where 
@@ -1191,10 +1345,22 @@ The rest of the new connections in Pegasus come from connecting the
 \end_inset
 
  can be any value in 
-\begin_inset Formula ${0,1}$
+\begin_inset Formula $\{0,1\}$
 \end_inset
 
 .
+ All edges can be drawn using just a one-line relation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z0},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z0},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1202,7 +1368,11 @@ For the
 \begin_inset Formula $z=1,2$
 \end_inset
 
- layers, all 
+ layers (
+\begin_inset Formula $\delta_{z0}=0)$
+\end_inset
+
+, all 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1235,6 +1405,24 @@ For the
 \end_inset
 
 -1: 
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1246,11 +1434,8 @@ For the
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -1286,7 +1471,7 @@ and all
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell in the next layer 
+ cell in the previous layer 
 \begin_inset Formula $z-1$
 \end_inset
 
@@ -1302,6 +1487,20 @@ and all
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 (x,y,z,i,1,k)\longleftrightarrow(x+\bar{i},y+i,z-1,\bar{i},j',k'),\label{eq:(x,y)->(x+1,y) or (x,y)->(x,y+1)}
@@ -1314,7 +1513,7 @@ and all
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -1345,7 +1544,7 @@ status open
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 where 
@@ -1370,7 +1569,11 @@ For the
 \begin_inset Formula $z=0$
 \end_inset
 
- layer, all 
+ layer (
+\begin_inset Formula $\delta_{z0}=1)$
+\end_inset
+
+, all 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1402,6 +1605,20 @@ both
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 (x,y,2,i,0,k) & \longleftrightarrow(x+1,y+1,0,\bar{i},j',k').\label{eq:(x,y)->(x+1,y+1)}
@@ -1414,7 +1631,7 @@ both
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -1497,7 +1714,7 @@ noprefix "false"
 \begin_inset Formula $K_{2,4}$
 \end_inset
 
- connecting the 
+ connects the 
 \begin_inset Formula $i=1$
 \end_inset
 
@@ -1509,8 +1726,12 @@ noprefix "false"
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- on a different layer 
+, also on a different layer 
 \begin_inset Formula $z$
+\end_inset
+
+and possibly different coordinate 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
 \end_inset
 
 .
@@ -1518,43 +1739,8 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-All three equations 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:(x,y) -> (x,y)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:(x,y)->(x+1,y+1)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- can be sumarized by one:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z2},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z2},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Equations 
@@ -1668,12 +1854,16 @@ noprefix "false"
 
 \begin_layout Standard
 \begin_inset Float figure
-wide false
+wide true
 sideways false
 status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
 Connections of a generic unit cell of the Pegasus graph.
@@ -1794,13 +1984,165 @@ name "fig:pegasusone"
 
 \end_inset
 
+Fig2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
-	width 90col%
+	width 66text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Pegasus.pdf
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Pegasus.pdf
+	width 25text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
+	width 100text%
 
 \end_inset
 
@@ -1876,48 +2218,8 @@ noprefix "false"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasus"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
-Alternative graphical representations of Pegasus
+Graphical representations of Pegasus
 \end_layout
 
 \begin_layout Standard
@@ -1950,7 +2252,7 @@ noprefix "false"
 \begin_inset Float figure
 wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1973,32 +2275,32 @@ name "fig:ChimeraAndPegasus3"
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraDmdTilt5x5_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
 
 \end_inset
 
 
-\begin_inset space \qquad{}
+\begin_inset space ~
 \end_inset
 
 
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
 
 \end_inset
 
 
-\begin_inset space \qquad{}
+\begin_inset space ~
 \end_inset
 
 
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
 
 \end_inset
 
@@ -2015,32 +2317,74 @@ name "fig:ChimeraAndPegasus3"
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5one_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
 
 \end_inset
 
 
-\begin_inset space \qquad{}
+\begin_inset space ~
 \end_inset
 
 
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
 
 \end_inset
 
 
-\begin_inset space \qquad{}
+\begin_inset space ~
 \end_inset
 
 
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5one_crop.pdf
-	width 25text%
-	height 25text%
+	width 33text%
+	height 33text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
+	width 33text%
+	height 33text%
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
+	width 33text%
+	height 33text%
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
+	width 33text%
+	height 33text%
 
 \end_inset
 
@@ -2054,7 +2398,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Float figure
@@ -2142,106 +2486,7 @@ name "fig:pegasus-1"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:ChimeraAndPegasus3_repeated"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdTilt5x5_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\begin_inset space \qquad{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\begin_inset space \qquad{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\begin_inset space \qquad{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\begin_inset space \qquad{}
-\end_inset
-
-
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
-	width 25text%
-	height 25text%
-
-\end_inset
-
-
-\end_layout
-
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -2251,8 +2496,29 @@ name "fig:ChimeraAndPegasus3_repeated"
 Comparison to Chimera
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Graph degree
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2265,7 +2531,7 @@ As the yellow vertex in Fig.
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 To count the number of edges of a vertex in a generic 
@@ -2563,10 +2829,15 @@ We note that certain binary optimization problems forming planar graphs
  can be solved on a classical computer with a number of operations that
  scales polynomially with the number of binary variables, with the blossom
  algorithm 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Edmonds1965,Edmonds1965a"
-literal "false"
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cite{Edmonds1965,*Edmonds1965a}
+\end_layout
 
 \end_inset
 
@@ -2583,8 +2854,9 @@ literal "false"
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell of Chimera physical qubits were to encode one logical qubit (in for
- example, an extreme case of minor embedding), then Chimera would be planar.
+ cell of a Chimera's physical qubits were to encode just one logical qubit
+ (in for example, an extreme case of minor embedding), then Chimera would
+ be planar.
  While all red, blue, and green lines added in Pegasus are of the form 
 \begin_inset Formula $K_{2,4}$
 \end_inset
@@ -2600,14 +2872,14 @@ these logical qubits would still form a non-planar graph in Pegasus.
 
 \emph default
  This should expand the number of binary optimization problems that can
- be embedded onto a D-Wave annealer, and cannot be solved on a classical
- computer with a number of operations that scales polynomially with the
- number of binary variables.
+ be embedded onto a D-Wave annealer, and cannot with any known algorithm
+ be solved on a classical computer with a number of operations that scales
+ polynomially with the number of binary variables.
  
 \end_layout
 
 \begin_layout Subsection
-Embedding of quadratization gadgets
+Embedding
 \end_layout
 
 \begin_layout Standard
@@ -2630,6 +2902,25 @@ which means that all three logical qubits and the auxiliary qubit can be
 \begin_layout Subsection
 Application: Nike will embed two problems on Chimera and Pegasus to show
  reduction in # of auxiliary qubits.
+\end_layout
+
+\begin_layout Section
+Open source code for generation of Pegasus figures
+\end_layout
+
+\begin_layout Standard
+We provide all readers with free, open-source codes to generate a variety
+ of different graphical depications of Pegasus in MetaPost, which can easily
+ be compiled with most LaTeX distributions and generates PDFs.
+ Many options are available that allow users to change the default settings
+ in order to suit their interests.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
