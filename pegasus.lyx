@@ -1353,6 +1353,20 @@ The rest of the new connections in Pegasus come from connecting the
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z0},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z0},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
@@ -1993,6 +2007,25 @@ Fig2
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "66text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2020,7 +2053,7 @@ name "fig:pegasus-4"
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
-	width 66text%
+	width 100text%
 
 \end_inset
 
@@ -2030,6 +2063,30 @@ name "fig:pegasus-4"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "34text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2039,7 +2096,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
+The Pegasus graph.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pegasus"
@@ -2057,13 +2114,20 @@ name "fig:pegasus"
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename fig_Pegasus.pdf
-	width 25text%
+	width 100text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -2079,7 +2143,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
+The Pegasus graph.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:pegasus-3"
@@ -2097,7 +2161,61 @@ name "fig:pegasus-3"
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename fig_Pegasus.pdf
-	width 25text%
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_Pegasus.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2914,6 +3032,16 @@ We provide all readers with free, open-source codes to generate a variety
  be compiled with most LaTeX distributions and generates PDFs.
  Many options are available that allow users to change the default settings
  in order to suit their interests.
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
+ the correctness of our algorithm, and to Aidan Roy for introducing us to
+ her.
 \end_layout
 
 \begin_layout Standard
