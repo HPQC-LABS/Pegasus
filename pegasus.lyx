@@ -1360,7 +1360,27 @@ The rest of the new connections in Pegasus come from connecting the
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -2mm
+\begin_inset VSpace -5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z0},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z0},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -1369,7 +1389,59 @@ The rest of the new connections in Pegasus come from connecting the
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z0},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z0},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
+\left(x,y,z,i,j,k\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -3mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\updownarrow
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\[
+\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(x+j\bar{i}z+\delta_{z0}(1-j),y+jiz+\delta_{z0}(1-j),(z-1)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod3,\bar{i},j',k'\right).\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
 \]
 
 \end_inset
@@ -1635,7 +1707,7 @@ both
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-(x,y,2,i,0,k) & \longleftrightarrow(x+1,y+1,0,\bar{i},j',k').\label{eq:(x,y)->(x+1,y+1)}
+(x,y,0,i,0,k) & \longleftrightarrow(x+1,y+1,2,\bar{i},j',k').\label{eq:(x,y)->(x+1,y+1)}
 \end{align}
 
 \end_inset
