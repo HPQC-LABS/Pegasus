@@ -288,7 +288,7 @@ name "fig:chimera"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf
 	width 90col%
 
 \end_inset
@@ -1307,11 +1307,11 @@ The rest of the new connections in Pegasus come from connecting the
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- partition 
+ part 
 \begin_inset Formula $i$
 \end_inset
 
- and its complementary partition 
+ and its complementary part 
 \begin_inset Formula $\bar{i}$
 \end_inset
 
@@ -1350,13 +1350,11 @@ The rest of the new connections in Pegasus come from connecting the
 
 .
  All edges can be drawn using just a one-line relation:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\[
-\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\left(\negthinspace x,\negthinspace y,\negthinspace z,\negthinspace i,\negthinspace j,\negthinspace k\negthinspace\right)\negthinspace\leftrightarrow\negthinspace\left(\negthinspace x\negthinspace+\negthinspace j\bar{i}\negthinspace+\negthinspace\delta_{z0},y\negthinspace+\negthinspace ji\negthinspace+\negthinspace\delta_{z0},\negthinspace(\negthinspace z\negthinspace-\negthinspace1\negthinspace)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\negthinspace\bar{i},\negthinspace j'\negthinspace\negthinspace,\negthinspace k'\right)\negthinspace\negthinspace.\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace
-\]
+\begin{multline}
+\left(x,y,z,i,j,k\right)\longleftrightarrow(x+(2\delta_{c,2}-1)j((1-\delta_{c,2})\bar{i}+\delta_{c,2}i),\\
+y+(2\delta_{c,2}-1)j((1-\delta_{c,2})i+\delta_{c,2}\bar{i}),(z+1)\mod3,\bar{i},j',k').\label{eq:gen}
+\end{multline}
 
 \end_inset
 
@@ -1365,14 +1363,25 @@ The rest of the new connections in Pegasus come from connecting the
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $z=1,2$
+\begin_inset Formula $z=0,1$
 \end_inset
 
  layers (
-\begin_inset Formula $\delta_{z0}=0)$
+\begin_inset Formula $\delta_{z2}=0)$
 \end_inset
 
-, all 
+, we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(x,y,z\in\left\{ 0,1\right\} ,i,j,k)\longleftrightarrow(x-j\bar{i},y-ji,z+1,\bar{i},j',k'),\label{eq:gen_z01}
+\end{equation}
+
+\end_inset
+
+all 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1381,14 +1390,14 @@ For the
 \end_inset
 
  cell are connected to all 
-\begin_inset Formula $j$
+\begin_inset Formula $j'$
 \end_inset
 
  and 
-\begin_inset Formula $k$
+\begin_inset Formula $k'$
 \end_inset
 
- vertices of the opposite partition 
+ vertices of the opposite part 
 \begin_inset Formula $\bar{i}$
 \end_inset
 
@@ -1400,54 +1409,16 @@ For the
 \begin_inset Formula $(x,y)$
 \end_inset
 
-, but previous layer 
-\begin_inset Formula $z$
+, but next layer 
+\begin_inset Formula $z+1$
 \end_inset
 
--1: 
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-(x,y,z,i,0,k)\longleftrightarrow(x,y,z-1,\bar{i},j',k'),\label{eq:(x,y) -> (x,y)}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
+: 
 \begin_inset Formula 
 \begin{align}
-(x,y,z,1,0,k) & \longleftrightarrow(x,y,z+1,0,j',k').\label{eq:outgoing_same_ij2}\\
-(x,y,z,0,0,k) & \longleftrightarrow(x,y,z+1,1,j',k'),
+(x,y,z\in\left\{ 0,1\right\} ,0,0,k) & \longleftrightarrow(x,y,z+1,1,j',k'),\label{eq:z01_j0_i0}\\
+(x,y,z\in\left\{ 0,1\right\} ,1,0,k) & \longleftrightarrow(x,y,z+1,0,j',k'),\label{eq:z01_j0_i1}
 \end{align}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -1456,14 +1427,14 @@ and all
 \end_inset
 
  vertices are also connected to all 
-\begin_inset Formula $j$
+\begin_inset Formula $j'$
 \end_inset
 
  and 
-\begin_inset Formula $k$
+\begin_inset Formula $k'$
 \end_inset
 
- vertices in the opposite partition 
+ vertices in the opposite part 
 \begin_inset Formula $\bar{i}$
 \end_inset
 
@@ -1471,8 +1442,8 @@ and all
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cell in the previous layer 
-\begin_inset Formula $z-1$
+ cell in the next layer 
+\begin_inset Formula $z+1$
 \end_inset
 
 , but with 
@@ -1487,93 +1458,35 @@ and all
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-(x,y,z,i,1,k)\longleftrightarrow(x+\bar{i},y+i,z-1,\bar{i},j',k'),\label{eq:(x,y)->(x+1,y) or (x,y)->(x,y+1)}
-\end{equation}
+\begin{align}
+(x,y,z\in\left\{ 0,1\right\} ,0,1,k) & \longleftrightarrow(x-1,y,z+1,1,j',k'),\label{eq:z01_j1_i0}\\
+(x,y,z\in\left\{ 0,1\right\} ,1,1,k) & \longleftrightarrow(x,y-1,z+1,0,j',k').\label{eq:z01_j1_i1}
+\end{align}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(x,y,z,0,1,k)\longleftrightarrow(x+1,y,z+1,1,j',k'),\label{eq:outgoing_ip1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(x,y,z,1,1,k)\longleftrightarrow(x,y+1,z+1,0,j',k'),\label{eq:outgoing_jp1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-where 
-\begin_inset Formula $i\neq I-1$
-\end_inset
-
- in the first case, and 
-\begin_inset Formula $j\neq J-1$
-\end_inset
-
- in the second.
- 
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Standard
 For the 
-\begin_inset Formula $z=0$
+\begin_inset Formula $z=2$
 \end_inset
 
  layer (
-\begin_inset Formula $\delta_{z0}=1)$
+\begin_inset Formula $\delta_{z2}=0)$
 \end_inset
 
-, all 
+, we have
+\begin_inset Formula 
+\begin{equation}
+(x,y,2,i,j,k)\longleftrightarrow(x+ji,y+j\bar{i},0,\bar{i},j',k'),\label{eq:gen_z2}
+\end{equation}
+
+\end_inset
+
+all 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1586,7 +1499,7 @@ For the
 \end_inset
 
  cells in the 
-\begin_inset Formula $z=2$
+\begin_inset Formula $z=0$
 \end_inset
 
  layer, but with 
@@ -1605,52 +1518,27 @@ both
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -2mm
+\begin_inset Formula 
+\begin{align}
+(x,y,2,0,0,k) & \longleftrightarrow(x+1,y+1,0,1,j',k'),\label{eq:z2_j0_i0}\\
+(x,y,2,1,0,k) & \longleftrightarrow(x+1,y+1,0,0,j',k'),\label{eq:z2_j0_i1}
+\end{align}
+
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -2mm
+and all 
+\begin_inset Formula $j=1$
 \end_inset
 
-
+ vertices are also connected 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-(x,y,2,i,0,k) & \longleftrightarrow(x+1,y+1,0,\bar{i},j',k').\label{eq:(x,y)->(x+1,y+1)}
+(x,y,2,0,1,k) & \longleftrightarrow(x,y+1,0,1,j',k'),\label{eq:z2_j1_i0}\\
+(x,y,2,1,1,k) & \longleftrightarrow(x+1,y,0,0,j',k').\label{eq:z2_j1_i1}
 \end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(x,y,2,0,0,k)\longleftrightarrow(x+1,y+1,0,1,j',k'),\label{eq:outgoing_last_ip1jp11}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-(x,y,2,1,0,k)\longleftrightarrow(x+1,y+1,0,0,j',k').\label{eq:outgoing_last_ip1jp12}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -1660,8 +1548,8 @@ status collapsed
 \begin_layout Standard
 Equations 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:(x,y) -> (x,y)"
+LatexCommand eqref
+reference "eq:z01_j0_i0"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1670,23 +1558,53 @@ noprefix "false"
 
 -
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:(x,y)->(x+1,y+1)"
+LatexCommand eqref
+reference "eq:z01_j1_i1"
 plural "false"
 caps "false"
 noprefix "false"
 
 \end_inset
 
- each describe a pair of 
+ (and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z2_j0_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z2_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) each describe a 
 \begin_inset Formula $K_{2,4}$
 \end_inset
 
- graphs (16 edges in total), one connecting the 
+ graph (8 edges in total, in different colors in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasusone"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), one connecting the 
 \begin_inset Formula $i=0$
 \end_inset
 
- partition of a 
+ part of a 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1698,7 +1616,7 @@ noprefix "false"
 \begin_inset Formula $i=1$
 \end_inset
 
- partition of a 
+ part of a 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1718,11 +1636,11 @@ noprefix "false"
 \begin_inset Formula $i=1$
 \end_inset
 
- partition to the 
+ part to the 
 \begin_inset Formula $i=0$
 \end_inset
 
- partition of a 
+ part of a 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1730,7 +1648,7 @@ noprefix "false"
 \begin_inset Formula $z$
 \end_inset
 
-and possibly different coordinate 
+ and possibly different coordinate 
 \begin_inset Formula $(x^{\prime},y^{\prime})$
 \end_inset
 
@@ -1739,76 +1657,7 @@ and possibly different coordinate
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Equations 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:(x,y) -> (x,y)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_jp1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- give four types of edges for each 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cell in the 
-\begin_inset Formula $k=0,1$
-\end_inset
-
- layers, while 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_ip1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_last_ip1jp12"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- give four types of edges for each 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cell in the 
-\begin_inset Formula $k=2$
-\end_inset
-
- layer.
- One Pegasus 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cell in layer 
-\begin_inset Formula $k=1$
-\end_inset
-
- with the edges given above is depicted in Figure 
+A representative part of the Pegasus graph is depicted in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pegasusone"
@@ -1819,37 +1668,6 @@ noprefix "false"
 \end_inset
 
 .
- 
-\end_layout
-
-\end_inset
-
-A representative part of the Pegasus graph 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(
-\begin_inset Formula $K=3$
-\end_inset
-
-) 
-\end_layout
-
-\end_inset
-
-is depicted in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:pegasus"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1862,8 +1680,41 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Note Note
+The Pegasus graph
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "66text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Connections of a generic unit cell of the Pegasus graph.
@@ -1910,17 +1761,7 @@ noprefix "false"
 ; blue: 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:(x,y) -> (x,y)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_last_ip1jp11"
+reference "eq:z01_j0_i0"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1930,17 +1771,7 @@ noprefix "false"
 ; red: 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_same_ij2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_last_ip1jp12"
+reference "eq:z01_j0_i1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1950,7 +1781,7 @@ noprefix "false"
 ; green: 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_ip1"
+reference "eq:z01_j1_i0"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1960,7 +1791,7 @@ noprefix "false"
 ; orange: 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:outgoing_jp1"
+reference "eq:z01_j1_i1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -1968,7 +1799,7 @@ noprefix "false"
 \end_inset
 
 .
- Solid/dashed lines start/end on the fixed 
+ Edges start/end on the fixed 
 \begin_inset Formula $(i,j,k)$
 \end_inset
 
@@ -1984,9 +1815,88 @@ name "fig:pegasusone"
 
 \end_inset
 
-Fig2
+
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "34text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The connections of a generic unit cell in the Pegasus graph.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusdotone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -2002,10 +1912,11 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
+The connections of the unit cells in the Pegasus graph.
+ 
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:pegasus-4"
+name "fig:pegasusdot"
 
 \end_inset
 
@@ -2019,85 +1930,13 @@ name "fig:pegasus-4"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
-	width 66text%
+	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
+	width 100text%
 
 \end_inset
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasus"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename fig_Pegasus.pdf
-	width 25text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasus-3"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename fig_Pegasus.pdf
-	width 25text%
 
 \end_inset
 
@@ -2141,7 +1980,7 @@ name "fig:pegasus-2"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5fullblue_crop.pdf
 	width 100text%
 
 \end_inset
@@ -2252,7 +2091,7 @@ noprefix "false"
 \begin_inset Float figure
 wide true
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -2274,7 +2113,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_ChimeraDmdTilt5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
 	width 33text%
 	height 33text%
 
@@ -2297,10 +2136,19 @@ name "fig:ChimeraAndPegasus3"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
 	width 33text%
 	height 33text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2316,7 +2164,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdTilt5x5one_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
 	width 33text%
 	height 33text%
 
@@ -2339,10 +2187,19 @@ name "fig:ChimeraAndPegasus3"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5one_crop.pdf
 	width 33text%
 	height 33text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2358,7 +2215,7 @@ name "fig:ChimeraAndPegasus3"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
 	width 33text%
 	height 33text%
 
@@ -2381,10 +2238,19 @@ name "fig:ChimeraAndPegasus3"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
 	width 33text%
 	height 33text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2522,302 +2388,19 @@ Graph degree
 \end_layout
 
 \begin_layout Standard
-As the yellow vertex in Fig.
- ? indicates, the vertices of Pegasus (except for vertices on an edge) have
- a degree 15, which is 2.5 times larger than the maimum degree achieved in
- Chimera.
+As can easily be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasusone"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the vertices of a generic unit cell of Pegasus have a degree 15, which
+ is 2.5 times larger than the maimum degree achieved in Chimera.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-To count the number of edges of a vertex in a generic 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
-  cell (not on the boundary of the layers), we have to reverse the 
-\begin_inset Quotes eld
-\end_inset
-
-outgoing
-\begin_inset Quotes erd
-\end_inset
-
- edges given in Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:(x,y) -> (x,y)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_same_ij2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_jp1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_ip1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- We call these 
-\begin_inset Quotes eld
-\end_inset
-
-incoming
-\begin_inset Quotes erd
-\end_inset
-
- edges,
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(i,j,k,l=1,m,n)\leftarrow(i,j,k-1,l=0,m'=0,n'),\label{eq:incoming_same_ij1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(i,j,k,l=0,m,n)\leftarrow(i,j,k-1,l=1,m'=0,n'),\label{eq:incoming_same_ij2}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(i,j,k,l=0,m,n)\leftarrow(i,j-1,k-1,l=1,m'=1,n'),\label{eq:incoming_jp1}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{equation}
-(i,j,k,l=1,m,n)\leftarrow(i-1,j,k-1,l=0,m'=1,n'),\label{eq:incoming_ip1}
-\end{equation}
-
-\end_inset
-
-where 
-\begin_inset Formula $j\neq0$
-\end_inset
-
- in the third case, and 
-\begin_inset Formula $i\neq0$
-\end_inset
-
- in the fourth.
- From these rules we are now able to count the number of edges incident
- on a vertex contained in a 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
-  cell which lies not on the boundary of the graph.
- To start off, each vertex will have 
-\begin_inset Formula $6$
-\end_inset
-
- edges coming from its chimera graph, Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:k44"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_vertical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_horizontal"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- The vertex will also have an additional edge from Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:uc_add"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, leading to a total of 
-\begin_inset Formula $7$
-\end_inset
-
- edges so far.
- The vertex will additionally have four edges from either Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:(x,y) -> (x,y)"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- or 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_same_ij2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- if 
-\begin_inset Formula $m=0$
-\end_inset
-
-, and from either Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_jp1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- or 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_ip1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- if 
-\begin_inset Formula $m=1$
-\end_inset
-
-.
- Moreover, it has additionally another two plus two edges from either 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:incoming_same_ij2"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:incoming_jp1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, or 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:incoming_same_ij1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:incoming_ip1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, leading to a total degree of 
-\begin_inset Formula $15$
-\end_inset
-
-.
- One Pegasus 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
-  cell with all the edges given above (that is, both outgoing and incoming
- edges, for fixed 
-\begin_inset Formula $(i,j,k)$
-\end_inset
-
-) is depicted in Figure ......., 
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -2914,6 +2497,16 @@ We provide all readers with free, open-source codes to generate a variety
  be compiled with most LaTeX distributions and generates PDFs.
  Many options are available that allow users to change the default settings
  in order to suit their interests.
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
+ the correctness of our algorithm, and to Aidan Roy for introducing us to
+ her.
 \end_layout
 
 \begin_layout Standard

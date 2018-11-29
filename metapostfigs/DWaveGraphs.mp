@@ -301,7 +301,7 @@ if (drawingmode<>"DotRect") and (drawingmode<>"DotTilt"):
 						endfor;
 						endfor;
 					endfor;
-	elseif eq = "Pegasus_c2_ijm1_u1":	% equation (6) (valid for c=2, hardcoded)
+	elseif eq = "Pegasus_c2_ijp1_u0":	% equation (6) (valid for c=2, hardcoded)
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
@@ -309,7 +309,7 @@ if (drawingmode<>"DotRect") and (drawingmode<>"DotTilt"):
 						endfor;
 						endfor;
 					endfor;
-	elseif eq = "Pegasus_c2_im1j_u0":	% equation (7) (valid for c=2, hardcoded)
+	elseif eq = "Pegasus_c2_ip1j_u1":	% equation (7) (valid for c=2, hardcoded)
 					for pp = 0 upto 1:
 						for q = 0 upto 1:
 						for qp = 0 upto 1:
@@ -337,9 +337,9 @@ else:
 							gredge( PV(2,i,j,0,0,0)-pici, PV(0,i+1,j+1,0,0,0)-pici, clr, emode ); 
 	elseif eq = "Pegasus_c2_ip1jp1_u1":	% equation (5) for u=1 (valid for c=2, hardcoded)
 							gredge( PV(2,i,j,0,0,0)+pici, PV(0,i+1,j+1,0,0,0)+pici, clr, emode ); 
-	elseif eq = "Pegasus_c2_ijm1_u1":	% equation (6) (valid for c=2, hardcoded)
+	elseif eq = "Pegasus_c2_ijp1_u0":	% equation (6) (valid for c=2, hardcoded)
 							gredge( PV(2,i,j,0,0,0), PV(0,i,j+1,0,0,0), clr, emode );
-	elseif eq = "Pegasus_c2_im1j_u0":	% equation (7) (valid for c=2, hardcoded)
+	elseif eq = "Pegasus_c2_ip1j_u1":	% equation (7) (valid for c=2, hardcoded)
 							gredge( PV(2,i,j,0,0,0), PV(0,i+1,j,0,0,0), clr, emode ); 
 	fi;
 fi;
@@ -497,12 +497,12 @@ PegasusLLfull := image(
 		endfor;
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("Pegasus_c2_ijm1_u1",2,i,j,corange,"continuous");
+				edgeeq("Pegasus_c2_ijp1_u0",2,i,j,corange,"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("Pegasus_c2_im1j_u0",2,i,j,cgreen,"continuous");
+				edgeeq("Pegasus_c2_ip1j_u1",2,i,j,cgreen,"continuous");
 			endfor;
 		endfor;
 ); % of PegasusLLfull
@@ -562,12 +562,12 @@ PegasusLLfullblue := image(
 		endfor;
 		for i = 0 upto L-1:
 			for j = 0 upto L-2:
-				edgeeq("Pegasus_c2_ijm1_u1",2,i,j,cblues[2],"continuous");
+				edgeeq("Pegasus_c2_ijp1_u0",2,i,j,cblues[2],"continuous");
 			endfor;
 		endfor;
 		for i = 0 upto L-2:
 			for j = 0 upto L-1:
-				edgeeq("Pegasus_c2_im1j_u0",2,i,j,cblues[2],"continuous");
+				edgeeq("Pegasus_c2_ip1j_u1",2,i,j,cblues[2],"continuous");
 			endfor;
 		endfor;
 ); % of PegasusLLfullblue
