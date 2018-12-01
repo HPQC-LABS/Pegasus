@@ -181,6 +181,150 @@ As Supplemental Material, we provide open source codes for generating Pegasus
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Chimera graph, 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Chimera graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:chimera"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tilted classic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diamond
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Upper triangle
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf
+	width 33text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The 128 qubits of the first commercial quantum annealer (D-Wave One, released
  in 2011) were connected by a graph called Chimera 
 \begin_inset CommandInset citation
@@ -238,67 +382,6 @@ noprefix "false"
 \end_inset
 
  unit cells (See Table 1).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Chimera graph, 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Chimera graph, with open edges to show that the pattern repeats.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:chimera"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf
-	width 90col%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -515,6 +598,293 @@ In 2018, D-Wave announced the construction of a (not yet commercial) quantum
 
 \begin_layout Section
 Algorithm for generating Pegasus
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "65text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Connections of a generic unit cell of the Pegasus graph.
+ (grey: Chimera graph 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:k44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; black: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; blue: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j0_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; red: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j0_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; green: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j1_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; orange: 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Edges start/end on the fixed 
+\begin_inset Formula $(i,j,k)$
+\end_inset
+
+ unit cell.) 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "29.5text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The connections of a generic unit cell in the Pegasus graph.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusdotone"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The connections of the unit cells in the Pegasus graph.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusdot"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1239,7 +1609,46 @@ Pegasus first adds connections within each
 \end_inset
 
 These edges are drawn in black color in the figures.
- 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The Pegasus graph, with open edges to show that the pattern repeats.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasus-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename fig_PegasusLLfull_allBlue_0_crop.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1671,329 +2080,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Pegasus graph
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "66text%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Connections of a generic unit cell of the Pegasus graph.
- (grey: Chimera graph 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:k44"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_horizontal"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_vertical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; black: 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:uc_add"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; blue: 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j0_i0"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; red: 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j0_i1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; green: 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j1_i0"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-; orange: 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j1_i1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Edges start/end on the fixed 
-\begin_inset Formula $(i,j,k)$
-\end_inset
-
- unit cell.) 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasusone"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "34text%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The connections of a generic unit cell in the Pegasus graph.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasusdotone"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset VSpace -2mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The connections of the unit cells in the Pegasus graph.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasusdot"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide true
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-The Pegasus graph, with open edges to show that the pattern repeats.
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pegasus-2"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename metapostfigs/fig_PegasusTrpRect5x5fullblue_crop.pdf
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -2112,6 +2198,10 @@ name "fig:ChimeraAndPegasus3"
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
 	width 33text%
@@ -2136,10 +2226,6 @@ name "fig:ChimeraAndPegasus3"
 \end_inset
 
 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraStdTilt5x5_crop.pdf
 	width 33text%
@@ -2165,8 +2251,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
-	width 33text%
-	height 33text%
+	width 45text%
+	height 45text%
 
 \end_inset
 
@@ -2177,8 +2263,8 @@ status open
 
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
-	width 33text%
-	height 33text%
+	width 45text%
+	height 45text%
 
 \end_inset
 
@@ -2216,8 +2302,8 @@ status open
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
-	width 33text%
-	height 33text%
+	width 45text%
+	height 45text%
 
 \end_inset
 
@@ -2228,8 +2314,8 @@ status open
 
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
-	width 33text%
-	height 33text%
+	width 45text%
+	height 45text%
 
 \end_inset
 
