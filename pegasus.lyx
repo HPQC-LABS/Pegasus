@@ -750,7 +750,7 @@ name "fig:pegasusone"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
+	filename metapostfigs/bottomLeftCrop.pdf
 	width 100text%
 
 \end_inset
@@ -798,6 +798,51 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+The connections of the unit cells in the Pegasus graph.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pegasusdot-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename metapostfigs/resizedOne.pdf
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
 The connections of a generic unit cell in the Pegasus graph.
  
 \begin_inset CommandInset label
@@ -818,6 +863,11 @@ name "fig:pegasusdotone"
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1612,6 +1662,10 @@ These edges are drawn in black color in the figures.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide true
 sideways false
@@ -1638,8 +1692,13 @@ name "fig:pegasus-2"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename fig_PegasusLLfull_allBlue_0_crop.pdf
+	filename metapostfigs/bottomLeftCrop.pdf
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
