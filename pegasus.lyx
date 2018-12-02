@@ -626,7 +626,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "65text%"
+width "62text%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -777,7 +777,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "29.5text%"
+width "35.5text%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -914,7 +914,7 @@ name "fig:pegasusdot"
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
+	filename metapostfigs/dotFullCroppedFurther.pdf
 	width 100text%
 
 \end_inset
