@@ -1819,10 +1819,42 @@ The rest of the new connections in Pegasus come from connecting the
 .
  All edges can be drawn using just a one-line relation:
 \begin_inset Formula 
-\begin{multline}
-\left(x,y,z,i,j,k\right)\longleftrightarrow(x+(2\delta_{c,2}-1)j((1-\delta_{c,2})\bar{i}+\delta_{c,2}i),\\
-y+(2\delta_{c,2}-1)j((1-\delta_{c,2})i+\delta_{c,2}\bar{i}),(z+1)\mod3,\bar{i},j',k').\label{eq:gen}
-\end{multline}
+\begin{multline*}
+\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\left(x,y,z,i,j,k\right)
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -8mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\longleftrightarrow\label{eq:motherOfAllEdgeRelations}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -7mm
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(x+j\negthinspace\left(i-1+\delta_{z,2}\right)\negthinspace,\negthinspace y-j\negthinspace\left(i-\delta_{z,2}\right)\negthinspace,\negthinspace(z+1)\negthinspace\negthinspace\negthinspace\negthinspace\negthinspace\mod\negthinspace3,\bar{i},j',k'\right)
+\]
 
 \end_inset
 
@@ -1838,18 +1870,18 @@ For the
 \begin_inset Formula $\delta_{z2}=0)$
 \end_inset
 
-, we have
+, we have:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-(x,y,z\in\left\{ 0,1\right\} ,i,j,k)\longleftrightarrow(x-j\bar{i},y-ji,z+1,\bar{i},j',k'),\label{eq:gen_z01}
+(x,y,z,i,j,k)\longleftrightarrow(x-j\bar{i},y-ji,z+1,\bar{i},j',k').\label{eq:gen_z01}
 \end{equation}
 
 \end_inset
 
-all 
+All 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1882,6 +1914,24 @@ all
 \end_inset
 
 : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(x,y,z)\longleftrightarrow(x,y,z+1),\,\text{for}\,\text{\ensuremath{z\in\{0,1\},j=0.}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Formula 
 \begin{align}
 (x,y,z\in\left\{ 0,1\right\} ,0,0,k) & \longleftrightarrow(x,y,z+1,1,j',k'),\label{eq:z01_j0_i0}\\
@@ -1890,7 +1940,17 @@ all
 
 \end_inset
 
-and all 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+All 
 \begin_inset Formula $j=1$
 \end_inset
 
@@ -1928,9 +1988,29 @@ and all
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
+\negthinspace\negthinspace(x,y,z) & \longleftrightarrow(x-\bar{i},y-i,z+1)\,\text{for}\,\text{\ensuremath{z\in\{0,1\},j=0.}}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
 (x,y,z\in\left\{ 0,1\right\} ,0,1,k) & \longleftrightarrow(x-1,y,z+1,1,j',k'),\label{eq:z01_j1_i0}\\
 (x,y,z\in\left\{ 0,1\right\} ,1,1,k) & \longleftrightarrow(x,y-1,z+1,0,j',k').\label{eq:z01_j1_i1}
 \end{align}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1943,18 +2023,29 @@ For the
 \end_inset
 
  layer (
-\begin_inset Formula $\delta_{z2}=0)$
+\begin_inset Formula $\delta_{z2}=1)$
 \end_inset
 
-, we have
+, we have from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:motherOfAllEdgeRelations"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
 \begin_inset Formula 
 \begin{equation}
-(x,y,2,i,j,k)\longleftrightarrow(x+ji,y+j\bar{i},0,\bar{i},j',k'),\label{eq:gen_z2}
+(x,y,2,i,j,k)\longleftrightarrow(x+ji,y+j\bar{i},0,\bar{i},j',k').\label{eq:gen_z2}
 \end{equation}
 
 \end_inset
 
-all 
+All 
 \begin_inset Formula $j=0$
 \end_inset
 
@@ -1988,25 +2079,44 @@ both
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-(x,y,2,0,0,k) & \longleftrightarrow(x+1,y+1,0,1,j',k'),\label{eq:z2_j0_i0}\\
-(x,y,2,1,0,k) & \longleftrightarrow(x+1,y+1,0,0,j',k'),\label{eq:z2_j0_i1}
+(x,y,2) & \longleftrightarrow(x+1,y+1,0),\,\text{for}\text{,\,\ensuremath{j=0.}}\label{eq:z2_j0_i0}
 \end{align}
 
 \end_inset
 
-and all 
+All 
 \begin_inset Formula $j=1$
 \end_inset
 
- vertices are also connected 
+ vertices are also connected in the following way:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
+(x,y,2) & \longleftrightarrow(x+i,y+\bar{i},0),\,\text{for,\,\ensuremath{j=1}}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
 (x,y,2,0,1,k) & \longleftrightarrow(x,y+1,0,1,j',k'),\label{eq:z2_j1_i0}\\
 (x,y,2,1,1,k) & \longleftrightarrow(x+1,y,0,0,j',k').\label{eq:z2_j1_i1}
 \end{align}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
