@@ -6,10 +6,19 @@
 \origin unavailable
 \textclass revtex4-1
 \begin_preamble
+\usepackage[dvipsnames]{xcolor}
 \usepackage{amsfonts,amsmath} % amsmath added here instead to prevent clash with lyx function
 %\input{tikzit/tikz_premable.tex}
 \newcommand{\intextheight}{13 pt}
 \let\fileinput\input % to allow conversion without turning tikz to lyx
+\usepackage{caption}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+% https://tex.stackexchange.com/questions/74296/to-have-no-pagebreak-before-bibliography
+\usepackage{etoolbox} 
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+
+\def\bibsection{\section*{\refname}} 
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
@@ -2219,27 +2228,6 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{align}
-(x,y,z\in\left\{ 0,1\right\} ,0,1,k) & \longleftrightarrow(x-1,y,z+1,1,j',k'),\label{eq:z01_j1_i0}\\
-(x,y,z\in\left\{ 0,1\right\} ,1,1,k) & \longleftrightarrow(x,y-1,z+1,0,j',k').\label{eq:z01_j1_i1}
-\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset space ~
 \end_inset
 
@@ -2341,9 +2329,30 @@ both
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-(x,y,2) & \longleftrightarrow(x+1,y+1,0),\,\text{for}\text{,\,\ensuremath{j=0.}}\label{eq:z2_j0_i0}
+(x,y,2) & \longleftrightarrow(x+1,y+1,0),\,\text{for}\text{,\,\ensuremath{j=0.}}\label{eq:}
 \end{align}
 
 \end_inset
@@ -2368,6 +2377,20 @@ noprefix "false"
 \end_inset
 
  vertices are connected in the following way:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2421,13 +2444,42 @@ noprefix "false"
 \end_inset
 
 , so there's actually 8 of them):
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\textcolor{red}{(x,y,z,0,0,k)} & \textcolor{red}{\longleftrightarrow}\textcolor{red}{(x,y,z+1,1,j',k'),\,z\in\{0,1\}}\label{eq:z01_j0_i0}\\
-\textcolor{green}{(x,y,z,0,0,k)} & \textcolor{green}{\longleftrightarrow}\textcolor{green}{(x,y,z+1,1,j',k'),\,z\in\{0,1\}}\label{eq:z01_j0_i1}
+\negthinspace\negthinspace\negthinspace\negthinspace\textcolor{blue}{(x,y,z,0,0,k)}\, & \textcolor{blue}{\leftrightarrow}\,\textcolor{blue}{(x,y,z+1,1,j',k'),\,\,\,\,\,\,\,\,\,\,\,z\in\{0,1\}}\label{eq:z01_j0_i0}\\
+\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,0,k)}\, & \textcolor{Green}{\leftrightarrow}\textcolor{Green}{\,(x,y,z+1,0,j',k'),\,\,\,\,\,\,\,\,\,\,\,z\in\{0,1\}}\label{eq:z01_j0_i1}\\
+\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,0,1,k)}\, & \textcolor{Orange}{\leftrightarrow}\textcolor{Orange}{\,(x-1,y,z+1,1,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i0}\\
+\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,1,k)}\, & \textcolor{red}{\leftrightarrow}\textcolor{red}{\,(x,y-1,z+1,0,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i1}\\
+\nonumber \\
+\negthinspace\negthinspace\negthinspace\negthinspace\textcolor{blue}{(x,y,2,0,0,k)}\, & \textcolor{blue}{\leftrightarrow}\textcolor{blue}{\,(x+1,y+1,0,1,j',k'),}\label{eq:z2_j0_i0}\\
+\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,0,k)}\, & \textcolor{Green}{\leftrightarrow}\textcolor{Green}{\,(x+1,y+1,0,0,j',k'),}\label{eq:z2_j0_i1}\\
+\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,0,1,k)}\, & \textcolor{Orange}{\leftrightarrow}\,\textcolor{Orange}{(x,y+1,0,0,j',k'),}\label{eq:z2_j1_i0}\\
+\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,1,k)}\, & \textcolor{red}{\leftrightarrow\,}\textcolor{red}{(x+1,y,0,1,j',k').}\label{eq:z2_j1_i1}
 \end{align}
 
 \end_inset
@@ -2436,21 +2488,11 @@ noprefix "false"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula 
-\begin{align}
-(x,y,2,0,1,k) & \longleftrightarrow(x,y+1,0,1,j',k'),\label{eq:z2_j1_i0}\\
-(x,y,2,1,1,k) & \longleftrightarrow(x+1,y,0,0,j',k').\label{eq:z2_j1_i1}
-\end{align}
-
+\begin_inset VSpace -2mm
 \end_inset
 
 
-\end_layout
-
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -2461,227 +2503,19 @@ status open
 status open
 
 \begin_layout Plain Layout
-Equations 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j0_i0"
-plural "false"
-caps "false"
-noprefix "false"
-
+\begin_inset VSpace -2mm
 \end_inset
 
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z01_j1_i1"
-plural "false"
-caps "false"
-noprefix "false"
 
-\end_inset
-
- (and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z2_j0_i0"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:z2_j1_i1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-) each describe a 
-\begin_inset Formula $K_{2,4}$
-\end_inset
-
- graph (8 edges in total, in different colors in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:pegasus"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-), one connecting the 
-\begin_inset Formula $i=0$
-\end_inset
-
- part of a 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- cell at 
-\begin_inset Formula $(x,y,z)$
-\end_inset
-
- to the 
-\begin_inset Formula $i=1$
-\end_inset
-
- part of a 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
- on a different layer 
-\begin_inset Formula $z$
-\end_inset
-
- and possibly different coordiante 
-\begin_inset Formula $(x^{\prime},y^{\prime})$
-\end_inset
-
-, and the other 
-\begin_inset Formula $K_{2,4}$
-\end_inset
-
- connects the 
-\begin_inset Formula $i=1$
-\end_inset
-
- part to the 
-\begin_inset Formula $i=0$
-\end_inset
-
- part of a 
-\begin_inset Formula $K_{4,4}$
-\end_inset
-
-, also on a different layer 
-\begin_inset Formula $z$
-\end_inset
-
- and possibly different coordinate 
-\begin_inset Formula $(x^{\prime},y^{\prime})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Plain Layout
-A representative part of the Pegasus graph is depicted in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:pegasus"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
-\end_layout
-
+\begin_inset VSpace -2mm
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Applying Equations 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:uc_add"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:outgoing_ip1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- to obtain edges connections to the Chimera layers given by Equations 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:k44"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_vertical"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:chimera_horizontal"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- will produce a Pegasus graph, without producing the same edge twice.
- 
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Graphical representations of Pegasus
-\end_layout
-
-\begin_layout Standard
-There are many ways that Pegasus can be drawn, so we show some of these
- in Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ChimeraAndPegasus3"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:ChimeraAndPegasus3_repeated"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -2782,7 +2616,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset VSpace bigskip
+\begin_inset VSpace -0.5mm
 \end_inset
 
 
@@ -2857,7 +2691,7 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset VSpace bigskip
+\begin_inset VSpace -0.5mm
 \end_inset
 
 
@@ -3062,7 +2896,105 @@ Graph degree
 \end_layout
 
 \begin_layout Standard
-As can easily be seen in Figure 
+If we look for example at the cell at position 
+\begin_inset Formula $(x,yz)=(1,1,1)$
+\end_inset
+
+, we can find that vertices have a degree of 
+\series bold
+\emph on
+fifteen: 
+\series default
+\emph default
+The 6 grey edges that would regularly be in Chimera (4 to form the 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell and 2 to connect to 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells above/left and below/right), then there is 1 Pegasus edge added 
+\emph on
+within
+\emph default
+ one 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell according to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, then we have 8 more Pegasus edges for connecting 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells of different Chimera layers 
+\begin_inset Formula $z$
+\end_inset
+
+, from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z01_j0_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z01_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (or from Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z2_j0_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:z2_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ if we were on a 
+\begin_inset Formula $z=2$
+\end_inset
+
+ cell).
+ Therefore the degree (which is 15) has increased by a factor of 2.5 when
+ compared to the degree of Chimera (which is 6).
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:pegasus"
@@ -3072,9 +3004,12 @@ noprefix "false"
 
 \end_inset
 
-, the vertices of a generic unit cell of Pegasus have a degree 15, which
- is 2.5 times larger than the maimum degree achieved in Chimera.
- 
+, the cells at the boundary, such as at position 
+\begin_inset Formula $(x,y,z)=(0,0,0)$
+\end_inset
+
+, do not show a degree of 15, just as the cells of Chimera at the very edge
+ would not show a degree of 6.
 \end_layout
 
 \begin_layout Subsection
@@ -3114,7 +3049,8 @@ cite{Edmonds1965,*Edmonds1965a}
  cell of a Chimera's physical qubits were to encode just one logical qubit
  (in for example, an extreme case of minor embedding), then Chimera would
  be planar.
- While all red, blue, and green lines added in Pegasus are of the form 
+ While all added edges in Pegasus that connect different Chimera layers
+ are of the form 
 \begin_inset Formula $K_{2,4}$
 \end_inset
 
@@ -3122,17 +3058,32 @@ cite{Edmonds1965,*Edmonds1965a}
 \begin_inset Formula $K_{2,4}$
 \end_inset
 
- lines connect cells of different planes of chimeras in a non-planar way,
+ edges connect cells of different planes of chimeras in a non-planar way,
  such that even if each cell were to represent one logical qubit, 
 \emph on
 these logical qubits would still form a non-planar graph in Pegasus.
 
 \emph default
- This should expand the number of binary optimization problems that can
- be embedded onto a D-Wave annealer, and cannot with any known algorithm
- be solved on a classical computer with a number of operations that scales
- polynomially with the number of binary variables.
+ This should expand the number of binary optimization problems that cannot
+ with any known algorithm be solved on a classical computer with a number
+ of operations polynomially scaling with the number of binary variables,
+ that can potentially be embedded onto a D-Wave annealer.
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3140,8 +3091,8 @@ Embedding
 \end_layout
 
 \begin_layout Standard
-We have written an entire paper on the embedding of quadratization gadgets
- onto Chimera and Pegasus.
+We have written an entire paper on the minor-embedding of quadratization
+ gadgets onto Chimera and Pegasus.
  One highlight of that work is the fact that 
 \emph on
 all 
@@ -3154,11 +3105,27 @@ quadratization gadgets for single cubic terms which require one auxiliary
 
 which means that all three logical qubits and the auxiliary qubit can be
  connected in any way, without any minor-embedding.
-\end_layout
+ We refer the reader to that paper for more thorough details about the advantage
+ of Pegasus over Chimera for the minor-embedding of quadratization gadgets.
+ 
+\begin_inset Note Note
+status open
 
-\begin_layout Subsection
+\begin_layout Plain Layout
 Application: Nike will embed two problems on Chimera and Pegasus to show
  reduction in # of auxiliary qubits.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3173,14 +3140,52 @@ We provide all readers with free, open-source codes to generate a variety
  in order to suit their interests.
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Acknowledgements
 \end_layout
 
 \begin_layout Standard
 We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
- the correctness of our algorithm, and to Aidan Roy for introducing us to
- her.
+ the correctness of our algorithm
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+, and to Aidan Roy for helpful discussions
+\end_layout
+
+\end_inset
+
+
+\lang british
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "/home/nike/pCloud Sync/library"
+options "apsrev4-1"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3200,13 +3205,233 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
 
-\lang british
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "/home/nike/pCloud Sync/library"
-options "apsrev4-1"
+\begin_layout Plain Layout
+Equations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j0_i0"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z01_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:z2_j1_i1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) each describe a 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ graph (8 edges in total, in different colors in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), one connecting the 
+\begin_inset Formula $i=0$
+\end_inset
+
+ part of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cell at 
+\begin_inset Formula $(x,y,z)$
+\end_inset
+
+ to the 
+\begin_inset Formula $i=1$
+\end_inset
+
+ part of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ on a different layer 
+\begin_inset Formula $z$
+\end_inset
+
+ and possibly different coordiante 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+, and the other 
+\begin_inset Formula $K_{2,4}$
+\end_inset
+
+ connects the 
+\begin_inset Formula $i=1$
+\end_inset
+
+ part to the 
+\begin_inset Formula $i=0$
+\end_inset
+
+ part of a 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+, also on a different layer 
+\begin_inset Formula $z$
+\end_inset
+
+ and possibly different coordinate 
+\begin_inset Formula $(x^{\prime},y^{\prime})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+A representative part of the Pegasus graph is depicted in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pegasus"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Applying Equations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:uc_add"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:outgoing_ip1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to obtain edges connections to the Chimera layers given by Equations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:k44"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_vertical"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:chimera_horizontal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ will produce a Pegasus graph, without producing the same edge twice.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Graphical representations of Pegasus
+\end_layout
+
+\begin_layout Plain Layout
+There are many ways that Pegasus can be drawn, so we show some of these
+ in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ChimeraAndPegasus3_repeated"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
 
 \end_inset
 
