@@ -19,6 +19,19 @@
 \patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
 
 \def\bibsection{\section*{\refname}} 
+
+\usepackage[hyphens]{url}  %% be sure to specify the option 'hyphens'
+%\usepackage[pdftex,bookmarksnumbered,hidelinks,breaklinks]{hyperref}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red},
+    citecolor={magenta},
+%    citecolor=[rgb]{1, 0.0784314, 0.184314},
+    urlcolor={blue}
+}
+
+\g@addto@macro\UrlBreaks{\do\-}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
@@ -3133,11 +3146,45 @@ Open source code for generation of Pegasus figures
 \end_layout
 
 \begin_layout Standard
+All figures in this publication and its Supplemental Material can be generated
+ (in vector graphic form) using our open source and customizable code which
+ should be cited as in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Szalay2018"
+literal "false"
+
+\end_inset
+
+.
+ The user can choose which type of Pegasus graph; the dimensions 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+; the edge colors and widths, the vertex colors and widths; among other
+ things.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 We provide all readers with free, open-source codes to generate a variety
  of different graphical depications of Pegasus in MetaPost, which can easily
  be compiled with most LaTeX distributions and generates PDFs.
  Many options are available that allow users to change the default settings
  in order to suit their interests.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3164,7 +3211,7 @@ Acknowledgements
 
 \begin_layout Standard
 We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
- the correctness of our algorithm
+ the correctness of our algorithm.
 \begin_inset Note Note
 status open
 
@@ -3176,6 +3223,30 @@ status open
 
 
 \lang british
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\lang british
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
