@@ -20,7 +20,7 @@
 
 \def\bibsection{\section*{\refname}} 
 
-\usepackage[hyphens]{url}  %% be sure to specify the option 'hyphens'
+%\usepackage[hyphens]{url}  %% be sure to specify the option 'hyphens'
 %\usepackage[pdftex,bookmarksnumbered,hidelinks,breaklinks]{hyperref}
 \usepackage[breaklinks]{hyperref}
 \hypersetup{
@@ -116,7 +116,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -129,7 +128,6 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
-
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -170,7 +168,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 

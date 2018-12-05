@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for f in fig*.eps; do ./a2ping.pl $f; done
-#for f in fig*.eps; do epspdf $f; done
+#for f in fig*.eps; do ./a2ping.pl $f; done
+for f in fig*.eps; do epspdf $f; done
 
 pdfcrop --margins '-100 -100 -215 -215'	fig_ChimeraDmdRect5x5.pdf		fig_ChimeraDmdRect5x5_crop.pdf
 pdfcrop --margins '-560 -560 -560 -560'	fig_PegasusDmdRect5x5one.pdf		fig_PegasusDmdRect5x5one_crop.pdf
