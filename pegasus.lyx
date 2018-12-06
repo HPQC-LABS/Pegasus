@@ -2701,14 +2701,14 @@ status open
 \begin_inset Formula 
 \begin{align}
 \negthinspace\negthinspace\negthinspace\negthinspace\textcolor{blue}{(x,y,z,0,0,k)}\, & \textcolor{blue}{\leftrightarrow}\,\textcolor{blue}{(x,y,z+1,1,j',k'),\,\,\,\,\,\,\,\,\,\,\,z\in\{0,1\}}\label{eq:z01_j0_i0}\\
-\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,0,k)}\, & \textcolor{Green}{\leftrightarrow}\textcolor{Green}{\,(x,y,z+1,0,j',k'),\,\,\,\,\,\,\,\,\,\,\,z\in\{0,1\}}\label{eq:z01_j0_i1}\\
-\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,0,1,k)}\, & \textcolor{Orange}{\leftrightarrow}\textcolor{Orange}{\,(x-1,y,z+1,1,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i0}\\
-\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,1,k)}\, & \textcolor{red}{\leftrightarrow}\textcolor{red}{\,(x,y-1,z+1,0,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i1}\\
+\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,0,k)}\, & \textcolor{red}{\leftrightarrow}\textcolor{red}{\,(x,y,z+1,0,j',k'),\,\,\,\,\,\,\,\,\,\,\,z\in\{0,1\}}\label{eq:z01_j0_i1}\\
+\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,0,1,k)}\, & \textcolor{Green}{\leftrightarrow}\textcolor{Green}{\,(x-1,y,z+1,1,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i0}\\
+\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,z,1,1,k)}\, & \textcolor{Orange}{\leftrightarrow}\textcolor{Orange}{\,(x,y-1,z+1,0,j',k'),\,z\in\{0,1\}}\label{eq:z01_j1_i1}\\
 \nonumber \\
 \negthinspace\negthinspace\negthinspace\negthinspace\textcolor{blue}{(x,y,2,0,0,k)}\, & \textcolor{blue}{\leftrightarrow}\textcolor{blue}{\,(x+1,y+1,0,1,j',k'),}\label{eq:z2_j0_i0}\\
-\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,0,k)}\, & \textcolor{Green}{\leftrightarrow}\textcolor{Green}{\,(x+1,y+1,0,0,j',k'),}\label{eq:z2_j0_i1}\\
-\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,0,1,k)}\, & \textcolor{Orange}{\leftrightarrow}\,\textcolor{Orange}{(x,y+1,0,0,j',k'),}\label{eq:z2_j1_i0}\\
-\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,1,k)}\, & \textcolor{red}{\leftrightarrow\,}\textcolor{red}{(x+1,y,0,1,j',k').}\label{eq:z2_j1_i1}
+\textcolor{red}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,0,k)}\, & \textcolor{red}{\leftrightarrow}\textcolor{red}{\,(x+1,y+1,0,0,j',k'),}\label{eq:z2_j0_i1}\\
+\textcolor{Green}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,0,1,k)}\, & \textcolor{Green}{\leftrightarrow}\,\textcolor{Green}{(x,y+1,0,0,j',k'),}\label{eq:z2_j1_i0}\\
+\textcolor{Orange}{\negthinspace\negthinspace\negthinspace\negthinspace(x,y,2,1,1,k)}\, & \textcolor{Orange}{\leftrightarrow\,}\textcolor{Orange}{(x+1,y,0,1,j',k').}\label{eq:z2_j1_i1}
 \end{align}
 
 \end_inset
