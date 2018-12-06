@@ -752,9 +752,68 @@ name "fig:pegasus"
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbox1=
+\backslash
+hbox{
+\backslash
+includegraphics[height=4cm]{metapostfigs/fig_ChimeraStdRect5x5_crop.pdf}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-6mm}
+\backslash
+includegraphics[width=
+\backslash
+textwidth]{metapostfigs/bottomLeftCrop.pdf}
+\backslash
+llap{
+\backslash
+hspace{-0cm}
+\backslash
+raisebox{6.9cm}{
+\backslash
+fcolorbox{black}{white}{
+\backslash
+includegraphics[height=4cm]{metapostfigs/showingDegree.pdf}}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/bottomLeftCrop.pdf
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -844,9 +903,52 @@ name "fig:pegasus64"
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace -6mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-6mm}
+\backslash
+includegraphics[width=
+\backslash
+textwidth]{metapostfigs/resizedOne.pdf}
+\backslash
+llap{
+\backslash
+hspace{3cm}
+\backslash
+raisebox{5cm}{
+\backslash
+fcolorbox{black}{white}{
+\backslash
+includegraphics[height=1.2cm]{metapostfigs/fig_PegasusDotRect5x5one_crop.pdf}}}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/resizedOne.pdf
 	width 100text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -957,6 +1059,7 @@ name "fig:pegasusdot"
 \begin_inset Graphics
 	filename metapostfigs/dotFullCroppedFurther.pdf
 	width 100text%
+	height 55text%
 
 \end_inset
 
