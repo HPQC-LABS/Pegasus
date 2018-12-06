@@ -32,6 +32,7 @@
 }
 
 \g@addto@macro\UrlBreaks{\do\-}
+\definecolor{LightGray}{rgb}{0.8,0.8,0.8}
 \end_preamble
 \options showpacs,preprintnumbers,amssymb,aps,notitlepage,twocolumn
 \use_default_options false
@@ -787,13 +788,17 @@ textwidth]{metapostfigs/bottomLeftCrop.pdf}
 \backslash
 llap{
 \backslash
-hspace{-0cm}
+hspace{-9.65cm}
 \backslash
-raisebox{6.9cm}{
+fboxsep=0mm
 \backslash
-fcolorbox{black}{white}{
+raisebox{7.8cm}{
 \backslash
-includegraphics[height=4cm]{metapostfigs/showingDegree.pdf}}}}
+fcolorbox{gray}{white}{
+\backslash
+includegraphics[height=3.3cm]{metapostfigs/showingDegree.pdf}}}
+\backslash
+hspace{9.65cm}}
 \end_layout
 
 \end_inset
@@ -925,13 +930,17 @@ textwidth]{metapostfigs/resizedOne.pdf}
 \backslash
 llap{
 \backslash
-hspace{3cm}
+hspace{2cm}
 \backslash
-raisebox{5cm}{
+fboxsep=0.2mm
 \backslash
-fcolorbox{black}{white}{
+raisebox{4.7cm}{
 \backslash
-includegraphics[height=1.2cm]{metapostfigs/fig_PegasusDotRect5x5one_crop.pdf}}}}
+fcolorbox{LightGray}{white}{
+\backslash
+includegraphics[height=1.5cm]{metapostfigs/fig_PegasusDotRect5x5one_crop.pdf}}}
+\backslash
+hspace{-0.2cm}}
 \end_layout
 
 \end_inset
@@ -2570,6 +2579,20 @@ both
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{align}
 (x,y,2) & \longleftrightarrow(x+1,y+1,0),\,\text{for}\text{,\,\ensuremath{j=0.}}\label{eq:}
@@ -3258,8 +3281,29 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Non-planarity
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3332,8 +3376,29 @@ these logical qubits would still form a non-planar graph in Pegasus.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -0.5mm
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Embedding
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3362,6 +3427,13 @@ Application: Nike will embed two problems on Chimera and Pegasus to show
  reduction in # of auxiliary qubits.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
 \end_inset
 
 
@@ -3441,10 +3513,6 @@ We provide all readers with free, open-source codes to generate a variety
 \end_inset
 
 
-\begin_inset VSpace -2mm
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section*
@@ -3452,14 +3520,86 @@ Acknowledgments
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
  the correctness of our algorithm.
+ NC was funded by EPSRC (Project: EP/S00114X); SS by NRDIF (Project: NKFIH-K1205
+69 and 2017-1.2.1-NKP-2017-00001) and by the 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
- NC was funded by EPSRC grant number EP/S00114X/, and SzSz by the National
- Research, Development and Innovation Fund of Hungary 
+HAS
+\end_layout
+
+\end_inset
+
+Hungarian Academy of Sciences for a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+János Bolyai Research Scholarship
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ within the 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+``Lendület'' Program
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+/, and SzSz by the National Research, Development and Innovation Fund of
+ Hungary 
 \begin_inset Note Note
 status open
 
@@ -3560,14 +3700,35 @@ raggedright
 \end_inset
 
 
-\size scriptsize
+\lang english
 
+\begin_inset VSpace -2mm
+\end_inset
+
+
+\begin_inset VSpace -1mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\lang british
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "/home/nike/pCloud Sync/library"
 options "apsrev4-1"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -2mm
 \end_inset
 
 
