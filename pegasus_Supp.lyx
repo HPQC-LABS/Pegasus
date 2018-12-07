@@ -143,7 +143,7 @@ status open
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells (Chimera)
+ cells (Chimera).
 \end_layout
 
 \end_inset
@@ -223,7 +223,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tilted classic
+Diamond
 \end_layout
 
 \end_inset
@@ -285,7 +285,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tilted classic
+Upper triangle
 \end_layout
 
 \end_inset
@@ -331,7 +331,7 @@ status open
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells in Chimera formation
+ cells in Chimera formation.
 \end_layout
 
 \end_inset
@@ -509,7 +509,7 @@ status open
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells in Chimera formation
+ cells in Chimera formation.
 \end_layout
 
 \end_inset
@@ -684,7 +684,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pegasus unit cells
+Pegasus cells.
 \end_layout
 
 \end_inset
@@ -764,7 +764,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tilted classic
+Diamond
 \end_layout
 
 \end_inset
@@ -826,7 +826,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Tilted classic
+Upper triangle
 \end_layout
 
 \end_inset
@@ -872,7 +872,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-64 inter-layer edges (Pegasus)
+64 inter-layer edges (Pegasus).
 \end_layout
 
 \end_inset
@@ -1233,13 +1233,13 @@ status open
 
 \begin_layout Plain Layout
 64 inter-layer edges within a 
-\emph on
-tilted
-\emph default
- 
 \begin_inset Formula $(X,Y,Z)=(5,5,3)$
 \end_inset
 
+ 
+\emph on
+tilted
+\emph default
  lattice (Pegasus).
 \end_layout
 
@@ -1411,7 +1411,7 @@ status open
 \begin_inset Formula $(X,Y,Z)=(2,2,3)$
 \end_inset
 
- patch cropped out of Pegasus
+ patch cropped out of Pegasus.
 \end_layout
 
 \end_inset
@@ -1585,7 +1585,11 @@ status open
 \begin_inset Formula $(X,Y,Z)=(2,2,3)$
 \end_inset
 
- patch cropped out of Pegasus
+ patch cropped out of a 
+\emph on
+tilted 
+\emph default
+Pegasus
 \end_layout
 
 \end_inset
@@ -1931,8 +1935,11 @@ status open
 \begin_inset Formula $(X,Y,Z)=(2,2,3)$
 \end_inset
 
- patch cropped out of Pegasus (with all Pegasus-only edges either black
- or light blue).
+ patch cropped out of 
+\emph on
+a tilted 
+\emph default
+Pegasus (with all Pegasus-only edges either black or light blue).
 \end_layout
 
 \end_inset
@@ -2277,6 +2284,10 @@ status open
 \begin_inset Formula $(X,Y,Z)=(5,5,3)$
 \end_inset
 
+ 
+\emph on
+tilted
+\emph default
  lattice of Pegasus.
 \end_layout
 
