@@ -57,8 +57,8 @@ innermode := "Trp";			%   trapezoid
 %innermode := "Dot";			%   one dot
 
 string outermode;			% type of layer:
-outermode := "Rect";			%   rectangular, one behind the other
-%outermode := "Tilt";			%   parallelogram, one behind the other
+%outermode := "Rect";			%   rectangular, one behind the other
+outermode := "Tilt";			%   parallelogram, one behind the other
 % not implemented yet:
 %outermode := "Stck";			%   parallelogram, stacked one on top of the other
 
@@ -754,6 +754,30 @@ beginfig(0)
 	draw PegasusLLfullblue;
 	draw PegasusLLDots;
 endfig;
+
+
+if innermode<>"Dot":
+
+bb := ((-.5ut,-ut)--(+.5ut,-ut)--(+.5ut,+ut)--(-.5ut,+ut)--cycle) shifted if innermode = "Std": PV(2,2,2,1,0,0) else: PV(2,2,2,0,0,1) fi;
+setbounds PegasusLLfull to bb;
+setbounds PegasusLLfullblue to bb;
+setbounds PegasusLLDots to bb;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"full_vertexcrop.eps";
+beginfig(0)
+	draw PegasusLLfull;
+	draw PegasusLLDots;
+endfig;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"fullblue_vertexcrop.eps";
+beginfig(0)
+	draw PegasusLLfullblue;
+	draw PegasusLLDots;
+endfig;
+
+%else:
+
+fi;
 
 
 end;
