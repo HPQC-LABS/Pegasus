@@ -10,6 +10,9 @@
 %   mpost DWaveGraphs.mp
 % for converting .eps files to .pdf, use the shell command
 %   for f in fig_*.eps; do a2ping $f; done
+%   OR
+%   for f in fig_*.eps; do epspdf $f; done
+
 
 % ** declarations for metaposting **********************************************
 prologues := 3;	% needed if there are LaTeX labels and also for converting to pdf
@@ -48,14 +51,14 @@ numeric L;	% size of the Chimera blocks, $L\times L$
 L := 5;
 
 string innermode;			% type of unit cells:
-%innermode := "Trp";			%   trapezoid
+innermode := "Trp";			%   trapezoid
 %innermode := "Dmd";			%   diamond
 %innermode := "Std";			%   2x4
-innermode := "Dot";			%   one dot
+%innermode := "Dot";			%   one dot
 
 string outermode;			% type of layer:
-%outermode := "Rect";			%   rectangular, one behind the other
-outermode := "Tilt";			%   parallelogram, one behind the other
+outermode := "Rect";			%   rectangular, one behind the other
+%outermode := "Tilt";			%   parallelogram, one behind the other
 % not implemented yet:
 %outermode := "Stck";			%   parallelogram, stacked one on top of the other
 
@@ -492,8 +495,8 @@ PegasusLLone := image(
 				% incoming edges
 				edgeeq("Pegasus_c01_ij_u0",c-1,i,j,cblue,"continuous");
 				edgeeq("Pegasus_c01_ij_u1",c-1,i,j,cred,"continuous");
-				edgeeq("Pegasus_c01_ijm1_u1",c-1,i,j+1,cgreen,"continuous");
-				edgeeq("Pegasus_c01_im1j_u0",c-1,i+1,j,corange,"continuous");
+				edgeeq("Pegasus_c01_ijm1_u1",c-1,i,j+1,corange,"continuous");
+				edgeeq("Pegasus_c01_im1j_u0",c-1,i+1,j,cgreen,"continuous");
 ); % of PegasusLLone
 
 picture PegasusLLfull;
