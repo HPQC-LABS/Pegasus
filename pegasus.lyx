@@ -3529,8 +3529,15 @@ Acknowledgments
 \begin_layout Standard
 We gratefully thank Kelly Boothby of D-Wave for her time spent in verifying
  the correctness of our algorithm.
- NC was funded by EPSRC (Project: EP/S00114X); SS by NRDIF (Project: NKFIH-K1205
-69 and 2017-1.2.1-NKP-2017-00001) and by the 
+ NC was funded by EPSRC (Project: EP/S00114X); SzSz by the NRDIF (NKFIH-K120569
+ and Quantum Technology National Excellence Program 2017-1.2.1-NKP-2017-00001)
+ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+SS by NRDIF (Project: NKFIH-K120569 and 2017-1.2.1-NKP-2017-00001) and by
+ the 
 \begin_inset Note Note
 status open
 
@@ -3593,6 +3600,10 @@ János Bolyai Research Scholarship
 \noun default
 \color inherit
 .
+\end_layout
+
+\end_inset
+
  
 \begin_inset Note Note
 status open
