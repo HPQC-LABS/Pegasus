@@ -117,7 +117,6 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
-
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -137,7 +136,6 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
-
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -181,7 +179,6 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
-
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -414,7 +411,7 @@ noprefix "false"
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells (See Table 1).
+ cells (see Table 1).
 \end_layout
 
 \begin_layout Standard
