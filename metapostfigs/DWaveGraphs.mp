@@ -29,32 +29,30 @@ if showindices=1:
 fi;
 
 % ** color definitions *********************************************************
-color cblack;	cblack := ( 0*16+ 0, 0*16+ 0, 0*16+ 0)/256;	% hsv:   0,  0,  0
-color cgrey;	cgrey  := (13*16+ 0,13*16+ 0,13*16+ 0)/256;	% hsv:   
-%color cred;	cred   := (15*16+15, 3*16+ 6, 3*16+ 6)/256;	% hsv:   0, 79,100
-color cred;	cred   := (       1,       0,       0)    ;	% hsv:   
-color clblue; 	clblue := ( 180    , 206    , 256    )/256;     % hsv: 
-%color cblue;	cblue  := ( 8*16+ 4, 8*16+ 4,15*16+15)/256;     % hsv: 240, 22, 67
-color cblue;	cblue  := (       0,       0,       1)    ;     % hsv: 
-%color cdblue;	cdblue := ( 45     , 98     ,     255)/256;     % hsv: 
-color cdblue;	cdblue := .4cblue + .6clblue;
-color cgreeno;	cgreeno:= ( 9*16+10,15*16+15, 9*16+10)/256;	% hsv: 120, 40,100
-color cgreen ;	cgreen := (       0,    0.95,       0)    ;	% hsv: 
+color cblack;	cblack := (  0,  0,  0)/256;
+color cgrey;	cgrey  := (208,208,208)/256;
 
-color cgreen;	cgreen := ( 0*16+ 0, 9*16+10, 4*16+ 2)/256;	% hsv: 146,100, 60
-%color corange;	corange:= (15*16+15, 9*16+15, 0*16+ 0)/256;	% hsv:  37,100,100
-color corange;	corange:= (       1,     0.5,       0)    ;	% hsv:  37,100,100
+color cred;	cred   := (256,  0,  0)/256;
+color cblue;	cblue  := (  0,  0,256)/256;
+color cgreen;	cgreen := (  0,154, 66)/256;
+color corange;	corange:= (256,128,  0)/256;
 
+color clblue; 	clblue := (180,206,256)/256;
+
+color cblues[];
+cblues[0] := .60[clblue,cblue];
+cblues[1] := .20[clblue,cblue];
+cblues[2] := clblue;
 % ** units *********************************************************************
 
 numeric L;	% size of the Chimera blocks, $L\times L$
 L := 5;
 
 string innermode;			% type of unit cells:
-innermode := "Trp";			%   trapezoid
+%innermode := "Trp";			%   trapezoid
 %innermode := "Dmd";			%   diamond
 %innermode := "Std";			%   2x4
-%innermode := "Dot";			%   one dot
+innermode := "Dot";			%   one dot
 
 string outermode;			% type of layer:
 %outermode := "Rect";			%   rectangular, one behind the other
@@ -566,7 +564,7 @@ PegasusLLfullblue := image(
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
 				edgeeq("Chimera_K44",c,i,j,cgrey,"continuous");
-				edgeeq("Pegasus_UC",c,i,j,cblack,"continuous");
+				edgeeq("Pegasus_UC",c,i,j,cgrey,"continuous");
 			endfor;
 		endfor;
 	endfor;
@@ -584,12 +582,67 @@ PegasusLLfullblue := image(
 			endfor;
 		endfor;
 	endfor;
-	color cblues[];
-	%cblues[0] := cdblue;
-	cblues[0] := clblue;
-	%cblues[1] := cblue;
-	cblues[1] := clblue;
-	cblues[2] := clblue;
+	for c = 0 upto 1:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("Pegasus_c01_ij_u0",c,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_ij_u1",c,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
+			for j = 1 upto L-1:
+				edgeeq("Pegasus_c01_ijm1_u1",c,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+		for i = 1 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("Pegasus_c01_im1j_u0",c,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+	endfor;
+
+		for i = 0 upto L-2:
+			for j = 0 upto L-2:
+				edgeeq("Pegasus_c2_ip1jp1_u0",2,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c2_ip1jp1_u1",2,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("Pegasus_c2_ijp1_u0",2,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("Pegasus_c2_ip1j_u1",2,i,j,clblue,"continuous");
+			endfor;
+		endfor;
+); % of PegasusLLfullblue
+
+picture PegasusLLfullblues;
+PegasusLLfullblues := image(
+	for c = 0 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("Chimera_K44",c,i,j,cgrey,"continuous");
+				edgeeq("Pegasus_UC",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
+	for c = 0 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("Chimera_Vertical",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
+	for c = 0 upto 2:
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("Chimera_Horizontal",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
 	for c = 0 upto 1:
 		for i = 0 upto L-1:
 			for j = 0 upto L-1:
@@ -625,7 +678,7 @@ PegasusLLfullblue := image(
 				edgeeq("Pegasus_c2_ip1j_u1",2,i,j,cblues[2],"continuous");
 			endfor;
 		endfor;
-); % of PegasusLLfullblue
+); % of PegasusLLfullblues
 
 
 picture ChimeraLLDots;
@@ -688,6 +741,7 @@ bb:=(bbl,bbb)--(bbr,bbb)--(bbr,bbt)--(bbl,bbt)--cycle;
 setbounds PegasusLLone to bb;
 setbounds PegasusLLfull to bb;
 setbounds PegasusLLfullblue to bb;
+setbounds PegasusLLfullblues to bb;
 setbounds PegasusLLDots to bb;
 
 outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"one.eps";
@@ -705,6 +759,12 @@ endfig;
 outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"fullblue.eps";
 beginfig(0)
 	draw PegasusLLfullblue;
+	draw PegasusLLDots;
+endfig;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"fullblues.eps";
+beginfig(0)
+	draw PegasusLLfullblues;
 	draw PegasusLLDots;
 endfig;
 
@@ -741,6 +801,7 @@ calcbb(0,1,1,0);
 bb:=(bbl-sfh*dbblfull,bbb-dbbbfull)--(bbr+sfh*dbbrfull,bbb-dbbbfull)--(bbr+sfh*dbbrfull,bbt+dbbtfull)--(bbl-sfh*dbblfull,bbt+dbbtfull)--cycle;
 setbounds PegasusLLfull to bb;
 setbounds PegasusLLfullblue to bb;
+setbounds PegasusLLfullblues to bb;
 setbounds PegasusLLDots to bb;
 
 outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"full_crop.eps";
@@ -754,6 +815,35 @@ beginfig(0)
 	draw PegasusLLfullblue;
 	draw PegasusLLDots;
 endfig;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"fullblues_crop.eps";
+beginfig(0)
+	draw PegasusLLfullblues;
+	draw PegasusLLDots;
+endfig;
+
+
+% a different cropping for the fig in the main text
+if (innermode="Dot") and (outermode="Rect"):
+
+%calcbb(0,1,2,0);
+calcbb(1,2,3,1);
+bbl := bbl-2.0ut;
+bbt := bbt-1.5ut;
+bbr := bbr+2.0ut;
+bbb := bbb+1.5ut;
+bb:=(bbl,bbb)--(bbr,bbb)--(bbr,bbt)--(bbl,bbt)--cycle;
+setbounds PegasusLLfull to bb;
+setbounds PegasusLLDots to bb;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"full_croprect.eps";
+beginfig(0)
+        draw PegasusLLfull;
+        draw PegasusLLDots;
+endfig;
+
+fi;
+
 
 
 if innermode<>"Dot":
@@ -775,9 +865,10 @@ beginfig(0)
 	draw PegasusLLDots;
 endfig;
 
-%else:
-
 fi;
+
+
+
 
 
 end;
