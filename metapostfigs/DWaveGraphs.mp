@@ -55,8 +55,8 @@ string innermode;			% type of unit cells:
 innermode := "Dot";			%   one dot
 
 string outermode;			% type of layer:
-%outermode := "Rect";			%   rectangular, one behind the other
-outermode := "Tilt";			%   parallelogram, one behind the other
+outermode := "Rect";			%   rectangular, one behind the other
+%outermode := "Tilt";			%   parallelogram, one behind the other
 % not implemented yet:
 %outermode := "Stck";			%   parallelogram, stacked one on top of the other
 
@@ -497,6 +497,46 @@ PegasusLLone := image(
 				edgeeq("Pegasus_c01_im1j_u0",c-1,i+1,j,cgreen,"continuous");
 ); % of PegasusLLone
 
+picture PegasusLLoneblue;
+PegasusLLoneblue := image(
+	for c = 0 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-1:
+				edgeeq("Chimera_K44",c,i,j,cgrey,"continuous");
+				edgeeq("Pegasus_UC",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
+	for c = 0 upto 2:
+		for i = 0 upto L-1:
+			for j = 0 upto L-2:
+				edgeeq("Chimera_Vertical",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
+	for c = 0 upto 2:
+		for i = 0 upto L-2:
+			for j = 0 upto L-1:
+				edgeeq("Chimera_Horizontal",c,i,j,cgrey,"continuous");
+			endfor;
+		endfor;
+	endfor;
+	numeric c,i,j;
+	c := 1;
+	i := 2;
+	j := 2;
+				% outgoing edges
+				edgeeq("Pegasus_c01_ij_u0",c,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_ij_u1",c,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_ijm1_u1",c,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_im1j_u0",c,i,j,clblue,"continuous");
+				% incoming edges
+				edgeeq("Pegasus_c01_ij_u0",c-1,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_ij_u1",c-1,i,j,clblue,"continuous");
+				edgeeq("Pegasus_c01_ijm1_u1",c-1,i,j+1,clblue,"continuous");
+				edgeeq("Pegasus_c01_im1j_u0",c-1,i+1,j,clblue,"continuous");
+); % of PegasusLLoneblue
+
 picture PegasusLLfull;
 PegasusLLfull := image(
 	for c = 0 upto 2:
@@ -739,6 +779,7 @@ endfig;
 calcbb(0,L-1,L-1,0);
 bb:=(bbl,bbb)--(bbr,bbb)--(bbr,bbt)--(bbl,bbt)--cycle;
 setbounds PegasusLLone to bb;
+setbounds PegasusLLoneblue to bb;
 setbounds PegasusLLfull to bb;
 setbounds PegasusLLfullblue to bb;
 setbounds PegasusLLfullblues to bb;
@@ -747,6 +788,12 @@ setbounds PegasusLLDots to bb;
 outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"one.eps";
 beginfig(0)
 	draw PegasusLLone;
+	draw PegasusLLDots;
+endfig;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"oneblue.eps";
+beginfig(0)
+	draw PegasusLLoneblue;
 	draw PegasusLLDots;
 endfig;
 
@@ -789,11 +836,18 @@ endfig;
 calcbb(2,2,2,2);
 bb:=(bbl-sfh*dbblone,bbb-dbbbone)--(bbr+sfh*dbbrone,bbb-dbbbone)--(bbr+sfh*dbbrone,bbt+dbbtone)--(bbl-sfh*dbblone,bbt+dbbtone)--cycle;
 setbounds PegasusLLone to bb;
+setbounds PegasusLLoneblue to bb;
 setbounds PegasusLLDots to bb;
 
 outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"one_crop.eps";
 beginfig(0)
 	draw PegasusLLone;
+	draw PegasusLLDots;
+endfig;
+
+outputtemplate := "fig_Pegasus"&innermode&outermode&decimal(L)&"x"&decimal(L)&"oneblue_crop.eps";
+beginfig(0)
+	draw PegasusLLoneblue;
 	draw PegasusLLDots;
 endfig;
 
