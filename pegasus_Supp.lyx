@@ -125,11 +125,19 @@
 
 \begin_layout Title
 
-\size giant
+\size huge
 Supplementary Material
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -15mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -170,9 +178,73 @@ Tilted classic
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraStdRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -234,7 +306,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraDmdRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -296,7 +368,7 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_ChimeraTrpRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -308,6 +380,13 @@ Upper triangle
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -15mm
 \end_inset
 
 
@@ -486,6 +565,13 @@ Compressed
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -10mm
 \end_inset
 
 
@@ -674,6 +760,13 @@ Compressed
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace -10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -711,9 +804,77 @@ Tilted classic
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -775,7 +936,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -837,7 +998,7 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRectUC.pdf
-	width 30text%
+	width 22text%
 
 \end_inset
 
@@ -855,7 +1016,7 @@ Upper triangle
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13mm
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -869,12 +1030,23 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset VSpace 10mm
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 64 inter-layer edges (Pegasus).
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 5mm
 \end_inset
 
 
@@ -901,13 +1073,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -939,7 +1143,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -957,6 +1161,48 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -977,13 +1223,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1015,7 +1293,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1033,7 +1311,7 @@ Compressed
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -7mm
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -1047,6 +1325,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\begin_inset VSpace 10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -1057,6 +1342,13 @@ status open
  lattice (Pegasus).
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 5mm
 \end_inset
 
 
@@ -1083,13 +1375,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1121,7 +1445,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1139,6 +1463,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1159,13 +1518,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1197,7 +1588,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1269,13 +1660,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1307,13 +1730,48 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1345,13 +1803,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpTilt5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1383,7 +1873,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotTilt5x5one.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1440,13 +1930,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1478,7 +2000,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1496,6 +2018,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1516,13 +2073,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1554,7 +2143,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1618,13 +2207,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1656,7 +2277,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1674,6 +2295,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1694,13 +2350,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpTilt5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1732,7 +2420,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotTilt5x5full_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1790,13 +2478,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1828,7 +2548,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1846,6 +2566,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -1866,13 +2621,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -1904,7 +2691,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -1968,13 +2755,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2006,7 +2825,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2024,6 +2843,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2044,13 +2898,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpTilt5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2082,7 +2968,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotTilt5x5fullblue_crop.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2139,13 +3025,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2177,7 +3095,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2195,6 +3113,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2215,13 +3168,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2253,7 +3238,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2317,13 +3302,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2355,7 +3372,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2373,6 +3390,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2393,13 +3445,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpTilt5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2431,7 +3515,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotTilt5x5full.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2491,13 +3575,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdRect5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2529,7 +3645,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdRect5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2547,6 +3663,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2567,13 +3718,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpRect5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2605,7 +3788,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotRect5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2669,13 +3852,45 @@ Tilted classic
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusStdTilt5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2707,7 +3922,7 @@ Diamond
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
@@ -2725,6 +3940,41 @@ Diamond
 \end_inset
 
 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide false
 sideways false
@@ -2745,13 +3995,45 @@ Upper triangle
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusTrpTilt5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 
@@ -2783,7 +4065,7 @@ Compressed
 \begin_layout Plain Layout
 \begin_inset Graphics
 	filename metapostfigs/fig_PegasusDotTilt5x5fullblue.pdf
-	width 24text%
+	width 48text%
 
 \end_inset
 
