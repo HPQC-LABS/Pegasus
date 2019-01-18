@@ -31,7 +31,7 @@
     urlcolor={blue}
 }
 
-\usepackage[paper=a4paper,top=1.2in,bottom=1.2in,right=0.68in,left=0.68in]{geometry} % needed to move title page up: https://tex.stackexchange.com/questions/31705/different-margins-for-title-page
+\usepackage[paper=a4paper,top=1.1in,bottom=1.2in,right=0.68in,left=0.68in]{geometry} % needed to move title page up: https://tex.stackexchange.com/questions/31705/different-margins-for-title-page
 
 
 
@@ -112,6 +112,53 @@
 \begin_body
 
 \begin_layout Title
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+onecolumngrid
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
 Pegasus: The second connectivity graph for large-scale quantum annealing
  hardware
 \end_layout
@@ -4580,13 +4627,6 @@ Compressed
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Part*
 \noindent
 \align center
@@ -4603,6 +4643,18 @@ newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+\noindent
+\align center
 \begin_inset ERT
 status open
 

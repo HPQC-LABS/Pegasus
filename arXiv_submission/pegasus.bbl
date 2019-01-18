@@ -84,7 +84,7 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Dattani}},\ }\href {http://arxiv.org/abs/1901.04405} {\emph {\bibinfo
   {title} {{Quadratization in discrete optimization and quantum mechanics}}}}\
-  (\bibinfo {year} {2019})\ \Eprint {http://arxiv.org/abs/1901.04405}
+  (\bibinfo {year} {2019})\ %\Eprint {http://arxiv.org/abs/1901.04405}
   {arXiv:1901.04405} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Dattani}\ and\ \citenamefont
   {Chancellor}(2019)}]{Dattani2019a}%
@@ -92,7 +92,7 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Dattani}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
   {Chancellor}},\ }\href {http://arxiv.org/abs/1411.6758} {\  (\bibinfo {year}
-  {2019})},\ \Eprint {http://arxiv.org/abs/1411.6758} {arXiv:1411.6758}
+  {2019})},\ %\Eprint {http://arxiv.org/abs/1411.6758} {arXiv:1411.6758}
   \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Szalay}\ \emph {et~al.}(2018)\citenamefont {Szalay},
   \citenamefont {Dattani},\ and\ \citenamefont {Chancellor}}]{Szalay2018}%
