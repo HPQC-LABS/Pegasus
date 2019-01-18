@@ -117,6 +117,7 @@ Nike Dattani
 \end_layout
 
 \begin_layout Author Email
+
 n.dattani@cfa.harvard.edu
 \end_layout
 
@@ -136,6 +137,7 @@ Szilard Szalay
 \end_layout
 
 \begin_layout Author Email
+
 szalay.szilard@wigner.mta.hu
 \end_layout
 
@@ -179,6 +181,7 @@ Nicholas Chancellor
 \end_layout
 
 \begin_layout Author Email
+
 nicholas.chancellor@durham.ac.uk
 \end_layout
 
@@ -2774,6 +2777,10 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 wide true
 sideways false
@@ -3009,6 +3016,11 @@ status open
 	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
 	width 33text%
 	height 33text%
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3416,7 +3428,23 @@ Embedding
 
 \begin_layout Standard
 We have written an entire paper on the minor-embedding of quadratization
- gadgets onto Chimera and Pegasus.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019"
+literal "false"
+
+\end_inset
+
+ gadgets onto Chimera and Pegasus 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019a"
+literal "false"
+
+\end_inset
+
+.
  One highlight of that work is the fact that 
 \emph on
 all 
@@ -3429,8 +3457,16 @@ quadratization gadgets for single cubic terms which require one auxiliary
 
  which means that all three logical qubits and the auxiliary qubit can be
  connected in any way, without any minor-embedding.
- We refer the reader to that paper for more thorough details about the advantage
- of Pegasus over Chimera for the minor-embedding of quadratization gadgets.
+ We refer the reader to that paper 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Dattani2019a"
+literal "false"
+
+\end_inset
+
+ for more thorough details about the advantage of Pegasus over Chimera for
+ the minor-embedding of quadratization gadgets.
  
 \begin_inset Note Note
 status open

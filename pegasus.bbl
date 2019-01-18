@@ -1,0 +1,107 @@
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{6}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Neven}\ \emph {et~al.}(2009)\citenamefont {Neven},
+  \citenamefont {Denchev}, \citenamefont {Drew-Brook}, \citenamefont {Zhang},
+  \citenamefont {Macready},\ and\ \citenamefont {Rose}}]{Neven2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Neven}}, \bibinfo {author} {\bibfnamefont {V.~S.}\ \bibnamefont {Denchev}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Drew-Brook}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Zhang}}, \bibinfo {author}
+  {\bibfnamefont {W.~G.}\ \bibnamefont {Macready}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Rose}},\ }\href
+  {https://static.googleusercontent.com/media/www.google.com/en//googleblogs/pdfs/nips{\_}demoreport{\_}120709{\_}research.pdf}
+  {\emph {\bibinfo {title} {{NIPS 2009 Demonstration: Binary Classification
+  using Hardware Implementation of Quantum Annealing}}}},\ \bibinfo {type}
+  {Tech. Rep.}\ (\bibinfo {year} {2009})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Edmonds}(1965{\natexlab{a}})}]{Edmonds1965}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Edmonds}},\ }\href {\doibase 10.4153/CJM-1965-045-4} {\bibfield  {journal}
+  {\bibinfo  {journal} {Canadian Journal of Mathematics}\ }\textbf {\bibinfo
+  {volume} {17}},\ \bibinfo {pages} {449} (\bibinfo {year}
+  {1965}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Edmonds}(1965{\natexlab{b}})}]{Edmonds1965a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Edmonds}},\ }\href
+  {https://nvlpubs.nist.gov/nistpubs/jres/69B/jresv69Bn1-2p125{\_}A1b.pdf}
+  {\emph {\bibinfo {title} {Journal of Research of the National Bureau of
+  Standards-B.}}},\ \bibinfo {type} {Tech. Rep.}\ \bibinfo {number} {2}\
+  (\bibinfo {year} {1965})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dattani}(2019)}]{Dattani2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Dattani}},\ }\href {http://arxiv.org/abs/1901.04405} {\emph {\bibinfo
+  {title} {{Quadratization in discrete optimization and quantum mechanics}}}}\
+  (\bibinfo {year} {2019})\ \Eprint {http://arxiv.org/abs/1901.04405}
+  {arXiv:1901.04405} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dattani}\ and\ \citenamefont
+  {Chancellor}(2019)}]{Dattani2019a}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Dattani}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Chancellor}},\ }\href {http://arxiv.org/abs/1411.6758} {\  (\bibinfo {year}
+  {2019})},\ \Eprint {http://arxiv.org/abs/1411.6758} {arXiv:1411.6758}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Szalay}\ \emph {et~al.}(2018)\citenamefont {Szalay},
+  \citenamefont {Dattani},\ and\ \citenamefont {Chancellor}}]{Szalay2018}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Szalay}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Dattani}}, \
+  and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Chancellor}},\
+  }\href {\doibase https://github.com/HPQC-LABS/PegasusDraw, DOI:
+  10.5281/zenodo1953876} {\  (\bibinfo {year} {2018}),\
+  https://github.com/HPQC-LABS/PegasusDraw, DOI:
+  10.5281/zenodo1953876}\BibitemShut {NoStop}%
+\end{thebibliography}%
