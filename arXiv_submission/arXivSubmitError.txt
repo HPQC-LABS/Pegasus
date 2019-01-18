@@ -1,0 +1,577 @@
+
+Cornell University
+We gratefully acknowledge support from
+the Simons Foundation and member institutions.
+arXiv.org > submit
+Logged in as ndattani | Help | My Account | Logout
+Start   >>   Add Files   >>   Process   >>   Metadata   >>   Preview
+
+Submission Processing
+arXiv now processes new submissions and replacements with TeX Live 2016.
+
+Reprocess
+
+arXiv's automated TeX processing has failed to process your source. The 3 most common mistakes causing this are:
+
+1. File-name upper/lower-case mismatch between TeX source and figure or included files
+2. Missing customized or differing version of style files. The most common being natbib.sty with the "Bibliography not compatible with author-year citations" (for the fix see #1 in texlive faq)
+3. Missing, misnamed, or non-portable complete paths to figure files
+
+The TeX Log appears below, and is best read bottom up, to see the relevant error message from your source processing within the appropriate section. If your problem is not solved by making the corrections as illustrated above, or your problem is extremely complex in nature, please contact us citing submit/2544326 to ensure a more rapid response. Please note that it may take a day or two to receive a personal response.
+
+You may wish to hit "Ctrl + F" ("Apple + F" on a Mac) or browse to Edit and select "Find" to search for "error". Please note that the first error may simply be arXiv's application of hypertex failing.
+
+TeX log appears below
+[verbose]: Creating arXiv submission AutoTeX object
+[verbose]: *** Using TeX Live 2016 ***
+[verbose]: Calling arXiv submission AutoTeX process
+[verbose]: TeX/AutoTeX.pm: admin_timeout = minion
+[verbose]: <_pegasus.lyx_> is of type 'TEX'.
+[verbose]: <pegasus.out> is of type 'unknown'.
+[verbose]: <pegasus.lyx> is of type 'TEX'.
+[verbose]: <pegasus.bbl> is of type 'TeX auxiliary'.
+[verbose]: <pegasus.tex> is of type 'PDFLATEX'.
+[verbose]: ~~~~~~~~~~~ Processing file 'pegasus.tex'
+[verbose]: arXiv Warning: user included plain hyperref directive.
+[verbose]: arXiv Warning: user included plain hyperref directive.
+[verbose]: TEXMFCNF is unset.
+[verbose]: ~~~~~~~~~~~ Running hpdflatex for the first time ~~~~~~~~
+[verbose]: Running: "(export HOME=/tmp PATH=/texlive/2016/bin/arch:/bin; cd /submissions/2544326/ && pdflatex 'pegasus.tex' < /dev/null)" 2>&1
+[verbose]: This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+restricted \write18 enabled.
+entering extended mode
+(./pegasus.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/aps4-1.rtx)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/aps10pt4-1.rtx)
+(/texlive/2016/texmf-dist/tex/latex/textcase/textcase.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/texlive/2016/texmf-dist/tex/latex/url/url.sty)
+(/texlive/2016/texmf-local/tex/latex/natbib/natbib.sty
+
+This is natbib version 8.31
+*************************************************************
+!!WARNING!! !!WARNING!! !!WARNING!! !!WARNING!!
+
+This version (v8.31) of natbib is stricter in its formatting
+requirements for bibitem entries than the previous version
+used at arXiv (v7.1).
+
+If your submission encounters a problem see
+
+http://arXiv.org/help/faq/texlive
+
+and the natbib documentation at
+
+http://www.ctan.org/tex-archive/macros/latex/contrib/natbib/
+
+for explanation and adjust your submission accordingly.
+The arXiv team.
+*************************************************************
+
+) (/texlive/2016/texmf-arxiv/tex/latex/revtex/revsymb4-1.sty))
+(/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty)
+(/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+(/texlive/2016/texmf-dist/tex/latex/base/t1enc.def))
+(/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+(/texlive/2016/texmf-dist/tex/latex/base/latin9.def))
+(/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+(/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/texlive/2016/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+(/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption) usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+) (/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/texlive/2016/texmf-config/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver: hpdftex.
+
+(/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+
+! LaTeX Error: Option clash for package hyperref.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type H <return> for immediate help.
+...
+
+l.39 \hypersetup
+{
+?
+! Emergency stop.
+...
+
+l.39 \hypersetup
+{
+! ==> Fatal error occurred, no output PDF file produced!
+Transcript written on pegasus.log.
+
+[verbose]: pdflatex 'pegasus.tex' failed.
+[verbose]: TEXMFCNF is unset.
+[verbose]: ~~~~~~~~~~~ Running pdflatex for the first time ~~~~~~~~
+[verbose]: Running: "(export HOME=/tmp PATH=/texlive/2016/bin/arch:/bin; cd /submissions/2544326/ && pdflatex 'pegasus.tex' < /dev/null)" 2>&1
+[verbose]: This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex)
+restricted \write18 enabled.
+entering extended mode
+(./pegasus.tex
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/aps4-1.rtx)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(/texlive/2016/texmf-arxiv/tex/latex/revtex/aps10pt4-1.rtx)
+(/texlive/2016/texmf-dist/tex/latex/textcase/textcase.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/texlive/2016/texmf-dist/tex/latex/url/url.sty)
+(/texlive/2016/texmf-local/tex/latex/natbib/natbib.sty
+
+This is natbib version 8.31
+*************************************************************
+!!WARNING!! !!WARNING!! !!WARNING!! !!WARNING!!
+
+This version (v8.31) of natbib is stricter in its formatting
+requirements for bibitem entries than the previous version
+used at arXiv (v7.1).
+
+If your submission encounters a problem see
+
+http://arXiv.org/help/faq/texlive
+
+and the natbib documentation at
+
+http://www.ctan.org/tex-archive/macros/latex/contrib/natbib/
+
+for explanation and adjust your submission accordingly.
+The arXiv team.
+*************************************************************
+
+) (/texlive/2016/texmf-arxiv/tex/latex/revtex/revsymb4-1.sty))
+(/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty)
+(/texlive/2016/texmf-dist/tex/latex/base/fontenc.sty
+(/texlive/2016/texmf-dist/tex/latex/base/t1enc.def))
+(/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
+(/texlive/2016/texmf-dist/tex/latex/base/latin9.def))
+(/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/texlive/2016/texmf-dist/tex/latex/float/float.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty)
+(/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty)
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/texlive/2016/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
+(/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption) usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+) (/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/texlive/2016/texmf-config/tex/latex/latexconfig/hyperref.cfg))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+(/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
+(/texlive/2016/texmf-config/tex/latex/latexconfig/geometry.cfg))
+(/texlive/2016/texmf-dist/tex/latex/subfig/subfig.sty)
+(/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+(/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+(/texlive/2016/texmf-dist/tex/generic/babel/babel.def))
+(/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf))
+
+Package Babel Warning: The package option `english' should not be used
+(Babel) with a more specific one (like `british') on input line
+58.
+
+
+Class revtex4-1 Warning: Repair the float package.
+
+No file pegasus.aux.
+(/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd)
+(/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty)
+(/texlive/2016/texmf-config/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+(/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./pegasus.out) (./pegasus.out)
+*geometry* detected driver: pdftex
+(/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd)
+(/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd)
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+pdfTeX warning: pdflatex (file ./metapostfigs/fig_ChimeraStdRect5x5_crop.pdf):
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/fig_ChimeraStdRect5x5_crop.pdf, id=78, 234.8775pt x 234.8775pt>
+<use metapostfigs/fig_ChimeraStdRect5x5_crop.pdf>
+
+pdfTeX warning: pdflatex (file ./metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf):
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf, id=79, 234.8775pt x 234.8775pt>
+<use metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf>
+
+pdfTeX warning: pdflatex (file ./metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf):
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf, id=80, 234.8775pt x 234.8775pt>
+<use metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf>
+Overfull \hbox (4.26044pt too wide) in paragraph at lines 109--114
+[][][][][][][][][]
+
+Package natbib Warning: Citation `Neven2009' on page 1 undefined on input line
+118.
+
+
+LaTeX Warning: Reference `fig:chimera' on page 1 undefined on input line 123.
+
+<use metapostfigs/fig_ChimeraStdRect5x5_crop.pdf>
+
+pdfTeX warning: pdflatex (file ./metapostfigs/bottomLeftCrop.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/bottomLeftCrop.pdf, id=81, 673.90271pt x 673.90271pt>
+<use metapostfigs/bottomLeftCrop.pdf>
+<metapostfigs/showingDegree.pdf, id=82, 13.71323pt x 17.53049pt>
+<use metapostfigs/showingDegree.pdf>
+Overfull \hbox (9.24994pt too wide) in paragraph at lines 177--178
+[][]
+
+
+pdfTeX warning: pdflatex (file ./metapostfigs/resizedOne.pdf): PDF inclusion: f
+ound PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/resizedOne.pdf, id=83, 484.57036pt x 463.63213pt>
+<use metapostfigs/resizedOne.pdf>
+
+pdfTeX warning: pdflatex (file ./metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+<metapostfigs/fig_PegasusDotRect5x5one_crop.pdf, id=84, 148.30406pt x 148.30406
+pt> <use metapostfigs/fig_PegasusDotRect5x5one_crop.pdf>
+
+LaTeX Warning: Reference `eq:z01_j0_i0' on page 1 undefined on input line 186.
+
+
+LaTeX Warning: Reference `eq:z2_j1_i1' on page 1 undefined on input line 186.
+
+
+Overfull \hbox (3.08331pt too wide) in paragraph at lines 186--187
+[][]
+
+
+pdfTeX warning: pdflatex (file ./metapostfigs/dotFullCroppedFurther.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<metapostfigs/dotFullCroppedFurther.pdf, id=85, 172.06659pt x 117.1517pt>
+<use metapostfigs/dotFullCroppedFurther.pdf>
+Overfull \hbox (3.08702pt too wide) in paragraph at lines 194--195
+[][]
+
+LaTeX Warning: Reference `tab:IndicesInPegasus' on page 1 undefined on input li
+ne 211.
+
+
+LaTeX Warning: Reference `fig:pegasus' on page 1 undefined on input line 219.
+
+[1{/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./metapostf
+igs/fig_ChimeraStdRect5x5_crop.pdf> <./metapostfigs/fig_ChimeraDmdRect5x5_crop.
+pdf> <./metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf> <./metapostfigs/bottomLeft
+Crop.pdf> <./metapostfigs/showingDegree.pdf> <./metapostfigs/resizedOne.pdf> <.
+/metapostfigs/fig_PegasusDotRect5x5one_crop.pdf> <./metapostfigs/dotFullCropped
+Further.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `subscript' on input line 264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 264.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `subscript' on input line 285.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 285.
+
+
+LaTeX Warning: Reference `fig:chimera' on page 3 undefined on input line 289.
+
+
+LaTeX Warning: Reference `eq:k44' on page 3 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eq:chimera_vertical' on page 3 undefined on input lin
+e 314.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 327.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `subscript' on input line 327.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 327.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 340.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `subscript' on input line 340.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref) removing `math shift' on input line 340.
+
+
+LaTeX Warning: Reference `fig:pegasus64' on page 3 undefined on input line 355.
+
+
+
+Underfull \hbox (badness 10000) detected at line 379
+[]$[] [] $
+
+LaTeX Warning: Reference `eq:gen_z01' on page 3 undefined on input line 404.
+
+
+LaTeX Warning: Reference `eq:gen_z01' on page 3 undefined on input line 415.
+
+
+LaTeX Warning: Reference `eq:motherOfAllEdgeRelations' on page 3 undefined on i
+nput line 431.
+
+
+LaTeX Warning: Reference `eq:gen_z2' on page 3 undefined on input line 435.
+
+
+LaTeX Warning: Reference `eq:gen_z2' on page 3 undefined on input line 449.
+
+[3]
+
+LaTeX Warning: Reference `fig:pegasus64' on page 4 undefined on input line 467.
+
+
+
+LaTeX Warning: Reference `fig:pegasus' on page 4 undefined on input line 505.
+
+
+LaTeX Warning: Reference `eq:uc_add' on page 4 undefined on input line 509.
+
+
+LaTeX Warning: Reference `eq:z01_j0_i0' on page 4 undefined on input line 511.
+
+
+LaTeX Warning: Reference `eq:z01_j1_i1' on page 4 undefined on input line 511.
+
+
+LaTeX Warning: Reference `eq:z2_j0_i0' on page 4 undefined on input line 512.
+
+
+LaTeX Warning: Reference `eq:z2_j1_i1' on page 4 undefined on input line 512.
+
+
+LaTeX Warning: Reference `fig:pegasus' on page 4 undefined on input line 517.
+
+
+Package natbib Warning: Citation `Edmonds1965' on page 4 undefined on input lin
+e 535.
+
+
+Package natbib Warning: Citation `Edmonds1965a' on page 4 undefined on input li
+ne 535.
+
+
+Package natbib Warning: Citation `Dattani2019' on page 4 undefined on input lin
+e 565.
+
+
+Package natbib Warning: Citation `Dattani2019a' on page 4 undefined on input li
+ne 565.
+
+
+Package natbib Warning: Citation `Dattani2019a' on page 4 undefined on input li
+ne 571.
+
+
+Package natbib Warning: Citation `Szalay2018' on page 4 undefined on input line
+584.
+
+
+Package natbib Warning: Citation `Szalay2018' on page 4 undefined on input line
+587.
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 598--603
+\T1/lmr/m/n/10 al-go-rithm. NC was funded by EP-SRC (Project:
+(./pegasus.bbl
+
+LaTeX Warning: Reference `LastBibItem' on page 4 undefined on input line 9.
+
+) [4]
+
+! LaTeX Error: File `/home/nike/Pegasus/metapostfigs/fig_ChimeraStdRectUC' not
+found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type H <return> for immediate help.
+...
+
+l.644 ...gasus/metapostfigs/fig_ChimeraStdRectUC}}
+~~~~~~~~\subfloat[Diamond\...
+
+?
+! Emergency stop.
+...
+
+l.644 ...gasus/metapostfigs/fig_ChimeraStdRectUC}}
+~~~~~~~~\subfloat[Diamond\...
+
+! ==> Fatal error occurred, no output PDF file produced!
+Transcript written on pegasus.log.
+
+[verbose]: pdflatex 'pegasus.tex' failed.
+[verbose]: Removing (La)TeX AUX file called 'pegasus.aux' (1547854569 >= 1547854568)
+[verbose]: Removing (La)TeX AUX file called 'pegasusNotes.bib' (1547854568 >= 1547854568)
+[verbose]: Removing (La)TeX AUX file called 'pegasus.out' (1547854569 >= 1547854568)
+[verbose]: 'htex' is not a valid TeX format; will ignore.
+[verbose]: TEXMFCNF is unset.
+[verbose]: ~~~~~~~~~~~ Running htex for the first time ~~~~~~~~
+[verbose]: Running: "(export HOME=/tmp PATH=/texlive/2016/bin/arch:/bin; cd /submissions/2544326/ && tex 'pegasus.tex' < /dev/null)" 2>&1
+[verbose]: This is TeX, Version 3.14159265 (TeX Live 2016) (preloaded format=tex)
+(./pegasus.tex
+! Undefined control sequence.
+l.1 \documentclass
+[british,english,showpacs,preprintnumbers,amssymb,aps,noti...
+
+?
+! Emergency stop.
+l.1 \documentclass
+[british,english,showpacs,preprintnumbers,amssymb,aps,noti...
+
+No pages of output.
+Transcript written on pegasus.log.
+
+[verbose]: tex 'pegasus.tex' failed.
+[verbose]: TEXMFCNF is unset.
+[verbose]: ~~~~~~~~~~~ Running tex for the first time ~~~~~~~~
+[verbose]: Running: "(export HOME=/tmp PATH=/texlive/2016/bin/arch:/bin; cd /submissions/2544326/ && tex 'pegasus.tex' < /dev/null)" 2>&1
+[verbose]: This is TeX, Version 3.14159265 (TeX Live 2016) (preloaded format=tex)
+(./pegasus.tex
+! Undefined control sequence.
+l.1 \documentclass
+[british,english,showpacs,preprintnumbers,amssymb,aps,noti...
+
+?
+! Emergency stop.
+l.1 \documentclass
+[british,english,showpacs,preprintnumbers,amssymb,aps,noti...
+
+No pages of output.
+Transcript written on pegasus.log.
+
+[verbose]: tex 'pegasus.tex' failed.
+[verbose]: We failed utterly to process the TeX file 'pegasus.tex'
+[error]: Unable to sucessfully process tex files.
+*** AutoTeX ABORTING ***
+
+[verbose]: AutoTeX returned error: Unable to sucessfully process tex files.
+
+[verbose]: $autotex->process failed $@: $?: 0 $!: Inappropriate ioctl for device
+[verbose]: Error running AutoTeX process:
+
+Contact
+
+If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact web-accessibility@cornell.edu for assistance.
+
