@@ -4627,24 +4627,6 @@ Compressed
 
 \end_layout
 
-\begin_layout Part*
-\noindent
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -4663,6 +4645,19 @@ status open
 
 \backslash
 onecolumngrid
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm} 
 \end_layout
 
 \end_inset
