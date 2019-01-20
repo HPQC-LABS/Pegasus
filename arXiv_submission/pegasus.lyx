@@ -380,7 +380,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \end_layout
 
 \end_inset
@@ -452,11 +452,11 @@ noprefix "false"
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- unit cell, and to 2 qubits the 
+ unit cell, and to 2 qubits in the 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
- cells above and below it (or to the left and right of it).
+ cells above and below it, or to the left and right of it.
  All commercial quantum annealers built to date follow this graph connectivity,
  with just larger and larger numbers of 
 \begin_inset Formula $K_{4,4}$
@@ -487,7 +487,7 @@ Chimera graphs in all commercial quantum annealers to date.
 \begin_layout Plain Layout
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
-<features tabularvalignment="middle">
+<features tabularvalignment="middle" tabularwidth="100col%">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt">
@@ -1080,15 +1080,8 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Quotes eld
-\end_inset
-
-Compressed
-\begin_inset Quotes erd
-\end_inset
-
- version of the Pegasus graph, with each cell represented by one vertex
- and each 
+`Compressed' version of the Pegasus graph, with each cell represented by
+ one vertex and each 
 \begin_inset Formula $K_{2,4}$
 \end_inset
 
@@ -1280,7 +1273,7 @@ Then
 \end_inset
 
  depiction, or the horizontal vertices in the diamond-shaped or triangle-shaped
- depictions, while 
+ depictions; while 
 \begin_inset Formula $i=1$
 \end_inset
 
@@ -1511,7 +1504,7 @@ Chimera layer
 \begin_inset Text
 
 \begin_layout Plain Layout
-Side within 
+`Side' within 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1550,7 +1543,7 @@ Side within
 \begin_inset Text
 
 \begin_layout Plain Layout
-First index within each side of 
+First index within each `side' of 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -1589,7 +1582,7 @@ First index within each side of
 \begin_inset Text
 
 \begin_layout Plain Layout
-Second index within each side of 
+Second index within each `side' of 
 \begin_inset Formula $K_{4,4}$
 \end_inset
 
@@ -2265,7 +2258,7 @@ All edges can actually be described using just a one-line rule:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{multline*}
-\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\left(x,y,z,i,j,k\right)
+\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\left(x,y,z,i,j,k\right)
 \end{multline*}
 
 \end_inset
@@ -2412,7 +2405,7 @@ vertices of the opposite side
 \begin_inset Formula $(x,y)$
 \end_inset
 
-, but next layer 
+, but in the next layer 
 \begin_inset Formula $z+1$
 \end_inset
 
@@ -2753,7 +2746,7 @@ noprefix "false"
 \begin_inset Formula $z=2$
 \end_inset
 
-, so there are actually 8 of them):
+, so there are actually 8 relations):
 \begin_inset VSpace -2mm
 \end_inset
 
@@ -3326,7 +3319,7 @@ noprefix "false"
 \begin_inset Formula $z=2$
 \end_inset
 
-).
+ layer).
  Therefore the degree (which is 15) has increased by a factor of 2.5 when
  compared to the degree of Chimera (which is 6).
 \end_layout
@@ -3347,7 +3340,7 @@ noprefix "false"
 \begin_inset Formula $(x,y,z)=(0,0,0)$
 \end_inset
 
-, do not show a degree of 15, just as the cells of Chimera at the very edge
+, do not show a degree of 15, just as the cells of Chimera at the boundary
  would not show a degree of 6
 \begin_inset Note Note
 status open
@@ -4431,7 +4424,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \end_layout
 
 \end_inset
@@ -4560,7 +4553,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \end_layout
 
 \end_inset
@@ -4713,7 +4706,7 @@ captionsetup[subfigure]{justification=centering}
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4969,7 +4962,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -5143,7 +5136,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -5359,7 +5352,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -5453,7 +5446,6 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Pegasus cells.
 \begin_inset ERT
 status open
 
@@ -5467,6 +5459,10 @@ centering
 \end_inset
 
 
+\begin_inset Formula $K_{4,4}$
+\end_inset
+
+ cells (Pegasus).
 \end_layout
 
 \end_inset
@@ -5684,7 +5680,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -5781,7 +5777,7 @@ centering
 
 \end_inset
 
-64 inter-layer edges (Pegasus).
+64 inter-layer edges in color (Pegasus).
 \end_layout
 
 \end_inset
@@ -5964,7 +5960,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -6109,7 +6105,7 @@ centering
 
 \end_inset
 
-64 inter-layer edges within an 
+64 inter-layer edges in color within an 
 \begin_inset Formula $(X,Y,Z)=(5,5,3)$
 \end_inset
 
@@ -6289,7 +6285,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 20mm
 \end_inset
 
@@ -6427,7 +6423,7 @@ centering
 
 \end_inset
 
-64 inter-layer edges within a 
+64 inter-layer edges in color within a 
 \begin_inset Formula $(X,Y,Z)=(5,5,3)$
 \end_inset
 
@@ -6586,7 +6582,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -6844,7 +6840,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -6954,7 +6950,7 @@ centering
 \emph on
 tilted 
 \emph default
-Pegasus
+Pegasus.
 \end_layout
 
 \end_inset
@@ -7091,7 +7087,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -7354,7 +7350,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -7617,7 +7613,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -7872,7 +7868,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -8146,7 +8142,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -8424,7 +8420,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
@@ -8711,7 +8707,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Upper triangle
+Triangle
 \begin_inset VSpace 2mm
 \end_inset
 
