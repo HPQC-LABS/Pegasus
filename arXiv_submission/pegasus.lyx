@@ -4844,7 +4844,7 @@ Tilted classic
 
 
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraStdRectUC.pdf
+	filename metapostfigs/fig_ChimeraStdRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -4910,7 +4910,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraDmdRectUC.pdf
+	filename metapostfigs/fig_ChimeraDmdRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -4976,7 +4976,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraTrpRectUC.pdf
+	filename metapostfigs/fig_ChimeraTrpRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -5008,7 +5008,7 @@ Triangle
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5066,7 +5066,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraStdRect5x5_crop.pdf
 	width 24text%
 
 \end_inset
@@ -5108,7 +5108,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraDmdRect5x5_crop.pdf
 	width 24text%
 
 \end_inset
@@ -5150,7 +5150,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraTrpRect5x5_crop.pdf
 	width 24text%
 
 \end_inset
@@ -5192,7 +5192,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraDotRect5x5_crop.pdf
+	filename metapostfigs/fig_ChimeraDotRect5x5_crop.pdf
 	width 24text%
 
 \end_inset
@@ -5224,7 +5224,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5282,7 +5282,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraStdRect5x5.pdf
+	filename metapostfigs/fig_ChimeraStdRect5x5.pdf
 	width 24text%
 
 \end_inset
@@ -5324,7 +5324,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraDmdRect5x5.pdf
+	filename metapostfigs/fig_ChimeraDmdRect5x5.pdf
 	width 24text%
 
 \end_inset
@@ -5366,7 +5366,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraTrpRect5x5.pdf
+	filename metapostfigs/fig_ChimeraTrpRect5x5.pdf
 	width 24text%
 
 \end_inset
@@ -5408,7 +5408,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_ChimeraDotRect5x5.pdf
+	filename metapostfigs/fig_ChimeraDotRect5x5.pdf
 	width 24text%
 
 \end_inset
@@ -5440,7 +5440,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5562,7 +5562,7 @@ Tilted classic
 
 
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRectUC.pdf
+	filename metapostfigs/fig_PegasusStdRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -5628,7 +5628,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRectUC.pdf
+	filename metapostfigs/fig_PegasusDmdRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -5694,7 +5694,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRectUC.pdf
+	filename metapostfigs/fig_PegasusTrpRectUC.pdf
 	width 22text%
 
 \end_inset
@@ -5755,7 +5755,7 @@ newgeometry{top=2mm,bottom=0mm,left=8mm,right=8mm}
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace -10mm
@@ -5796,7 +5796,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5816,7 +5816,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5one_crop.pdf
 	width 48text%
 
 \end_inset
@@ -5870,7 +5870,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5890,7 +5890,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5one_crop.pdf
 	width 48text%
 
 \end_inset
@@ -5954,7 +5954,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -5974,7 +5974,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5one_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6028,7 +6028,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6048,7 +6048,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5one_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6080,7 +6080,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -6128,7 +6128,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6148,7 +6148,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5one.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6202,7 +6202,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6222,7 +6222,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5one.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6299,7 +6299,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5one.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6373,7 +6373,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5one.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6405,7 +6405,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6447,7 +6447,7 @@ tilted
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6467,7 +6467,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdTilt5x5one.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6521,7 +6521,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6541,7 +6541,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdTilt5x5one.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6576,7 +6576,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6596,7 +6596,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpTilt5x5one.pdf
+	filename metapostfigs/fig_PegasusTrpTilt5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6630,7 +6630,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6650,7 +6650,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotTilt5x5one.pdf
+	filename metapostfigs/fig_PegasusDotTilt5x5one.pdf
 	width 48text%
 
 \end_inset
@@ -6674,7 +6674,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -6719,7 +6719,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6739,7 +6739,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6773,7 +6773,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6793,7 +6793,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6834,7 +6834,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6854,7 +6854,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6868,7 +6868,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6888,7 +6888,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -6920,7 +6920,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -6966,7 +6966,7 @@ Pegasus.
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -6986,7 +6986,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdTilt5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7020,7 +7020,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7040,7 +7040,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdTilt5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7081,7 +7081,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7101,7 +7101,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpTilt5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusTrpTilt5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7115,7 +7115,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7135,7 +7135,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotTilt5x5full_crop.pdf
+	filename metapostfigs/fig_PegasusDotTilt5x5full_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7163,7 +7163,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -7209,7 +7209,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7229,7 +7229,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7263,7 +7263,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7283,7 +7283,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7344,7 +7344,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7364,7 +7364,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7378,7 +7378,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7398,7 +7398,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7426,7 +7426,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -7472,7 +7472,7 @@ Pegasus (with all Pegasus-only edges either black or light blue).
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7492,7 +7492,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7526,7 +7526,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7546,7 +7546,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7607,7 +7607,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7627,7 +7627,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpTilt5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusTrpTilt5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7641,7 +7641,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7661,7 +7661,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotTilt5x5fullblue_crop.pdf
+	filename metapostfigs/fig_PegasusDotTilt5x5fullblue_crop.pdf
 	width 48text%
 
 \end_inset
@@ -7685,7 +7685,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -7727,7 +7727,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7747,7 +7747,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5full.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -7781,7 +7781,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7801,7 +7801,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5full.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -7862,7 +7862,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7882,7 +7882,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5full.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -7900,7 +7900,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -7920,7 +7920,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5full.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -7948,7 +7948,7 @@ Compressed
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset VSpace 10mm
@@ -7997,7 +7997,7 @@ tilted
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8017,7 +8017,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdTilt5x5full.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -8055,7 +8055,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8075,7 +8075,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdTilt5x5full.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -8136,7 +8136,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8156,7 +8156,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpTilt5x5full.pdf
+	filename metapostfigs/fig_PegasusTrpTilt5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -8182,7 +8182,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8202,7 +8202,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotTilt5x5full.pdf
+	filename metapostfigs/fig_PegasusDotTilt5x5full.pdf
 	width 48text%
 
 \end_inset
@@ -8272,7 +8272,7 @@ centering
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8292,7 +8292,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdRect5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusStdRect5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8330,7 +8330,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8350,7 +8350,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdRect5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusDmdRect5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8414,7 +8414,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8434,7 +8434,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpRect5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusTrpRect5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8464,7 +8464,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8484,7 +8484,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotRect5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusDotRect5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8558,7 +8558,7 @@ lattice of Pegasus (with all Pegasus-only edges either black or light blue).
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8578,7 +8578,7 @@ Tilted classic
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusStdTilt5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusStdTilt5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8620,7 +8620,7 @@ Tilted classic
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8640,7 +8640,7 @@ Diamond
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDmdTilt5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusDmdTilt5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8701,7 +8701,7 @@ Diamond
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8721,7 +8721,7 @@ Triangle
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusTrpTilt5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusTrpTilt5x5fullblue.pdf
 	width 48text%
 
 \end_inset
@@ -8755,7 +8755,7 @@ Triangle
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -8775,7 +8775,7 @@ Compressed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /home/nike/Pegasus/metapostfigs/fig_PegasusDotTilt5x5fullblue.pdf
+	filename metapostfigs/fig_PegasusDotTilt5x5fullblue.pdf
 	width 48text%
 
 \end_inset
