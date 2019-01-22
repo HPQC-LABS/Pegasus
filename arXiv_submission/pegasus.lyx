@@ -4647,7 +4647,9 @@ status open
 
 
 \backslash
-newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm} 
+newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm}
+\backslash
+centering 
 \end_layout
 
 \end_inset
@@ -4694,7 +4696,7 @@ captionsetup[subfigure]{justification=centering}
 
 \begin_layout Standard
 \align center
-\begin_inset VSpace -15mm
+\begin_inset VSpace -5mm
 \end_inset
 
 
