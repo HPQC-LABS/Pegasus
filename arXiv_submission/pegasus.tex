@@ -65,7 +65,6 @@ hardware}
 \author{Nike Dattani}
 \email{n.dattani@cfa.harvard.edu}
 
-\selectlanguage{english}%
 
 \affiliation{Harvard-Smithsonian Center for Astrophysics}
 
@@ -75,7 +74,6 @@ hardware}
 Szilard Szalay}
 \email{szalay.szilard@wigner.mta.hu}
 
-\selectlanguage{english}%
 
 \affiliation{Wigner Research Centre for Physics}
 
@@ -83,7 +81,6 @@ Szilard Szalay}
 Nicholas Chancellor}
 \email{nicholas.chancellor@durham.ac.uk}
 
-\selectlanguage{english}%
 
 \affiliation{Joint Quantum Centre, Durham University}
 \begin{abstract}
@@ -106,9 +103,13 @@ code for generating the many depictions of Pegasus that we show.
 \caption{Three different depictions of the Chimera graph, with open edges to
 show that the pattern repeats.\label{fig:chimera}}
 
-\subfloat[Tilted classic]{\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraStdRect5x5_crop}}
-\subfloat[Diamond]{\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5_crop}}
-\subfloat[Upper triangle]{\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraTrpRect5x5_crop}}
+\subfloat[Tilted classic]{
+
+\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraStdRect5x5_crop}}\subfloat[Diamond]{
+
+\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5_crop}}\subfloat[Triangle]{
+
+\includegraphics[width=0.33\textwidth]{metapostfigs/fig_ChimeraTrpRect5x5_crop}}
 \end{figure*}
 
 The 128 qubits of the first commercial quantum annealer (D-Wave One,
@@ -120,15 +121,15 @@ cells directly above and below it, and the other side being connected
 to the same corresponding side on the $K_{4,4}$ cells to the right
 and left of it (see Figure \ref{fig:chimera}). The qubits can couple
 to up to 6 other qubits, since each qubit couples to 4 qubits within
-its $K_{4,4}$ unit cell, and to 2 qubits the $K_{4,4}$ cells above
-and below it (or to the left and right of it). All commercial quantum
-annealers built to date follow this graph connectivity, with just
-larger and larger numbers of $K_{4,4}$ cells (see Table 1).
+its $K_{4,4}$ unit cell, and to 2 qubits in the $K_{4,4}$ cells
+above and below it, or to the left and right of it. All commercial
+quantum annealers built to date follow this graph connectivity, with
+just larger and larger numbers of $K_{4,4}$ cells (see Table 1).
 
 \begin{table}[H]
 \caption{Chimera graphs in all commercial quantum annealers to date.}
 
-\begin{tabular}{ccc}
+\begin{tabular*}{1\columnwidth}{@{\extracolsep{\fill}}ccc}
 \hline 
 \noalign{\vskip2mm}
  & Array of $K_{4,4}$ cells & Total \# of qubits\tabularnewline[2mm]
@@ -139,7 +140,7 @@ D-Wave Two & $8\times8$ & 512\tabularnewline
 D-Wave 2X & $12\times12$ & 1152\tabularnewline
 D-Wave 2000Q & $16\times16$ & 2048\tabularnewline[2mm]
 \hline 
-\end{tabular}
+\end{tabular*}
 \end{table}
 
 In 2018, D-Wave announced the construction of a (not yet commercial)
@@ -185,7 +186,7 @@ Chimera layers, colored according to Eqs. (\ref{eq:z01_j0_i0})-(\ref{eq:z2_j1_i1
 
 \vspace{-2mm}
 
-\subfloat[``Compressed'' version of the Pegasus graph, with each cell represented
+\subfloat[`Compressed' version of the Pegasus graph, with each cell represented
 by one vertex and each $K_{2,4}$ (8 edges) represented by one edge.
 \label{fig:pegasusdot}]{
 
@@ -216,7 +217,7 @@ will increase in the direction going upward and rightward simultaneously
 (since paper and computer screens are still two-dimensional), see
 Figure \ref{fig:pegasus}. Then $i=0$ will represent the left side
 in the classic $K_{4,4}$ depiction, or the horizontal vertices in
-the diamond-shaped or triangle-shaped depictions, while $i=1$ will
+the diamond-shaped or triangle-shaped depictions; while $i=1$ will
 represent the right side in the classic and vertical vertices in the
 diamond and triangle.
 
@@ -236,9 +237,9 @@ Index & Range & Description\tabularnewline[2mm]
 $x$ & $0$ to $X-1$ & Row within a Chimera layer\tabularnewline
 $y$ & $0$ to $Y-1$ & Column within a Chimera layer\tabularnewline
 $z$ & $0$ to $2$ & Chimera layer\tabularnewline
-$i$ & $0,1$ & Side within $K_{4,4}$\tabularnewline
-$j$ & $0,1$ & First index within each side of $K_{4,4}$\tabularnewline
-$k$ & $0,1$ & Second index within each side of $K_{4,4}$\tabularnewline[2mm]
+$i$ & $0,1$ & `Side' within $K_{4,4}$\tabularnewline
+$j$ & $0,1$ & First index within each `side' of $K_{4,4}$\tabularnewline
+$k$ & $0,1$ & Second index within each `side' of $K_{4,4}$\tabularnewline[2mm]
 \hline 
 \end{tabular}
 \end{table}
@@ -373,7 +374,7 @@ rule:}}
 \vspace{-4mm}
 
 \begin{multline*}
-\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\left(x,y,z,i,j,k\right)
+\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\left(x,y,z,i,j,k\right)
 \end{multline*}
 
 \vspace{-8mm}
@@ -402,7 +403,7 @@ we have:
 Substituting $j=0$ into Eq. (\ref{eq:gen_z01}) tells us that all
 $j=0$ vertices of a $K_{4,4}$ cell are connected to all vertices
 of the opposite side $\bar{i}$ in the $K_{4,4}$ cell with the same
-$(x,y)$, but next layer $z+1$: 
+$(x,y)$, but in the next layer $z+1$: 
 
 \vspace{-5mm}
 
@@ -464,7 +465,7 @@ $j=1$ vertices are connected in the following way:
 We now explicitly write down the 4 rules which lead to the grouping
 scheme depicted in Figure \ref{fig:pegasus64} (these rules are different
 depending on whether $z\in\{0,1\}$ or $z=2$, so there are actually
-8 of them):\vspace{-2mm}
+8 relations):\vspace{-2mm}
 
 \vspace{-2mm}
 
@@ -508,13 +509,13 @@ cells above/left and below/right), then there is 1 Pegasus edge added
 then we have 8 more Pegasus edges for connecting $K_{4,4}$ cells
 of different Chimera layers $z$, from Eqs. (\ref{eq:z01_j0_i0})-(\ref{eq:z01_j1_i1})
 (or from Eqs. (\ref{eq:z2_j0_i0})-(\ref{eq:z2_j1_i1}) if we were
-starting with a cell in the $z=2$). Therefore the degree (which is
-15) has increased by a factor of 2.5 when compared to the degree of
-Chimera (which is 6).
+starting with a cell in the $z=2$ layer). Therefore the degree (which
+is 15) has increased by a factor of 2.5 when compared to the degree
+of Chimera (which is 6).
 
 In Fig. \ref{fig:pegasus}, the cells at the boundary, such as at
 position $(x,y,z)=(0,0,0)$, do not show a degree of 15, just as the
-cells of Chimera at the very edge would not show a degree of 6.
+cells of Chimera at the boundary would not show a degree of 6.
 
 \vspace{-2mm}
 
@@ -620,11 +621,10 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 \selectlanguage{english}%
 \newpage{}
 
-\newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm} \onecolumngrid
-\begin{center}\vspace{-15mm}
-\centering
-\part*{\centering Supplementary Material}
-\vspace{10mm}
+\newgeometry{top=15mm,bottom=0mm,left=8mm,right=8mm}
+\part*{\onecolumngrid \begin{center}\vspace{-15mm}
+Supplementary Material}
+
 \centering\captionsetup[subfigure]{justification=centering}
 \begin{center}
 \vspace{-15mm}
@@ -636,9 +636,16 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 
 \vspace{1mm}
 
-\subfloat[Tilted classic\vspace{2mm}]{\centering~~~~~~~~~~~~~~~~\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraStdRectUC}}~~~~~~~~
-\subfloat[Diamond\vspace{2mm}]{\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraDmdRectUC}}~~~~~~~~
-\subfloat[Upper triangle\vspace{2mm}]{\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraTrpRectUC}}
+\subfloat[Tilted classic\vspace{2mm}
+]{\centering
+
+~~~~~~~~~~~~~~~~\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraStdRectUC}}~~~~~~~~\subfloat[Diamond\vspace{2mm}
+]{
+
+\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraDmdRectUC}}~~~~~~~~\subfloat[Triangle\vspace{2mm}
+]{
+
+\includegraphics[width=0.22\textwidth]{metapostfigs/fig_ChimeraTrpRectUC}}
 \end{figure}
 \par\end{center}
 
@@ -656,7 +663,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 \includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraStdRect5x5_crop}}~~\subfloat[Diamond\vspace{2mm}
 ]{
 
-\includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5_crop}}~~\subfloat[Upper triangle\vspace{2mm}
+\includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5_crop}}~~\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraTrpRect5x5_crop}}~~\subfloat[Compressed\vspace{2mm}
@@ -680,7 +687,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 \includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraStdRect5x5}}~~\subfloat[Diamond\vspace{2mm}
 ]{
 
-\includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5}}~~\subfloat[Upper triangle\vspace{2mm}
+\includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraDmdRect5x5}}~~\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.24\textwidth]{metapostfigs/fig_ChimeraTrpRect5x5}}~~\subfloat[Compressed\vspace{2mm}
@@ -696,7 +703,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 
 \begin{center}
 \begin{figure}[H]
-\caption{Pegasus cells.\centering}
+\caption{\centering$K_{4,4}$ cells (Pegasus).}
 
 \subfloat[Tilted classic\vspace{2mm}
 ]{
@@ -704,7 +711,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 ~~~~~~~~~~~~~~~~~\includegraphics[width=0.22\textwidth]{metapostfigs/fig_PegasusStdRectUC}}~~~~~~~~\subfloat[Diamond\vspace{2mm}
 ]{
 
-\includegraphics[width=0.22\textwidth]{metapostfigs/fig_PegasusDmdRectUC}}~~~~~~~~\subfloat[Upper triangle\vspace{2mm}
+\includegraphics[width=0.22\textwidth]{metapostfigs/fig_PegasusDmdRectUC}}~~~~~~~~\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.22\textwidth]{metapostfigs/fig_PegasusTrpRectUC}}
@@ -721,7 +728,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 \begin{center}
 \begin{figure}[H]
 \vspace{-10mm}
-\caption{\centering64 inter-layer edges (Pegasus).}
+\caption{\centering64 inter-layer edges in color (Pegasus).}
 
 \vspace{15mm}
 
@@ -735,7 +742,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 
 \vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5one_crop}}~~~~~~~~~~\subfloat[Compressed\vspace{2mm}
@@ -753,8 +760,8 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 \begin{figure}[H]
 \vspace{10mm}
 
-\caption{\centering64 inter-layer edges within an $(X,Y,Z)=(5,5,3)$ lattice
-(Pegasus).}
+\caption{\centering64 inter-layer edges in color within an $(X,Y,Z)=(5,5,3)$
+lattice (Pegasus).}
 
 \vspace{15mm}
 
@@ -766,7 +773,7 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdRect5x5one}}~~~~~~~~~~
 
-\subfloat[Upper triangle\vspace{20mm}
+\subfloat[Triangle\vspace{20mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5one}}~~~~~~~~~~\subfloat[Compressed\vspace{2mm}
@@ -782,8 +789,8 @@ and the HAS (János Bolyai Research Scholarship and ``Lendület'' Program).
 
 \begin{center}
 \begin{figure}[H]
-\caption{\centering64 inter-layer edges within a $(X,Y,Z)=(5,5,3)$ \emph{tilted}
-lattice (Pegasus).}
+\caption{\centering64 inter-layer edges in color within a $(X,Y,Z)=(5,5,3)$
+\emph{tilted} lattice (Pegasus).}
 \vspace{15mm}
 
 \subfloat[Tilted classic\vspace{2mm}
@@ -794,7 +801,7 @@ lattice (Pegasus).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdTilt5x5one}}\vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpTilt5x5one}}~~~~~\subfloat[Compressed\vspace{2mm}
@@ -817,7 +824,7 @@ lattice (Pegasus).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdRect5x5full_crop}}~~~~~\vspace{15mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5full_crop}}\subfloat[Compressed\vspace{2mm}
@@ -835,7 +842,7 @@ lattice (Pegasus).}
 \begin{figure}[H]
 \vspace{10mm}
 \caption{\centering$(X,Y,Z)=(2,2,3)$ patch cropped out of a \emph{tilted
-}Pegasus}
+}Pegasus.}
 \vspace{10mm}
 
 \subfloat[Tilted classic\vspace{2mm}
@@ -846,7 +853,7 @@ lattice (Pegasus).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdTilt5x5full_crop}}~~~~~\vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpTilt5x5full_crop}}\subfloat[Compressed\vspace{2mm}
@@ -873,7 +880,7 @@ Pegasus-only edges either black or light blue).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdRect5x5fullblue_crop}}~~~~~~~~~~\vspace{15mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5fullblue_crop}}\subfloat[Compressed\vspace{2mm}
@@ -899,7 +906,7 @@ Pegasus-only edges either black or light blue).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdTilt5x5fullblue_crop}}~~~~~~~~~~\vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpTilt5x5fullblue_crop}}\subfloat[Compressed\vspace{2mm}
@@ -921,7 +928,7 @@ Pegasus-only edges either black or light blue).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdRect5x5full}}~~~~~~~~~~\vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5full}}~\subfloat[Compressed\vspace{2mm}
@@ -947,7 +954,7 @@ Pegasus-only edges either black or light blue).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdTilt5x5full}}~~~~~~~~~~\vspace{7mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpTilt5x5full}}~~~\subfloat[Compressed\vspace{2mm}
@@ -975,7 +982,7 @@ edges either black or light blue).}
 
 \vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpRect5x5fullblue}}~~~~\subfloat[Compressed\vspace{2mm}
@@ -1001,7 +1008,7 @@ all Pegasus-only edges either black or light blue).}
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusDmdTilt5x5fullblue}}~~~~~~~~~~\vspace{10mm}
 
-\subfloat[Upper triangle\vspace{2mm}
+\subfloat[Triangle\vspace{2mm}
 ]{
 
 \includegraphics[width=0.48\textwidth]{metapostfigs/fig_PegasusTrpTilt5x5fullblue}}~~~~~\subfloat[Compressed\vspace{2mm}
